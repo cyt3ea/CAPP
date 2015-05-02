@@ -888,7 +888,7 @@ public class HomePage extends Activity implements OnClickListener{
 			int currentMonth = mm;
 			String currentMonthName = getMonthAsString(currentMonth);
 			daysInMonth = getNumberOfDaysOfMonth(currentMonth);
-			//Log.d(tag, "Current MOnth: " + currentMonthName + " having " + daysInMonth + " days");
+			Log.d(tag, "Current Month: " + currentMonthName + " having " + daysInMonth + " days");
 			GregorianCalendar cal = new GregorianCalendar(yy, currentMonth, dd);
 
 			if(currentMonth == 11) { 
@@ -897,7 +897,7 @@ public class HomePage extends Activity implements OnClickListener{
 				nextMonth = 0;
 				prevYear = yy;
 				nextYear = yy + 1;
-				//Log.d(tag, "*->PrevYear: " + prevYear + " PrevMonth:" + prevMonth + " NextMonth: " + nextMonth + " NextYear: " + nextYear);
+				Log.d(tag, "*->PrevYear: " + prevYear + " PrevMonth:" + prevMonth + " NextMonth: " + nextMonth + " NextYear: " + nextYear);
 			}
 			else if(currentMonth == 0) { 
 				prevMonth = 11; 
@@ -905,7 +905,7 @@ public class HomePage extends Activity implements OnClickListener{
 				nextYear = yy;
 				daysInPrevMonth = getNumberOfDaysOfMonth(prevMonth);
 				nextMonth = 1;
-				//Log.d(tag, "*->PrevYear: " + prevYear + " PrevMonth:" + prevMonth + " NextMonth: " + nextMonth + " NextYear: " + nextYear);
+				Log.d(tag, "*->PrevYear: " + prevYear + " PrevMonth:" + prevMonth + " NextMonth: " + nextMonth + " NextYear: " + nextYear);
 			}
 			else { 
 				prevMonth = currentMonth - 1;
@@ -913,7 +913,7 @@ public class HomePage extends Activity implements OnClickListener{
 				nextYear = yy;
 				prevYear = yy;
 				daysInPrevMonth = getNumberOfDaysOfMonth(prevMonth);
-				//Log.d(tag, "*->PrevYear: " + prevYear + " PrevMonth:" + prevMonth + " NextMonth: " + nextMonth + " NextYear: " + nextYear);
+				Log.d(tag, "*->PrevYear: " + prevYear + " PrevMonth:" + prevMonth + " NextMonth: " + nextMonth + " NextYear: " + nextYear);
 			}
 
 			int currentWeekDay = cal.get(Calendar.DAY_OF_WEEK) - 1;
@@ -935,8 +935,8 @@ public class HomePage extends Activity implements OnClickListener{
 			int tempDD = dd;
             int dOW = 0; //Day of week starts on Sunday.
 			for (int i = 0; i < trailingSpaces; i++) {
-				if(tempDD - trailingSpaces + i<= 0) {
-				//Log.d(tag, "PREV MONTH:= " + dd + " => " + String.valueOf(trailingSpaces) + " " + String.valueOf((daysInPrevMonth - trailingSpaces + DAY_OFFSET) + i));
+                Log.d(tag, "PREV MONTH:= " + dd + " => " + String.valueOf(trailingSpaces) + " " + String.valueOf((daysInPrevMonth - trailingSpaces + DAY_OFFSET) + i));
+                if(tempDD - trailingSpaces + i<= 0) {
 					list.add(String.valueOf((daysInPrevMonth - trailingSpaces) + i + DAY_OFFSET) + "-GREY" + "-" + getMonthAsString(prevMonth) + "-" + prevYear + "-" + weekdays[dOW]);
 				}
 				else {
@@ -1143,10 +1143,10 @@ public class HomePage extends Activity implements OnClickListener{
 			}
 			if(day_color[1].equals("BLUE")) {
                 Log.d("BLUE: ", month + " =? " + c.get(Calendar.MONTH) + " " + day + " =? " + c.get(Calendar.DAY_OF_MONTH));
-				if(month == c.get(Calendar.MONTH)-1 && day == c.get(Calendar.DAY_OF_MONTH))
+				if(year == c.get(Calendar.YEAR) && month == c.get(Calendar.MONTH)-1)
 					gridcell.setTextColor(getResources().getColor(R.color.orange));
-				else
-					gridcell.setTextColor(getResources().getColor(R.color.black));
+				//else
+				//	gridcell.setTextColor(getResources().getColor(R.color.black));
 			}
 			return row;
 		} 
