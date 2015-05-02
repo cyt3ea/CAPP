@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reminder_array">
+        <item>None</item>
+        <item>At Time of Event</item>
+        <item>5 Minutes Before</item>
+        <item>15 Minutes Before</item>
+        <item>30 Minutes Before</item>
+        <item>1 Hour Before</item>
+        <item>2 Hours Before</item>
+        <item>1 Day Before</item>
+        <item>2 Days Before</item>
+        <item>1 Week Before</item>
+    </string-array>
+    <string-array name="calendar_array">
+        <item>Default</item>
+        <item>Academic</item>
+    </string-array>
+    <string-array name="color_array">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="color_item_labels" >
+        <item >Red<font fgcolor="#FF0000">red</font></item>
+        <item ><FONT COLOR="#FF9249">Orange</FONT></item>
+        <item ><FONT COLOR="#FFDB2B">Yellow</FONT></item>
+        <item ><FONT COLOR="#A5FF7F">Green</FONT></item>
+        <item ><FONT COLOR="#7F92FF">Blue</FONT></item>
+        <item ><FONT COLOR="#8900F9">Purple</FONT></item>
+        <item ><FONT COLOR="#FFA7DC">Pink</FONT></item>
+        <item ><FONT COLOR="#000000">Black</FONT></item>
+      </string-array>
+</resources>

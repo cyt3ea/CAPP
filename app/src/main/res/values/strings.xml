@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CAPP</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="userName">Username</string>
+    <string name="todaysDate">December 31, 2000</string>
+    <string name="title">Event Main Info</string>
+    <string name="more">More Information Goes Here</string>
+    <color name="grey">#F0F0F0</color>
+    <string name="action_day">Day</string>
+    <string name="action_week">Week</string>
+    <string name="action_month">Month</string>
+    <string name="action_year">Year</string>
+    <string name="action_switch">Switch Calendar</string>
+    <string name="action_addEvent">Add Event</string>
+    <string name="action_search">Search</string>
+    <color name="transparent">#00000000</color>
+    <color name="lightgray">#A0A0A0</color>
+    <color name="black">#000000</color>
+    <color name="reds">#FF0000</color>
+    <color name="oranges">#FF6A00</color>
+    <color name="yellows">#FFDB2B</color>
+    <color name="greens">#A5FF7F</color>
+    <color name="blues">#7F92FF</color>
+    <color name="purples">#8900F9</color>
+    <color name="pinks">#FFA7DC</color>
+    <color name="blacks">#000000</color>
+</resources>

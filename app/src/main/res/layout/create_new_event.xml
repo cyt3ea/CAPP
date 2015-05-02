@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homepage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/createEventHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/createEventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Create Event"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/addEvent"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/createEventTitle"
+            android:layout_alignBottom="@+id/createEventTitle"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:text="Add"
+            android:textColor="#FF494C"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/backButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/createEventTitle"
+            android:layout_alignBottom="@+id/createEventTitle"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:text="Back"
+            android:textColor="#FF494C"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <ScrollView 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:id="@+id/createEventBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/eventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:hint="Title" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/eventLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:hint="Location" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/startDateAndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:text="Starts: January 30, 2015 | 12:00PM"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/endDateAndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:text="Ends:   February 30, 2015 | 12:00PM"
+            android:textSize="18dp" >
+        </TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/createEventBody"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" >
+
+        <TextView android:id="@+id/allDayText" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/allDayCheckBox"
+            android:layout_alignBaseline="@+id/allDayCheckBox"
+            android:layout_marginLeft="5dp" 
+            android:text="All Day" 
+            android:textSize="18dp"/>
+        
+        <Spinner
+            android:id="@+id/remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/remindText"
+            android:layout_toRightOf="@+id/remindText" />
+
+        <CheckBox
+            android:id="@+id/privateCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/allDayCheckBox"
+            android:layout_toRightOf="@+id/privateText"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/privateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/privateCheckBox"
+            android:layout_alignBottom="@+id/privateCheckBox"
+            android:layout_alignRight="@+id/allDayText"
+            android:text="Private"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/remindText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/privateText"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/privateCheckBox"
+            android:text="Remind: "
+            android:textSize="18dp" />
+
+        <CheckBox
+            android:id="@+id/allDayCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/allDayText" />
+        
+        <TextView
+            android:id="@+id/calendarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/privateText"
+            android:layout_marginTop="5dp"
+            android:layout_alignTop="@+id/calendar"
+            android:text="Calendar: "
+            android:textSize="18dp" />
+        
+        <Spinner
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/remind"
+            android:layout_toRightOf="@+id/calendarText" />
+        
+        <TextView
+            android:id="@+id/colorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/privateText"
+            android:layout_marginTop="5dp"
+            android:layout_alignTop="@+id/color"
+            android:text="Color: "
+            android:textSize="18dp" />
+        
+        <Spinner
+            android:id="@+id/color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendar"
+            android:layout_toRightOf="@+id/colorText" />
+        
+        <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Description"
+        android:layout_below="@+id/color"
+        android:inputType="textMultiLine" >
+    </EditText>
+
+    </RelativeLayout>
+    </LinearLayout>
+    
+    </ScrollView>
+
+</LinearLayout>
+
+
