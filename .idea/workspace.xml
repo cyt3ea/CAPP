@@ -17,35 +17,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.example.capp" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6003521d-16fb-4c68-bfa9-ebf49ab32164" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/SignUPActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/SignUPActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CAPP.iml" afterPath="$PROJECT_DIR$/CAPP.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/capp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/capp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/screen_gridcell.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/screen_gridcell.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="6003521d-16fb-4c68-bfa9-ebf49ab32164" name="Default" comment="" />
     <ignored path="CAPP.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
