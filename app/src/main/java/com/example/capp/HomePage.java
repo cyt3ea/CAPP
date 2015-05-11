@@ -245,9 +245,11 @@ public class HomePage extends Activity implements OnClickListener{
         weekCalendarView.setAdapter(weekAdapter);
 
 		weekAdapter.notifyDataSetChanged();
-        if(!view.equals("week"))
-		    dayPicked.setText(months[month] + " " + day + ", " + year);
-		
+
+        if(!view.equals("week")) {
+            dayPicked.setText(months[month] + " " + day + ", " + year);
+        }
+
 		ArrayList<Event> tempList = new ArrayList<Event>();
 		tempList = myEventsDataBaseAdapter.getAllEvents();
 		Log.v("EVENTS IN DATABASE: ", tempList.toString());
@@ -345,57 +347,6 @@ public class HomePage extends Activity implements OnClickListener{
 		}
 
         view = "week";
-		/*
-		ArrayList<Event> tempList = new ArrayList<Event>();
-		tempList = myEventsDataBaseAdapter.getAllEvents();
-		Log.v("EVENTS IN DATABASE: ", tempList.toString());
-		dOWL.clear();
-		eventCollections.clear();
-		int tempCount = 1;
-		for(int i = 0; i<8; i++) {
-			if(startDay <= daysOfMonth[startMonth]){
-				int temp = tempDay + i;
-				dOWL.add(startMonth + "/" + temp + "/" + year);
-				eventCollections.put(startMonth + "/" + temp + "/" + year, new ArrayList<Event>());
-			}
-			else {
-				dOWL.add(endMonth + "/" + tempCount + "/" + year);
-				eventCollections.put(endMonth + "/" + tempCount + "/" + year, new ArrayList<Event>());
-				tempCount++;
-			}
-		}
-		for(Event e : tempList) {
-			if(e.getStartDate()[1] >= startDay && e.getStartDate()[1] <= endDay) { 
-				if(e.getStartDate()[0] == startMonth && e.getStartDate()[0] <= endMonth) {
-					if(e.getStartDate()[2] == year && e.getStartDate()[2] <= year) {
-						int duration = 0;
-						if(e.getEndDate()[0] > endMonth && e.getEndDate()[1] > endDay)
-							duration = endDay - e.getStartDate()[1] + 1;
-						else if(e.getEndDate()[0] == startMonth && e.getEndDate()[1] == startDay){
-							duration = 0;
-							String tempEventDay = startMonth + "/" + startDay + "/" + year;
-							eventCollections.get(tempEventDay).add(e);
-						}
-						else
-							duration = e.getEndDate()[1] - e.getStartDate()[1] + 1;
-						for(int day = e.getStartDate()[1]; day < e.getStartDate()[1]+duration; day++) {
-							String tempEventDay = "";
-							tempCount = 1;
-							if(day <= daysOfMonth[e.getStartDate()[0]])
-								tempEventDay = startMonth + "/" + day + "/" + year;
-							else {
-								tempEventDay = endMonth + "/" + tempCount + "/" + year;
-								tempCount++;
-							}
-							eventCollections.get(tempEventDay).add(e);
-						}
-					}
-				}
-			}
-		}
-		
-		expWeekListAdapter.notifyDataSetChanged();
-		*/
 	}
 
 	private void openDayView() {
@@ -719,7 +670,7 @@ public class HomePage extends Activity implements OnClickListener{
 
 		private static final String tag = "GridCellAdapter";
 		private final Context _context;
-		private final List<String> list;
+		private final ArrayList<String> list;
 		private static final int DAY_OFFSET = 1;
 		private final String[] weekdays = new String[] {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" };
 		private final String[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
@@ -934,6 +885,7 @@ public class HomePage extends Activity implements OnClickListener{
 			//Trailing Month Days
 			int tempDD = dd;
             int dOW = 0; //Day of week starts on Sunday.
+            int pos = 0;
 			for (int i = 0; i < trailingSpaces; i++) {
                 Log.d(tag, "PREV MONTH:= " + dd + " => " + String.valueOf(trailingSpaces) + " " + String.valueOf((daysInPrevMonth - trailingSpaces + DAY_OFFSET) + i));
                 if(tempDD - trailingSpaces + i<= 0) {
@@ -943,6 +895,7 @@ public class HomePage extends Activity implements OnClickListener{
 					list.add(String.valueOf((dd - trailingSpaces) + i) + "-BLACK" + "-" + getMonthAsString(currentMonth) + "-" + yy + "-" + weekdays[dOW]);
 				}
                 dOW++;
+                pos++;
 			}
 			//Current Month Days
 			int overflow = 1;
@@ -961,6 +914,7 @@ public class HomePage extends Activity implements OnClickListener{
 					overflow++;
 				}
                 dOW++;
+                pos++;
 			}
 /*
 			//Leading Month Days
@@ -989,6 +943,10 @@ public class HomePage extends Activity implements OnClickListener{
 			this.currentWeekDay = currentWeekDay;
 		}
 
+        public ArrayList<String> getDaysInWeek() {
+            return list;
+        }
+
 		public int getCurrentWeekDay() { 
 			return currentWeekDay;
 		}
@@ -1011,8 +969,6 @@ public class HomePage extends Activity implements OnClickListener{
 				int tempMonth = Arrays.asList(months).indexOf(date[1]);
 				int tempYear = Integer.parseInt(date[2]);
                 int position = Integer.parseInt(date[3]);
-                double xCo = (Math.ceil(position + 1 / numberOfColumns));
-                double yCo = (xCo * numberOfColumns) - position;
                 int[] posXY = new int[2];
                 int xCurrentPos = pointImage.getLeft();
                 int yCurrentPos = pointImage.getTop();
@@ -1110,12 +1066,26 @@ public class HomePage extends Activity implements OnClickListener{
 			gridcell.setOnClickListener(this);
             dayOfWeek = (TextView) row.findViewById(R.id.dayOfWeekLabel);
 
+
 			//Log.d(tag, "Current Day: " + getCurrentDayOfMonth());
 			String[] day_color = list.get(position).split("-");
 			String theday = day_color[0];
 			String themonth = day_color[2];
 			String theyear = day_color[3];
             String theDayOfWeek = day_color[4];
+
+            String[] parsedDayPicked = dayPicked.getText().toString().split(" ");
+            Log.v("PARSED stuff: ", theday + " - " + themonth + " - " + theyear + " / " + parsedDayPicked[1].substring(0, parsedDayPicked[1].length() - 1) + " - " + parsedDayPicked[0] + " - " + parsedDayPicked[2]);
+            if (theday.equals(parsedDayPicked[1].substring(0, parsedDayPicked[1].length() - 1)) && themonth.equals(parsedDayPicked[0]) && theyear.equals(parsedDayPicked[2])) {
+                int[] posXY = new int[2];
+                gridcell.getLocationOnScreen(posXY);
+                int xNextPos = posXY[0];
+                Log.v("SUCCESS???: ", "" + xNextPos);
+                ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", xNextPos);
+                anim.setDuration(1000);
+                anim.start();
+            }
+
 			/*
 			if((!eventsPerMonthMap.isEmpty() && eventsPerMonthMap != null)) { 
 				if(eventsPerMonthMap.containsKey(theday)) { 
