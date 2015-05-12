@@ -3,6 +3,7 @@ import android.animation.ObjectAnimator;
 import android.graphics.Point;
 import android.view.Display;
 import android.view.animation.Animation;
+import android.view.animation.GridLayoutAnimationController;
 import android.view.animation.TranslateAnimation;
 import android.widget.ExpandableListView;
 
@@ -109,6 +110,7 @@ public class HomePage extends Activity implements OnClickListener{
 				+ Integer.toString(year));
 		dayPicked = (TextView) findViewById(R.id.dayPicked);
         point = (ImageView) findViewById(R.id.pointer);
+		point.setVisibility(View.INVISIBLE);
 
 		adapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, expListAdapter);
 
@@ -457,7 +459,7 @@ public class HomePage extends Activity implements OnClickListener{
 		adapter.notifyDataSetChanged();
 		calendarView.setAdapter(adapter);
 	}
-	
+
 
 	@Override
 	public void onClick(View v) {
@@ -467,11 +469,11 @@ public class HomePage extends Activity implements OnClickListener{
 		if(cal.isLeapYear(c.get(Calendar.YEAR))) {
 			daysOfMonth[1] = 29;
 		}
-		else 
+		else
 			daysOfMonth[1] = 28;
 
 		if(v.getId() == R.id.toggleLeft) {
-			if(month <= 1) { 
+			if(month <= 1) {
 				if(day == 1) {
 					year--;
 					month = 11;
@@ -481,7 +483,7 @@ public class HomePage extends Activity implements OnClickListener{
 					day--;
 				}
 			}
-			else if(day == 1) { 
+			else if(day == 1) {
 				month--;
 				day = daysOfMonth[month];
 			}
@@ -489,13 +491,13 @@ public class HomePage extends Activity implements OnClickListener{
 				day--;
 			}
 			/*todaysDateTextView=(TextView)findViewById(R.id.viewDate);
-			todaysDateTextView.setText(months[month] +  " " + day + ", " 
+			todaysDateTextView.setText(months[month] +  " " + day + ", "
 					+ Integer.toString(year));*/
 			openDayView();
 		}
 		else if(v.getId() == R.id.toggleLeftWV) {
 
-            if(point.getLeft()< 0) {
+            if(point.getLeft()> 0 && point.getLeft()<width) {
                 ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", width + 100);
                 anim.setDuration(1000);
                 anim.start();
@@ -513,7 +515,7 @@ public class HomePage extends Activity implements OnClickListener{
 					startMonth = month;
 					year--;
 				}
-				else { 
+				else {
 					endMonth = month;
 					month--;
 					startMonth = month;
@@ -536,7 +538,7 @@ public class HomePage extends Activity implements OnClickListener{
 			}
 			else {
 				todaysDateTextView.setText(months[startMonth].substring(0,3) + ".  "
-						+ Integer.toString(startDay) + " - " + months[endMonth].substring(0,3) + ".  " 
+						+ Integer.toString(startDay) + " - " + months[endMonth].substring(0,3) + ".  "
 						+ Integer.toString(endDay-1));
 			}*/
 			openWeekView();
@@ -544,9 +546,9 @@ public class HomePage extends Activity implements OnClickListener{
 		else if(v.getId() == R.id.toggleLeftMV) {
 			if(month <=1 ) {
 				month = 11;
-				year--; 
+				year--;
 			}
-			else { 
+			else {
 				month--;
 			}
 			setGridCellAdapterToDate(month, year);
@@ -554,24 +556,24 @@ public class HomePage extends Activity implements OnClickListener{
 			todaysDateTextView.setText(months[month] + " "
 					+ Integer.toString(year));
 		}
-		else if(v.getId() == R.id.toggleLeftYV) { 
+		else if(v.getId() == R.id.toggleLeftYV) {
 			year--;
 			todaysDateTextView=(TextView)findViewById(R.id.viewDateYV);
 			todaysDateTextView.setText(Integer.toString(year));
 		}
 		else if(v.getId() == R.id.toggleRight) {
 			//Toast.makeText(HomePage.this, "Right Button Clicked!", Toast.LENGTH_SHORT).show();
-			if(month == 11) { 
+			if(month == 11) {
 				if(day == 31) {
 					year++;
 					month = 0;
 					day = 1;
 				}
-				else { 
+				else {
 					day++;
 				}
 			}
-			else if(day == daysOfMonth[month]) { 
+			else if(day == daysOfMonth[month]) {
 				month++;
 				day = 1;
 			}
@@ -579,12 +581,12 @@ public class HomePage extends Activity implements OnClickListener{
 				day++;
 			}
 			/*todaysDateTextView=(TextView)findViewById(R.id.viewDate);
-			todaysDateTextView.setText(months[month] +  " " + day + ", " 
+			todaysDateTextView.setText(months[month] +  " " + day + ", "
 					+ Integer.toString(year));*/
 			openDayView();
 		}
 		else if(v.getId() == R.id.toggleRightWV) {
-            if(point.getLeft() < width) {
+            if(point.getLeft() < width && point.getLeft() >0) {
                 ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", -100);
                 anim.setDuration(1000);
                 anim.start();
@@ -598,7 +600,7 @@ public class HomePage extends Activity implements OnClickListener{
 			if(day + 14 > daysOfMonth[month]) {
 				endDay = 14 - Math.abs(daysOfMonth[month]-day);
 				if(month == 11) {
-					if(day + 7 > daysOfMonth[month]) { 
+					if(day + 7 > daysOfMonth[month]) {
 						startDay = 7 - Math.abs(daysOfMonth[month]-day);
 						month = 0;
 						startMonth = month;
@@ -613,13 +615,13 @@ public class HomePage extends Activity implements OnClickListener{
 						startDay = day + 7;
 					}
 				}
-				else if (day + 7 > daysOfMonth[month]) { 
+				else if (day + 7 > daysOfMonth[month]) {
 					startDay = 7 - Math.abs(daysOfMonth[month]-day);
 					month++;
 					startMonth = month;
 					endMonth = month;
 				}
-				else { 
+				else {
 					startMonth = month;
 					month++;
 					endMonth = month;
@@ -641,17 +643,17 @@ public class HomePage extends Activity implements OnClickListener{
 			}
 			else {
 				todaysDateTextView.setText(months[startMonth].substring(0,3) + ".  "
-						+ Integer.toString(startDay) + " - " + months[endMonth].substring(0,3) + ".  " 
+						+ Integer.toString(startDay) + " - " + months[endMonth].substring(0,3) + ".  "
 						+ Integer.toString(endDay-1));
 			}*/
 			openWeekView();
 		}
-		else if(v.getId() == R.id.toggleRightMV) { 
+		else if(v.getId() == R.id.toggleRightMV) {
 			if(month >= 11 ) {
 				month = 0;
-				year++; 
+				year++;
 			}
-			else { 
+			else {
 				month++;
 			}
 			setGridCellAdapterToDate(month, year);
@@ -659,7 +661,7 @@ public class HomePage extends Activity implements OnClickListener{
 			todaysDateTextView.setText(months[month] +  " "
 					+ Integer.toString(year));
 		}
-		else if(v.getId() == R.id.toggleRightYV) { 
+		else if(v.getId() == R.id.toggleRightYV) {
 			year++;
 			todaysDateTextView=(TextView)findViewById(R.id.viewDateYV);
 			todaysDateTextView.setText(Integer.toString(year));
@@ -715,7 +717,6 @@ public class HomePage extends Activity implements OnClickListener{
 			expLA = exp;
 			dayPicked = dp;
             pointImage = point;
-            pointImage.setVisibility(View.VISIBLE);
   			//Log.d(tag, "==> Passed in Date FOR Month: " + month + " " + "Year: " + year);
 			Calendar calendar = Calendar.getInstance();
 			setCurrentDayOfMonth(calendar.get(Calendar.DAY_OF_MONTH));
@@ -1077,13 +1078,19 @@ public class HomePage extends Activity implements OnClickListener{
             String[] parsedDayPicked = dayPicked.getText().toString().split(" ");
             Log.v("PARSED stuff: ", theday + " - " + themonth + " - " + theyear + " / " + parsedDayPicked[1].substring(0, parsedDayPicked[1].length() - 1) + " - " + parsedDayPicked[0] + " - " + parsedDayPicked[2]);
             if (theday.equals(parsedDayPicked[1].substring(0, parsedDayPicked[1].length() - 1)) && themonth.equals(parsedDayPicked[0]) && theyear.equals(parsedDayPicked[2])) {
-                int[] posXY = new int[2];
-                gridcell.getLocationOnScreen(posXY);
-                int xNextPos = posXY[0];
-                Log.v("SUCCESS???: ", "" + xNextPos);
-                ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", xNextPos);
-                anim.setDuration(1000);
-                anim.start();
+                //int[] posXY = new int[2];
+				//row.getLocationOnScreen(posXY);
+                int xNextPos = width/7 * position;
+                Log.v("SUCCESS???: ", width/7.0 + " * " + position + " = " + xNextPos);
+				if(point.getVisibility() == View.INVISIBLE) {
+					point.setX(xNextPos);
+					point.setVisibility(View.VISIBLE);
+				}
+				else {
+					ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", xNextPos);
+					anim.setDuration(1000);
+					anim.start();
+				}
             }
 
 			/*
@@ -1113,7 +1120,7 @@ public class HomePage extends Activity implements OnClickListener{
 			}
 			if(day_color[1].equals("BLUE")) {
                 Log.d("BLUE: ", month + " =? " + c.get(Calendar.MONTH) + " " + day + " =? " + c.get(Calendar.DAY_OF_MONTH));
-				if(year == c.get(Calendar.YEAR) && month == c.get(Calendar.MONTH)-1)
+				if(year == c.get(Calendar.YEAR) && month == c.get(Calendar.MONTH))
 					gridcell.setTextColor(getResources().getColor(R.color.orange));
 				//else
 				//	gridcell.setTextColor(getResources().getColor(R.color.black));
