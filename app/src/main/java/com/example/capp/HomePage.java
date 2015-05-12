@@ -142,21 +142,6 @@ public class HomePage extends Activity implements OnClickListener{
 		expWeekListAdapter = new ExpandableListAdapter(this, eventList);
 		weekViewLV.setAdapter(expWeekListAdapter);
 		
-		/*
-		weekViewLV.setOnChildClickListener(new OnChildClickListener() {
-			 
-            public boolean onChildClick(ExpandableListView parent, View v,
-                    int groupPosition, int childPosition, long id) {
-                final String selected = (String) expListAdapter.getChild(
-                        groupPosition, childPosition);
-                Toast.makeText(getBaseContext(), selected, Toast.LENGTH_LONG)
-                        .show();
- 
-                return true;
-            }
-        });
-        */
-		
 		myEventsDataBaseAdapter = new MyEventsDataBaseAdapter(this);
 		myEventsDataBaseAdapter = myEventsDataBaseAdapter.open();
 		
@@ -183,6 +168,7 @@ public class HomePage extends Activity implements OnClickListener{
 				day = Integer.parseInt(temp[1].substring(0, temp[1].length() - 1));
 				month = Arrays.asList(months).indexOf(temp[0]);
 				year = Integer.parseInt(temp[2]);
+				//point.setVisibility(View.INVISIBLE);
 				openDayView();
 			}
 		});
@@ -257,11 +243,15 @@ public class HomePage extends Activity implements OnClickListener{
 		// TODO Auto-generated method stuff
 
         weekCalendarView = (GridView) this.findViewById(R.id.weekCalendarView);
+		if(weekAdapter == null) {
+			weekAdapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, day, expWeekListAdapter, dayPicked, point);
+			weekCalendarView.setAdapter(weekAdapter);
+		}
+        else
+			setWeekGridCellAdapterToDate(day, month, year);
+		//weekCalendarView.setAdapter(weekAdapter);
 
-        weekAdapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, day, expWeekListAdapter, dayPicked, point);
-        weekCalendarView.setAdapter(weekAdapter);
-
-		weekAdapter.notifyDataSetChanged();
+		//weekAdapter.notifyDataSetChanged();
 
         if(!view.equals("week")) {
             dayPicked.setText(months[month] + " " + day + ", " + year);
@@ -270,31 +260,39 @@ public class HomePage extends Activity implements OnClickListener{
 		ArrayList<Event> tempList = new ArrayList<Event>();
 		tempList = myEventsDataBaseAdapter.getAllEvents();
 		Log.v("EVENTS IN DATABASE: ", tempList.toString());
+
+		String[] temp = dayPicked.getText().toString().split(" ");
+		String[] parsedDayPicked = dayPicked.getText().toString().split(" ");
+		int tempDay = Integer.parseInt(temp[1].substring(0, temp[1].length() - 1));
+		int tempMonth = Arrays.asList(months).indexOf(temp[0]);
+		int tempYear = Integer.parseInt(temp[2]);
+
+		Log.v("DATE: ", month + " " + day + " " + year);
 		eventList.clear();
 		
 		//only shows events for that day
 		for(Event e : tempList) {
 			//Log.v("EVENT DATE: ", e.getStartDate()[0] + " " + e.getStartDate()[1] + " " + e.getStartDate()[2]);
-			if(e.getStartDate()[1] == day && e.getEndDate()[1] == day) { 
-				if(e.getStartDate()[0] == month && e.getEndDate()[0] == month) {
-					if(e.getStartDate()[2] == year && e.getEndDate()[2] == year) {
+			if(e.getStartDate()[1] == tempDay && e.getEndDate()[1] == tempDay) {
+				if(e.getStartDate()[0] == tempMonth && e.getEndDate()[0] == tempMonth) {
+					if(e.getStartDate()[2] == tempYear && e.getEndDate()[2] == tempYear) {
 						eventList.add(e);
 						Log.v("Event added to list: ", e.toString());
 					}
 				}
 			}
-			else if(e.getStartDate()[2] <= year && e.getEndDate()[2] >= year) { 
-				if(e.getStartDate()[0] <= month && e.getEndDate()[0] >= month) {
-					if(e.getStartDate()[1] <= day && e.getEndDate()[1] >= day) {
-						Log.v("start date", e.getStartDate()[1] + " " + day);
+			else if(e.getStartDate()[2] <= tempYear && e.getEndDate()[2] >= tempYear) {
+				if(e.getStartDate()[0] <= tempMonth && e.getEndDate()[0] >= tempMonth) {
+					if(e.getStartDate()[1] <= tempDay && e.getEndDate()[1] >= tempDay) {
+						Log.v("start date", e.getStartDate()[1] + " " + tempDay);
 						if(e.getStartTimeHour() == -1) {
 							//do nothing
 						}
-						else if(e.getStartDate()[1] == day) {
+						else if(e.getStartDate()[1] == tempDay) {
 							e.setEndTimeHour(23);
 							e.setEndTimeMin(59);
 						}
-						else if(e.getEndDate()[1] == day) {
+						else if(e.getEndDate()[1] == tempDay) {
 							e.setStartTimeHour(0);
 							e.setStartTimeMin(0);
 						}
@@ -310,7 +308,6 @@ public class HomePage extends Activity implements OnClickListener{
 			}
 		}
 		Collections.sort(eventList);
-		expWeekListAdapter.notifyDataSetChanged();
 
 		if(dayOfWeek != 1) {
 			if(day - dayOfWeek < 0) {
@@ -321,9 +318,6 @@ public class HomePage extends Activity implements OnClickListener{
 				day = day - dayOfWeek + 1;
 			dayOfWeek = 1;
 		}
-		Log.v("DATE: ", month + " " + day + " " + year);
-
-		viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.weekview)));
 
 		int startDay = 0;
 		int endDay = 0;
@@ -362,7 +356,11 @@ public class HomePage extends Activity implements OnClickListener{
 					+ Integer.toString(startDay) + " - " + months[endMonth].substring(0,3) + "  "
 					+ Integer.toString(endDay));
 		}
+		viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.weekview)));
 
+		expWeekListAdapter.setEventList(eventList);
+		expWeekListAdapter.notifyDataSetChanged();
+		Log.d("Notified Changes: ", eventList.toString());
         view = "week";
 	}
 
@@ -456,7 +454,7 @@ public class HomePage extends Activity implements OnClickListener{
 
 				if(view.equals("day"))
 					openDayView();
-				else if(view.equals("week")) 
+				else if(view.equals("week"))
 					openWeekView();
 				else if(view.equals("month"))
 					openMonthView();
@@ -473,6 +471,10 @@ public class HomePage extends Activity implements OnClickListener{
 		c.set(year, month-1, c.get(Calendar.DAY_OF_MONTH));
 		adapter.notifyDataSetChanged();
 		calendarView.setAdapter(adapter);
+	}
+
+	private void setWeekGridCellAdapterToDate(int day, int month, int year) {
+		weekAdapter.setNewDate(day, month, year);
 	}
 
 
@@ -512,12 +514,12 @@ public class HomePage extends Activity implements OnClickListener{
 		}
 		else if(v.getId() == R.id.toggleLeftWV) {
 
-            if(point.getLeft()> 0 && point.getLeft()<width) {
-                ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", width + 100);
+            if(point.getX()> 0 && point.getX()<width) {
+                ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", width + 200);
                 anim.setDuration(1000);
                 anim.start();
             }
-            Log.d("Point", point.getLeft() + "");
+            Log.d("Point", point.getX() + "");
 
             int startDay = 0;
 			int endDay = 0;
@@ -601,12 +603,12 @@ public class HomePage extends Activity implements OnClickListener{
 			openDayView();
 		}
 		else if(v.getId() == R.id.toggleRightWV) {
-            if(point.getLeft() < width && point.getLeft() >0) {
-                ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", -100);
+            if(point.getX() < width && point.getX() >0) {
+                ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", -200);
                 anim.setDuration(1000);
                 anim.start();
             }
-            Log.d("Point", point.getLeft() + "");
+            Log.d("Point", point.getX() + "");
 
             int startDay = 0;
 			int endDay = 0;
@@ -743,7 +745,7 @@ public class HomePage extends Activity implements OnClickListener{
 			//eventsPerMonthMap = findNumberOfEventsPerMonth(year, month);
 		}
 
-		private String getMonthAsString(int i) { 
+		private String getMonthAsString(int i) {
 			return months[i];
 		}
 
@@ -939,6 +941,13 @@ public class HomePage extends Activity implements OnClickListener{
 				list.add(String.valueOf(i+1) + "-GREY" + "-" + getMonthAsString(nextMonth) + "-" + nextYear);
 			} */
 		}
+
+		private void setNewDate(int dd, int mm, int yy) {
+			list.clear();
+			printWeek(mm, yy, dd);
+			notifyDataSetChanged();
+		}
+
 
 		/** * NOTE: YOU NEED TO IMPLEMENT THIS PART Given the YEAR, MONTH, retrieve * ALL entries from a SQLite database for that month. Iterate over the * List of All entries, and get the dateCreated, which is converted into * day. * * @param year * @param month * @return */
 

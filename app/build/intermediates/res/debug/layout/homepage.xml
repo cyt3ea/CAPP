@@ -131,7 +131,7 @@
         		android:id="@+id/weekCalendarView"
         		android:layout_width="match_parent"
        			android:layout_height="wrap_content"
-        		android:numColumns="7" >
+				android:numColumns="7" >
     		</GridView>
     		
 	        <ImageView 
