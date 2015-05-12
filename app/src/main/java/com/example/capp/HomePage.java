@@ -54,7 +54,7 @@ public class HomePage extends Activity implements OnClickListener{
 	String view = "day";
 	GridCellAdapter weekAdapter, adapter;
 	GridView weekCalendarView, calendarView;
-	ImageButton leftToggle, rightToggle, leftToggleWV, rightToggleWV, leftToggleMV, rightToggleMV, leftToggleYV, rightToggleYV;
+	ImageButton leftToggle, rightToggle, leftToggleWV, rightToggleWV, leftToggleMV, rightToggleMV, leftToggleYV, rightToggleYV, goToDayPicked;
 	ArrayList<Event> eventList = new ArrayList<Event>();
 	ExpandableListView dayViewLV, weekViewLV;
 	ViewFlipper viewFlipper;
@@ -65,7 +65,7 @@ public class HomePage extends Activity implements OnClickListener{
 	Map<String, ArrayList<Event>> eventCollections = new HashMap<String, ArrayList<Event>>();
     ImageView point;
     int width, height;
-	
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
@@ -109,6 +109,7 @@ public class HomePage extends Activity implements OnClickListener{
 		todaysDateTextView.setText(months[month] + " " + Integer.toString(day) + ", "
 				+ Integer.toString(year));
 		dayPicked = (TextView) findViewById(R.id.dayPicked);
+
         point = (ImageView) findViewById(R.id.pointer);
 		point.setVisibility(View.INVISIBLE);
 
@@ -171,7 +172,21 @@ public class HomePage extends Activity implements OnClickListener{
 				startActivityForResult(makeNewEvent, ActivityTwoRequestCode);
 			}
 		});
-		
+
+		goToDayPicked = (ImageButton)findViewById(R.id.goToDayPicked);
+		goToDayPicked.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(HomePage.this, "Going to " + dayPicked.getText(), Toast.LENGTH_SHORT).show();
+				String[] temp = dayPicked.getText().toString().split(" ");
+				String[] parsedDayPicked = dayPicked.getText().toString().split(" ");
+				day = Integer.parseInt(temp[1].substring(0, temp[1].length() - 1));
+				month = Arrays.asList(months).indexOf(temp[0]);
+				year = Integer.parseInt(temp[2]);
+				openDayView();
+			}
+		});
+
 		openDayView();
 	}
 
