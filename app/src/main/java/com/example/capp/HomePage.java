@@ -3,6 +3,7 @@ import android.animation.ObjectAnimator;
 import android.graphics.Point;
 import android.view.Display;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.GridLayoutAnimationController;
 import android.view.animation.TranslateAnimation;
 import android.widget.ExpandableListView;
@@ -65,6 +66,10 @@ public class HomePage extends Activity implements OnClickListener{
 	Map<String, ArrayList<Event>> eventCollections = new HashMap<String, ArrayList<Event>>();
     ImageView point;
     int width, height;
+	String weekToggle;
+
+	Animation slideOutRight, slideOutLeft, slideInRight, slideInLeft;
+
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -73,6 +78,44 @@ public class HomePage extends Activity implements OnClickListener{
 		getActionBar().setDisplayShowHomeEnabled(false);
 
 		setContentView(R.layout.homepage);
+
+		weekCalendarView = (GridView) this.findViewById(R.id.weekCalendarView);
+
+		slideOutRight = AnimationUtils.loadAnimation(HomePage.this, android.R.anim.slide_out_right);
+		slideOutRight.setAnimationListener(new Animation.AnimationListener() {
+			public void onAnimationStart(Animation anim)
+			{
+			};
+			public void onAnimationRepeat(Animation anim)
+			{
+			};
+			public void onAnimationEnd(Animation anim)
+			{
+				slideInLeft.setDuration(500);
+				weekCalendarView.setAnimation(slideInLeft);
+				setWeekGridCellAdapterToDate(day, month, year);
+				slideInLeft.start();
+			};
+		});
+		slideOutLeft = AnimationUtils.loadAnimation(HomePage.this, R.anim.slide_out_left);
+		slideOutLeft.setAnimationListener(new Animation.AnimationListener() {
+			public void onAnimationStart(Animation anim)
+			{
+			};
+			public void onAnimationRepeat(Animation anim)
+			{
+			};
+			public void onAnimationEnd(Animation anim)
+			{
+				slideInRight.setDuration(500);
+				weekCalendarView.setAnimation(slideInRight);
+				setWeekGridCellAdapterToDate(day, month, year);
+				slideInRight.start();
+			};
+		});
+		slideInRight = AnimationUtils.loadAnimation(HomePage.this, R.anim.slide_in_right);
+		slideInLeft = AnimationUtils.loadAnimation(HomePage.this, android.R.anim.slide_in_left);
+		weekToggle = "none";
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -242,16 +285,10 @@ public class HomePage extends Activity implements OnClickListener{
 	private void openWeekView() {
 		// TODO Auto-generated method stuff
 
-        weekCalendarView = (GridView) this.findViewById(R.id.weekCalendarView);
 		if(weekAdapter == null) {
 			weekAdapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, day, expWeekListAdapter, dayPicked, point);
 			weekCalendarView.setAdapter(weekAdapter);
 		}
-        else
-			setWeekGridCellAdapterToDate(day, month, year);
-		//weekCalendarView.setAdapter(weekAdapter);
-
-		//weekAdapter.notifyDataSetChanged();
 
         if(!view.equals("week")) {
             dayPicked.setText(months[month] + " " + day + ", " + year);
@@ -477,7 +514,6 @@ public class HomePage extends Activity implements OnClickListener{
 		weekAdapter.setNewDate(day, month, year);
 	}
 
-
 	@Override
 	public void onClick(View v) {
 
@@ -514,9 +550,14 @@ public class HomePage extends Activity implements OnClickListener{
 		}
 		else if(v.getId() == R.id.toggleLeftWV) {
 
+			slideOutRight.setDuration(500);
+			weekCalendarView.setAnimation(slideOutRight);
+			slideOutRight.start();
+			weekToggle = "left";
+
             if(point.getX()> 0 && point.getX()<width) {
                 ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", width + 200);
-                anim.setDuration(1000);
+                anim.setDuration(500);
                 anim.start();
             }
             Log.d("Point", point.getX() + "");
@@ -603,9 +644,15 @@ public class HomePage extends Activity implements OnClickListener{
 			openDayView();
 		}
 		else if(v.getId() == R.id.toggleRightWV) {
+
+			slideOutLeft.setDuration(500);
+			weekCalendarView.setAnimation(slideOutLeft);
+			slideOutLeft.start();
+			weekToggle = "right";
+
             if(point.getX() < width && point.getX() >0) {
                 ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", -200);
-                anim.setDuration(1000);
+                anim.setDuration(500);
                 anim.start();
             }
             Log.d("Point", point.getX() + "");
@@ -1112,7 +1159,7 @@ public class HomePage extends Activity implements OnClickListener{
 				}
 				else {
 					ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", xNextPos);
-					anim.setDuration(1000);
+					anim.setDuration(600);
 					anim.start();
 				}
             }
