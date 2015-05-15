@@ -18,23 +18,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6003521d-16fb-4c68-bfa9-ebf49ab32164" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/slide_in_right.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/slide_out_left.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$CustomDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$CustomDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/Menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/Menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$array.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$array.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$menu.class" />
@@ -49,12 +38,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/capp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/capp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/homepage.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/homepage.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/homepage.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/homepage.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CAPP.iws" />
@@ -99,73 +88,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="homepage.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homepage.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48">
-              <caret line="289" column="28" selection-start-line="289" selection-start-column="28" selection-end-line="289" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.39688715">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2083#2090#0" expanded="true" />
-                <element signature="e#2329#2337#0" expanded="true" />
-                <element signature="e#2402#2428#0" expanded="true" />
-                <element signature="e#7120#7432#0" expanded="true" />
-                <element signature="e#7431#7432#0" expanded="true" />
-                <element signature="e#7536#8072#0" expanded="true" />
-                <element signature="e#8071#8072#0" expanded="true" />
-                <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-                <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-                <element signature="e#10489#10496#0" expanded="true" />
-                <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-                <element signature="e#14210#14217#0" expanded="true" />
-                <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-                <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-                <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="e#34908#34924#0" expanded="true" />
-                <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="e#36844#36851#0" expanded="true" />
-                <element signature="e#36900#36907#0" expanded="true" />
-                <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+                <element signature="e#944#964#0" expanded="true" />
+                <element signature="e#2858#2878#0" expanded="true" />
+                <element signature="e#6457#6477#0" expanded="true" />
+                <element signature="e#9835#9855#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExpandableListAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rounded_button.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rounded_button.xml">
+      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-2.3333333">
+              <caret line="712" column="58" selection-start-line="712" selection-start-column="58" selection-end-line="712" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2119#2126#0" expanded="true" />
+                <element signature="e#2399#2407#0" expanded="true" />
+                <element signature="e#2472#2498#0" expanded="true" />
+                <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+                <element signature="e#11260#11267#0" expanded="true" />
+                <element signature="e#13998#14005#0" expanded="true" />
+                <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
+                <element signature="e#17647#17654#0" expanded="true" />
+                <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
+                <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+                <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+                <element signature="e#38544#38560#0" expanded="true" />
+                <element signature="e#38923#38924#0" expanded="true" />
+                <element signature="e#38958#38959#0" expanded="true" />
+                <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+                <element signature="e#40497#40504#0" expanded="true" />
+                <element signature="e#40553#40560#0" expanded="true" />
+                <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+                <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+                <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+                <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1369,12 +1338,19 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/anim.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_left.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rounded_button.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/homepage.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_out_left.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_in_right.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/homepage.xml" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -1384,10 +1360,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1320" />
-    <option name="height" value="784" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1302" />
+    <option name="height" value="766" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1415,9 +1391,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1554,36 +1528,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CAPP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CAPP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="anim" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1620,6 +1564,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1634,8 +1582,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1854,24 +1800,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="1" y="1" width="1302" height="766" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2998405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29885057" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16984127" sideWeight="0.49881235" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930756" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930756" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39712918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3957307" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16984127" sideWeight="0.49881235" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17230274" sideWeight="0.49881235" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16984127" sideWeight="0.49881235" order="4" side_tool="false" content_ui="tabs" />
@@ -1883,9 +1830,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1904,88 +1850,89 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>517</line>
-          <properties class="com.example.capp.HomePage" method="onClick" />
+          <line>600</line>
+          <properties class="com.example.capp.HomePage" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>267</line>
-          <properties class="com.example.capp.HomePage" method="openMonthView" />
+          <line>284</line>
+          <properties class="com.example.capp.HomePage" method="openYearView" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
+          <line>1000</line>
+          <properties class="com.example.capp.HomePage.GridCellAdapter" method="printWeek" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
+          <line>1238</line>
+          <properties class="com.example.capp.HomePage.GridCellAdapter" method="getItemId" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1132" column="71" selection-start-line="1132" selection-start-column="71" selection-end-line="1132" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="17" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -1994,56 +1941,56 @@
           <caret line="1087" column="0" selection-start-line="1087" selection-start-column="0" selection-end-line="1087" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="17" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2052,56 +1999,56 @@
           <caret line="1101" column="35" selection-start-line="1101" selection-start-column="35" selection-end-line="1101" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="17" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2110,56 +2057,56 @@
           <caret line="1101" column="35" selection-start-line="1101" selection-start-column="35" selection-end-line="1101" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="17" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2168,56 +2115,56 @@
           <caret line="1101" column="35" selection-start-line="1101" selection-start-column="35" selection-end-line="1101" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2226,56 +2173,56 @@
           <caret line="761" column="39" selection-start-line="761" selection-start-column="39" selection-end-line="761" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2284,56 +2231,56 @@
           <caret line="758" column="19" selection-start-line="758" selection-start-column="19" selection-end-line="758" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2342,56 +2289,56 @@
           <caret line="761" column="14" selection-start-line="761" selection-start-column="14" selection-end-line="761" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2400,56 +2347,56 @@
           <caret line="961" column="17" selection-start-line="961" selection-start-column="17" selection-end-line="961" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2458,32 +2405,27 @@
           <caret line="541" column="9" selection-start-line="541" selection-start-column="9" selection-end-line="541" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2565,14 +2507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rectangle.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2581,58 +2515,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/create_new_event.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.143302">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rounded_button.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.24138">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.042857">
           <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2652,40 +2548,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rounded_button.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/group_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.881029">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4533762">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.75">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48">
-          <caret line="289" column="28" selection-start-line="289" selection-start-column="28" selection-end-line="289" selection-end-column="28" />
+        <state vertical-scroll-proportion="-2.3333333">
+          <caret line="712" column="58" selection-start-line="712" selection-start-column="58" selection-end-line="712" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2083#2090#0" expanded="true" />
-            <element signature="e#2329#2337#0" expanded="true" />
-            <element signature="e#2402#2428#0" expanded="true" />
-            <element signature="e#7120#7432#0" expanded="true" />
-            <element signature="e#7431#7432#0" expanded="true" />
-            <element signature="e#7536#8072#0" expanded="true" />
-            <element signature="e#8071#8072#0" expanded="true" />
-            <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
-            <element signature="method#openMonthView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#10489#10496#0" expanded="true" />
+            <element signature="e#2119#2126#0" expanded="true" />
+            <element signature="e#2399#2407#0" expanded="true" />
+            <element signature="e#2472#2498#0" expanded="true" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="e#11260#11267#0" expanded="true" />
+            <element signature="e#13998#14005#0" expanded="true" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <element signature="e#14210#14217#0" expanded="true" />
+            <element signature="e#17647#17654#0" expanded="true" />
             <element signature="method#onActivityResult#0;class#HomePage#0" expanded="false" />
-            <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
-            <element signature="method#GridCellAdapter#1;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findNumberOfEventsPerMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#34908#34924#0" expanded="true" />
-            <element signature="method#setCurrentDayOfMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="e#38544#38560#0" expanded="true" />
+            <element signature="e#38923#38924#0" expanded="true" />
+            <element signature="e#38958#38959#0" expanded="true" />
             <element signature="method#onClick#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#36844#36851#0" expanded="true" />
-            <element signature="e#36900#36907#0" expanded="true" />
+            <element signature="e#40497#40504#0" expanded="true" />
+            <element signature="e#40553#40560#0" expanded="true" />
             <element signature="method#getCount#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItem#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
             <element signature="method#getItemId#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getView#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39688715">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <element signature="e#944#964#0" expanded="true" />
+            <element signature="e#2858#2878#0" expanded="true" />
+            <element signature="e#6457#6477#0" expanded="true" />
+            <element signature="e#9835#9855#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>

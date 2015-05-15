@@ -46,7 +46,7 @@ public class HomePage extends Activity implements OnClickListener{
 
 	protected static final int ActivityTwoRequestCode = 0;
 
-	TextView todaysDateTextView, dayPicked;
+	TextView todaysDateTextView, dayPicked, dayPickedMonth;
 	String[] months = { "January", "February", "March", "April", "May",
 			"June", "July", "August", "September", "October", "November","December" };
 	int[] daysOfMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
@@ -55,11 +55,11 @@ public class HomePage extends Activity implements OnClickListener{
 	String view = "day";
 	GridCellAdapter weekAdapter, adapter;
 	GridView weekCalendarView, calendarView;
-	ImageButton leftToggle, rightToggle, leftToggleWV, rightToggleWV, leftToggleMV, rightToggleMV, leftToggleYV, rightToggleYV, goToDayPicked;
+	ImageButton leftToggle, rightToggle, leftToggleWV, rightToggleWV, leftToggleMV, rightToggleMV, leftToggleYV, rightToggleYV, goToDayPicked, goToDayPickedMonth;
 	ArrayList<Event> eventList = new ArrayList<Event>();
-	ExpandableListView dayViewLV, weekViewLV;
+	ExpandableListView dayViewLV, weekViewLV, monthViewLV;
 	ViewFlipper viewFlipper;
-	ExpandableListAdapter expListAdapter, expWeekListAdapter;
+	ExpandableListAdapter expListAdapter, expWeekListAdapter, expMonthListAdapter;
 	MyEventsDataBaseAdapter myEventsDataBaseAdapter;
 	String userName;
 	ArrayList<String> dOWL = new ArrayList<String>();
@@ -80,6 +80,7 @@ public class HomePage extends Activity implements OnClickListener{
 		setContentView(R.layout.homepage);
 
 		weekCalendarView = (GridView) this.findViewById(R.id.weekCalendarView);
+		calendarView = (GridView) this.findViewById(R.id.monthCalendarView);
 
 		slideOutRight = AnimationUtils.loadAnimation(HomePage.this, android.R.anim.slide_out_right);
 		slideOutRight.setAnimationListener(new Animation.AnimationListener() {
@@ -91,9 +92,15 @@ public class HomePage extends Activity implements OnClickListener{
 			};
 			public void onAnimationEnd(Animation anim)
 			{
-				slideInLeft.setDuration(500);
-				weekCalendarView.setAnimation(slideInLeft);
-				setWeekGridCellAdapterToDate(day, month, year);
+				slideInLeft.setDuration(200);
+				if(view.equals("week")) {
+					weekCalendarView.setAnimation(slideInLeft);
+					setWeekGridCellAdapterToDate(day, month, year);
+				}
+				if(view.equals("month")) {
+					calendarView.setAnimation(slideInLeft);
+					setGridCellAdapterToDate(month, year);
+				}
 				slideInLeft.start();
 			};
 		});
@@ -107,9 +114,15 @@ public class HomePage extends Activity implements OnClickListener{
 			};
 			public void onAnimationEnd(Animation anim)
 			{
-				slideInRight.setDuration(500);
-				weekCalendarView.setAnimation(slideInRight);
-				setWeekGridCellAdapterToDate(day, month, year);
+				slideInRight.setDuration(200);
+				if(view.equals("week")) {
+					weekCalendarView.setAnimation(slideInRight);
+					setWeekGridCellAdapterToDate(day, month, year);
+				}
+				else if(view.equals("month")) {
+					calendarView.setAnimation(slideInRight);
+					setGridCellAdapterToDate(month, year);
+				}
 				slideInRight.start();
 			};
 		});
@@ -152,11 +165,10 @@ public class HomePage extends Activity implements OnClickListener{
 		todaysDateTextView.setText(months[month] + " " + Integer.toString(day) + ", "
 				+ Integer.toString(year));
 		dayPicked = (TextView) findViewById(R.id.dayPicked);
+		dayPickedMonth = (TextView) findViewById(R.id.dayPickedMonth);
 
         point = (ImageView) findViewById(R.id.pointer);
 		point.setVisibility(View.INVISIBLE);
-
-		adapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, expListAdapter);
 
 		leftToggle = (ImageButton) findViewById(R.id.toggleLeft);
 		leftToggle.setOnClickListener(this);
@@ -184,12 +196,17 @@ public class HomePage extends Activity implements OnClickListener{
 		weekViewLV = (ExpandableListView) findViewById(R.id.weekViewEvents);
 		expWeekListAdapter = new ExpandableListAdapter(this, eventList);
 		weekViewLV.setAdapter(expWeekListAdapter);
+
+		monthViewLV = (ExpandableListView) findViewById(R.id.monthViewEvents);
+		expMonthListAdapter = new ExpandableListAdapter(this, eventList);
+		monthViewLV.setAdapter(expMonthListAdapter);
 		
 		myEventsDataBaseAdapter = new MyEventsDataBaseAdapter(this);
 		myEventsDataBaseAdapter = myEventsDataBaseAdapter.open();
 		
 		this.dayViewLV.setEmptyView(findViewById(R.id.empty));
 		this.weekViewLV.setEmptyView(findViewById(R.id.emptyWeek));
+		this.monthViewLV.setEmptyView(findViewById(R.id.emptyMonth));
 
 		ImageButton addNewEvent = (ImageButton)mCustomView.findViewById(R.id.addEventButton);
 		addNewEvent.setOnClickListener(new OnClickListener() { 
@@ -207,7 +224,6 @@ public class HomePage extends Activity implements OnClickListener{
 			public void onClick(View v) {
 				Toast.makeText(HomePage.this, "Going to " + dayPicked.getText(), Toast.LENGTH_SHORT).show();
 				String[] temp = dayPicked.getText().toString().split(" ");
-				String[] parsedDayPicked = dayPicked.getText().toString().split(" ");
 				day = Integer.parseInt(temp[1].substring(0, temp[1].length() - 1));
 				month = Arrays.asList(months).indexOf(temp[0]);
 				year = Integer.parseInt(temp[2]);
@@ -216,6 +232,19 @@ public class HomePage extends Activity implements OnClickListener{
 			}
 		});
 
+		goToDayPickedMonth = (ImageButton)findViewById(R.id.goToDayPickedMonth);
+		goToDayPickedMonth.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(HomePage.this, "Going to " + dayPickedMonth.getText(), Toast.LENGTH_SHORT).show();
+				String[] temp = dayPickedMonth.getText().toString().split(" ");
+				day = Integer.parseInt(temp[1].substring(0, temp[1].length() - 1));
+				month = Arrays.asList(months).indexOf(temp[0]);
+				year = Integer.parseInt(temp[2]);
+				//point.setVisibility(View.INVISIBLE);
+				openDayView();
+			}
+		});
 		openDayView();
 	}
 
@@ -267,16 +296,83 @@ public class HomePage extends Activity implements OnClickListener{
 
 	private void openMonthView() {
 		// TODO Auto-generated method stub
+
+		if(adapter == null) {
+			adapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, expMonthListAdapter, dayPickedMonth);
+			calendarView.setAdapter(adapter);
+		}
+		else {
+			setGridCellAdapterToDate(month, year);
+		}
+
+		if(!view.equals("month")) {
+			dayPickedMonth.setText(months[month] + " " + day + ", " + year);
+			Log.d("DAY PICKED MONTH", months[month] + " " + day + ", " + year);
+			//point.setVisibility(View.GONE);
+		}
+
 		view = "month";
-		c = Calendar.getInstance();
-		month = c.get(Calendar.MONTH);
-		day = c.get(Calendar.DATE);
-		year = c.get(Calendar.YEAR);
+//		c = Calendar.getInstance();
+//		month = c.get(Calendar.MONTH);
+//		day = c.get(Calendar.DATE);
+//		year = c.get(Calendar.YEAR);
+
+		ArrayList<Event> tempList = new ArrayList<Event>();
+		tempList = myEventsDataBaseAdapter.getAllEvents();
+		Log.v("EVENTS IN DATABASE: ", tempList.toString());
+
+		String[] temp = dayPickedMonth.getText().toString().split(" ");
+		int tempDay = Integer.parseInt(temp[1].substring(0, temp[1].length() - 1));
+		int tempMonth = Arrays.asList(months).indexOf(temp[0]);
+		int tempYear = Integer.parseInt(temp[2]);
+
+		Log.v("DATE: ", month + " " + day + " " + year);
+		eventList.clear();
+
+		//only shows events for that day
+		for(Event e : tempList) {
+			//Log.v("EVENT DATE: ", e.getStartDate()[0] + " " + e.getStartDate()[1] + " " + e.getStartDate()[2]);
+			if(e.getStartDate()[1] == tempDay && e.getEndDate()[1] == tempDay) {
+				if(e.getStartDate()[0] == tempMonth && e.getEndDate()[0] == tempMonth) {
+					if(e.getStartDate()[2] == tempYear && e.getEndDate()[2] == tempYear) {
+						eventList.add(e);
+						Log.v("Event added to list: ", e.toString());
+					}
+				}
+			}
+			else if(e.getStartDate()[2] <= tempYear && e.getEndDate()[2] >= tempYear) {
+				if(e.getStartDate()[0] <= tempMonth && e.getEndDate()[0] >= tempMonth) {
+					if(e.getStartDate()[1] <= tempDay && e.getEndDate()[1] >= tempDay) {
+						Log.v("start date", e.getStartDate()[1] + " " + tempDay);
+						if(e.getStartTimeHour() == -1) {
+							//do nothing
+						}
+						else if(e.getStartDate()[1] == tempDay) {
+							e.setEndTimeHour(23);
+							e.setEndTimeMin(59);
+						}
+						else if(e.getEndDate()[1] == tempDay) {
+							e.setStartTimeHour(0);
+							e.setStartTimeMin(0);
+						}
+						else {
+							e.setStartTimeHour(-1);
+							e.setStartTimeMin(-1);
+							e.setEndTimeHour(-1);
+							e.setEndTimeMin(-1);
+						}
+						eventList.add(e);
+					}
+				}
+			}
+		}
+		Collections.sort(eventList);
+		expMonthListAdapter.setEventList(eventList);
+		expMonthListAdapter.notifyDataSetChanged();
+
 		viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.monthview)));
-		calendarView = (GridView) this.findViewById(R.id.monthCalendarView);
-		adapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, expListAdapter);
-		adapter.notifyDataSetChanged();
-		calendarView.setAdapter(adapter);
+		//adapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, expListAdapter, dayPickedMonth);
+		//adapter.notifyDataSetChanged();
 
 		todaysDateTextView=(TextView)findViewById(R.id.viewDateMV);
 		todaysDateTextView.setText(months[month] + " " + Integer.toString(year));
@@ -289,6 +385,8 @@ public class HomePage extends Activity implements OnClickListener{
 			weekAdapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, day, expWeekListAdapter, dayPicked, point);
 			weekCalendarView.setAdapter(weekAdapter);
 		}
+		else
+			setWeekGridCellAdapterToDate(day, month, year);
 
         if(!view.equals("week")) {
             dayPicked.setText(months[month] + " " + day + ", " + year);
@@ -299,7 +397,6 @@ public class HomePage extends Activity implements OnClickListener{
 		Log.v("EVENTS IN DATABASE: ", tempList.toString());
 
 		String[] temp = dayPicked.getText().toString().split(" ");
-		String[] parsedDayPicked = dayPicked.getText().toString().split(" ");
 		int tempDay = Integer.parseInt(temp[1].substring(0, temp[1].length() - 1));
 		int tempMonth = Arrays.asList(months).indexOf(temp[0]);
 		int tempYear = Integer.parseInt(temp[2]);
@@ -503,11 +600,10 @@ public class HomePage extends Activity implements OnClickListener{
 		}
 	}
 
-	private void setGridCellAdapterToDate(int month, int year) { 
-		adapter = new GridCellAdapter(getApplicationContext(), R.id.calendar_day_gridcell, month, year, expListAdapter);
-		c.set(year, month-1, c.get(Calendar.DAY_OF_MONTH));
-		adapter.notifyDataSetChanged();
-		calendarView.setAdapter(adapter);
+	private void setGridCellAdapterToDate(int month, int year) {
+		adapter.setNewMonthDate(month, year);
+		//c.set(year, month-1, c.get(Calendar.DAY_OF_MONTH));
+		//adapter.notifyDataSetChanged();
 	}
 
 	private void setWeekGridCellAdapterToDate(int day, int month, int year) {
@@ -550,14 +646,13 @@ public class HomePage extends Activity implements OnClickListener{
 		}
 		else if(v.getId() == R.id.toggleLeftWV) {
 
-			slideOutRight.setDuration(500);
+			slideOutRight.setDuration(200);
 			weekCalendarView.setAnimation(slideOutRight);
 			slideOutRight.start();
-			weekToggle = "left";
 
             if(point.getX()> 0 && point.getX()<width) {
                 ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", width + 200);
-                anim.setDuration(500);
+                anim.setDuration(200);
                 anim.start();
             }
             Log.d("Point", point.getX() + "");
@@ -602,6 +697,11 @@ public class HomePage extends Activity implements OnClickListener{
 			openWeekView();
 		}
 		else if(v.getId() == R.id.toggleLeftMV) {
+
+			slideOutRight.setDuration(200);
+			calendarView.setAnimation(slideOutRight);
+			slideOutRight.start();
+
 			if(month <=1 ) {
 				month = 11;
 				year--;
@@ -609,10 +709,10 @@ public class HomePage extends Activity implements OnClickListener{
 			else {
 				month--;
 			}
-			setGridCellAdapterToDate(month, year);
 			todaysDateTextView=(TextView)findViewById(R.id.viewDateMV);
 			todaysDateTextView.setText(months[month] + " "
 					+ Integer.toString(year));
+			openMonthView();
 		}
 		else if(v.getId() == R.id.toggleLeftYV) {
 			year--;
@@ -645,14 +745,14 @@ public class HomePage extends Activity implements OnClickListener{
 		}
 		else if(v.getId() == R.id.toggleRightWV) {
 
-			slideOutLeft.setDuration(500);
+			slideOutLeft.setDuration(200);
 			weekCalendarView.setAnimation(slideOutLeft);
 			slideOutLeft.start();
 			weekToggle = "right";
 
             if(point.getX() < width && point.getX() >0) {
                 ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", -200);
-                anim.setDuration(500);
+                anim.setDuration(200);
                 anim.start();
             }
             Log.d("Point", point.getX() + "");
@@ -713,6 +813,11 @@ public class HomePage extends Activity implements OnClickListener{
 			openWeekView();
 		}
 		else if(v.getId() == R.id.toggleRightMV) {
+
+			slideOutLeft.setDuration(200);
+			calendarView.setAnimation(slideOutLeft);
+			slideOutLeft.start();
+
 			if(month >= 11 ) {
 				month = 0;
 				year++;
@@ -720,10 +825,10 @@ public class HomePage extends Activity implements OnClickListener{
 			else {
 				month++;
 			}
-			setGridCellAdapterToDate(month, year);
 			todaysDateTextView=(TextView)findViewById(R.id.viewDateMV);
 			todaysDateTextView.setText(months[month] +  " "
 					+ Integer.toString(year));
+			openMonthView();
 		}
 		else if(v.getId() == R.id.toggleRightYV) {
 			year++;
@@ -752,16 +857,17 @@ public class HomePage extends Activity implements OnClickListener{
 		//private final HashMap<String, Integer> eventsPerMonthMap;
 		private final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MMM-yyyy");
 		ExpandableListAdapter expLA;
-		TextView dayPicked;
+		TextView dayPicked, dayPickedMonth;
         ImageView pointImage;
 
-        public GridCellAdapter(Context context, int textViewResourceId, int month, int year, ExpandableListAdapter exp) {
+        public GridCellAdapter(Context context, int textViewResourceId, int month, int year, ExpandableListAdapter exp, TextView dp) {
 			super();
 			this._context = context;
 			this.list = new ArrayList<String>();
 			expLA = exp;
 			myEventsDataBaseAdapter = new MyEventsDataBaseAdapter(context);
 			myEventsDataBaseAdapter = myEventsDataBaseAdapter.open();
+			dayPickedMonth = dp;
 			//Log.d(tag, "==> Passed in Date FOR Month: " + month + " " + "Year: " + year);
 			Calendar calendar = Calendar.getInstance();
 			setCurrentDayOfMonth(calendar.get(Calendar.DAY_OF_MONTH));
@@ -847,9 +953,9 @@ public class HomePage extends Activity implements OnClickListener{
 			int currentWeekDay = cal.get(Calendar.DAY_OF_WEEK) - 1;
 			trailingSpaces = currentWeekDay;
 
-			//Log.d(tag, "Week Day: " + currentWeekDay + " is " + getWeekDayAsString(currentWeekDay));
-			//Log.d(tag, "No. Trailing space to add: " + trailingSpaces);
-			//Log.d(tag, "No. of Days in Previous Month: " + daysInPrevMonth);
+			Log.d(tag, "Week Day: " + currentWeekDay + " is " + getWeekDayAsString(currentWeekDay));
+			Log.d(tag, "No. Trailing space to add: " + trailingSpaces);
+			Log.d(tag, "No. of Days in Previous Month: " + daysInPrevMonth);
 			if(cal.isLeapYear(cal.get(Calendar.YEAR))) { 
 				if (mm == 2) { 
 					daysInMonth++;
@@ -862,13 +968,13 @@ public class HomePage extends Activity implements OnClickListener{
 			//Trailing Month Days
             int dOW = 0; //Day of week starts on Sunday.
             for (int i = 0; i < trailingSpaces; i++) {
-				//Log.d(tag, "PREV MONTH:= " + prevMonth + " => " + getMonthAsString(prevMonth) + " " + String.valueOf((daysInPrevMonth - trailingSpaces + DAY_OFFSET) + i));
+				Log.d(tag, "PREV MONTH:= " + prevMonth + " => " + getMonthAsString(prevMonth) + " " + String.valueOf((daysInPrevMonth - trailingSpaces + DAY_OFFSET) + i));
 				list.add(String.valueOf((daysInPrevMonth - trailingSpaces + DAY_OFFSET) + i) + "-GREY" + "-" + getMonthAsString(prevMonth) + "-" + prevYear + "-" + weekdays[dOW]);
                 dOW++;
 			}
 			//Current Month Days
 			for(int i = 1; i <=daysInMonth; i++) { 
-				//Log.d(currentMonthName, String.valueOf(i) + " " + getMonthAsString(currentMonth) + " " + yy);
+				Log.d(currentMonthName, String.valueOf(i) + " " + getMonthAsString(currentMonth) + " " + yy);
 				if (i == getCurrentDayOfMonth()) {
                     if(dOW >= 7)
 					    list.add(String.valueOf(i) + "-BLUE" + "-" + getMonthAsString(currentMonth) + "-" + yy + "-NONE");
@@ -887,7 +993,7 @@ public class HomePage extends Activity implements OnClickListener{
 
 			//Leading Month Days
 			for(int i = 0; i < list.size() % 7; i++) {
-				//Log.d(tag, "NEXT MONTH:= " + getMonthAsString(nextMonth));
+				Log.d(tag, "NEXT MONTH:= " + getMonthAsString(nextMonth));
 				list.add(String.valueOf(i+1) + "-GREY" + "-" + getMonthAsString(nextMonth) + "-" + nextYear + "-NONE");
 			}
 		}
@@ -995,6 +1101,12 @@ public class HomePage extends Activity implements OnClickListener{
 			notifyDataSetChanged();
 		}
 
+		private void setNewMonthDate(int mm, int yy) {
+			list.clear();
+			printMonth(mm, yy);
+			notifyDataSetChanged();
+		}
+
 
 		/** * NOTE: YOU NEED TO IMPLEMENT THIS PART Given the YEAR, MONTH, retrieve * ALL entries from a SQLite database for that month. Iterate over the * List of All entries, and get the dateCreated, which is converted into * day. * * @param year * @param month * @return */
 
@@ -1042,15 +1154,19 @@ public class HomePage extends Activity implements OnClickListener{
 				int tempYear = Integer.parseInt(date[2]);
                 int position = Integer.parseInt(date[3]);
                 int[] posXY = new int[2];
-                int xCurrentPos = pointImage.getLeft();
-                int yCurrentPos = pointImage.getTop();
-                v.getLocationOnScreen(posXY);
-                int xNextPos = posXY[0];
-                Log.e("Translation", "From " + xCurrentPos + " to " + xNextPos);
-                ObjectAnimator anim = ObjectAnimator.ofFloat(pointImage, "translationX", xNextPos);
-                anim.setDuration(1000);
-                anim.start();
-				dayPicked.setText(date[1] + " " + date[0] + ", " + date[2]);
+				if(dayPicked != null) {
+					int xCurrentPos = pointImage.getLeft();
+					v.getLocationOnScreen(posXY);
+					int xNextPos = posXY[0];
+					Log.e("Translation", "From " + xCurrentPos + " to " + xNextPos);
+					ObjectAnimator anim = ObjectAnimator.ofFloat(pointImage, "translationX", xNextPos);
+					anim.setDuration(350);
+					anim.start();
+					dayPicked.setText(date[1] + " " + date[0] + ", " + date[2]);
+				}
+				else if(dayPickedMonth != null) {
+					dayPickedMonth.setText(date[1] + " " + date[0] + ", " + date[2]);
+				}
 				Log.d(tag, "Parsed Date: " + tempMonth + "/" + tempDay + "/" + tempYear);
 				ArrayList<Event> eventList = new ArrayList<Event>();
 				ArrayList<Event> tempList = new ArrayList<Event>();
@@ -1145,25 +1261,24 @@ public class HomePage extends Activity implements OnClickListener{
 			String themonth = day_color[2];
 			String theyear = day_color[3];
             String theDayOfWeek = day_color[4];
-
-            String[] parsedDayPicked = dayPicked.getText().toString().split(" ");
-            Log.v("PARSED stuff: ", theday + " - " + themonth + " - " + theyear + " / " + parsedDayPicked[1].substring(0, parsedDayPicked[1].length() - 1) + " - " + parsedDayPicked[0] + " - " + parsedDayPicked[2]);
-            if (theday.equals(parsedDayPicked[1].substring(0, parsedDayPicked[1].length() - 1)) && themonth.equals(parsedDayPicked[0]) && theyear.equals(parsedDayPicked[2])) {
-                //int[] posXY = new int[2];
-				//row.getLocationOnScreen(posXY);
-                int xNextPos = width/7 * position;
-                Log.v("SUCCESS???: ", width/7.0 + " * " + position + " = " + xNextPos);
-				if(point.getVisibility() == View.INVISIBLE) {
-					point.setX(xNextPos);
-					point.setVisibility(View.VISIBLE);
+			if (dayPicked!= null) {
+				String[] parsedDayPicked = dayPicked.getText().toString().split(" ");
+				//Log.v("PARSED stuff: ", theday + " - " + themonth + " - " + theyear + " / " + parsedDayPicked[1].substring(0, parsedDayPicked[1].length() - 1) + " - " + parsedDayPicked[0] + " - " + parsedDayPicked[2]);
+				if (theday.equals(parsedDayPicked[1].substring(0, parsedDayPicked[1].length() - 1)) && themonth.equals(parsedDayPicked[0]) && theyear.equals(parsedDayPicked[2])) {
+					//int[] posXY = new int[2];
+					//row.getLocationOnScreen(posXY);
+					int xNextPos = width / 7 * position;
+					//Log.v("SUCCESS???: ", width / 7.0 + " * " + position + " = " + xNextPos);
+					if (point.getVisibility() == View.INVISIBLE) {
+						point.setX(xNextPos);
+						point.setVisibility(View.VISIBLE);
+					} else {
+						ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", xNextPos);
+						anim.setDuration(350);
+						anim.start();
+					}
 				}
-				else {
-					ObjectAnimator anim = ObjectAnimator.ofFloat(point, "translationX", xNextPos);
-					anim.setDuration(600);
-					anim.start();
-				}
-            }
-
+			}
 			/*
 			if((!eventsPerMonthMap.isEmpty() && eventsPerMonthMap != null)) { 
 				if(eventsPerMonthMap.containsKey(theday)) { 
@@ -1182,7 +1297,7 @@ public class HomePage extends Activity implements OnClickListener{
                 dayOfWeek.setVisibility(View.GONE);
             else
                 dayOfWeek.setText(theDayOfWeek);
-			Log.d(tag, "Setting GridCell" + theday + "-" + themonth + "-" + theyear + theDayOfWeek + "-" + day_color[1]);
+			Log.d(tag, "Setting GridCell " + theday + "-" + themonth + "-" + theyear + theDayOfWeek + "-" + day_color[1]);
 			if(day_color[1].equals("GREY")) { 
 				gridcell.setTextColor(getResources().getColor(R.color.lightgray));
 			}
@@ -1190,7 +1305,7 @@ public class HomePage extends Activity implements OnClickListener{
 				gridcell.setTextColor(getResources().getColor(R.color.black));
 			}
 			if(day_color[1].equals("BLUE")) {
-                Log.d("BLUE: ", month + " =? " + c.get(Calendar.MONTH) + " " + day + " =? " + c.get(Calendar.DAY_OF_MONTH));
+                //Log.d("BLUE: ", month + " =? " + c.get(Calendar.MONTH) + " " + day + " =? " + c.get(Calendar.DAY_OF_MONTH));
 				if(year == c.get(Calendar.YEAR) && month == c.get(Calendar.MONTH))
 					gridcell.setTextColor(getResources().getColor(R.color.orange));
 				//else
