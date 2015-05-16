@@ -368,14 +368,6 @@ public class HomePage extends Activity implements OnClickListener{
 	private void openMonthView() {
 		// TODO Auto-generated method stub
 
-		if(adapter == null) {
-			adapter = new GridCellAdapter(HomePage.this, R.id.calendar_day_gridcell, month, year, expMonthListAdapter, dayPickedMonth, view);
-			calendarView.setAdapter(adapter);
-		}
-		else {
-			setGridCellAdapterToDate(month, year);
-		}
-
 		if(!view.equals("month")) {
 			dayPickedMonth.setText(months[month] + " " + day + ", " + year);
 			Log.d("DAY PICKED MONTH", months[month] + " " + day + ", " + year);
@@ -383,6 +375,14 @@ public class HomePage extends Activity implements OnClickListener{
 		}
 
 		view = "month";
+
+		if(adapter == null) {
+			adapter = new GridCellAdapter(HomePage.this, R.id.calendar_day_gridcell, month, year, expMonthListAdapter, dayPickedMonth, view);
+			calendarView.setAdapter(adapter);
+		}
+		else {
+			setGridCellAdapterToDate(month, year);
+		}
 
 		ArrayList<Event> tempList = new ArrayList<Event>();
 		tempList = myEventsDataBaseAdapter.getAllEvents();
