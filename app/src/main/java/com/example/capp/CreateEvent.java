@@ -407,12 +407,16 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			else if((endYear < startYear) ||
 					(endMonth < startMonth && endYear >= startYear) ||
 					(endDay < startDay && endMonth >= startMonth && endYear >= startYear)) {
+				Log.d("Invalid Date: END", endMonth + " " + endDay + " " + endYear);
+				Log.d("Invalid Date: START", startMonth + " " + startDay + " " + startDay);
 				text = "End Date Cannot be earlier than Start Date.";
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
 			}
 			else if (((endTimeH < startTimeH) ||
-					(endTimeM < startTimeM && endTimeH >= startTimeH)) && startDay == endDay && startMonth == endMonth && startYear == endYear) {
+					(endTimeM < startTimeM && endTimeH == startTimeH)) && startDay == endDay && startMonth == endMonth && startYear == endYear) {
+				Log.d("Invalid Time: END", endTimeH + " " + endTimeM);
+				Log.d("Invalid Time: START", startTimeH + " " + startTimeM);
 				text = "End Time Cannot be earlier than Start Time.";
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
