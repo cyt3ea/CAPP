@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HOME PAGE IS DAYVIEW -->
+
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/myViewFlipper"
+	android:layout_width="match_parent"
+	android:background="#FFFFFF"
+	android:layout_height="match_parent" >
+
+	<LinearLayout
+		android:id="@+id/dayview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:id="@+id/leftRightToggle"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:gravity="center">
+
+			<ImageButton
+				android:id="@+id/toggleRight"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_marginLeft="5dp"
+				android:background="@android:color/transparent"
+				android:layout_toEndOf="@+id/viewDate"
+				android:src="@drawable/rightbutton"/>
+
+			<TextView
+				android:id="@+id/viewDate"
+				android:text="@string/todaysDate"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="20sp"
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"/>
+
+			<ImageButton
+				android:id="@+id/toggleLeft"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_marginRight="5dp"
+				android:layout_toStartOf="@+id/viewDate"
+				android:background="@android:color/transparent"
+				android:src="@drawable/leftbutton"/>
+
+		</RelativeLayout>
+		<LinearLayout
+			android:id="@+id/midHomePage"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:background="@android:color/darker_gray"/>
+
+			<TextView android:id="@+id/empty"
+				android:gravity="center"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textSize="20sp"
+				android:text="No Events" />
+
+			<ExpandableListView
+				android:id="@+id/defaultDayViewEvents"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+			</ExpandableListView>
+
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/weekview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:id="@+id/leftRightToggleWV"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:gravity="center">
+
+			<ImageButton
+				android:id="@+id/toggleRightWV"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_marginLeft="5dp"
+				android:background="@android:color/transparent"
+				android:layout_toEndOf="@+id/viewDateWV"
+				android:src="@drawable/rightbutton"/>
+
+			<TextView
+				android:id="@+id/viewDateWV"
+				android:text="@string/todaysDate"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="20sp"
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"/>
+
+			<ImageButton
+				android:id="@+id/toggleLeftWV"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_marginRight="5dp"
+				android:layout_toStartOf="@+id/viewDateWV"
+				android:background="@android:color/transparent"
+				android:src="@drawable/leftbutton"/>
+
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:id="@+id/midHomePageWV"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:background="@android:color/darker_gray"/>
+
+			<GridView
+				android:id="@+id/weekCalendarView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:numColumns="7" >
+			</GridView>
+
+			<ImageView
+				android:id="@+id/pointer"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:src="@drawable/triangle"
+				android:visibility="invisible">
+			</ImageView>
+
+			<RelativeLayout
+				android:id="@+id/dayLabel"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:paddingBottom="0dp">
+
+				<TextView
+					android:id="@+id/dayPicked"
+					android:gravity="left"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="7dp"
+					android:textSize="18sp" />
+
+				<ImageButton
+					android:id="@+id/goToDayPicked"
+					android:layout_width="150dp"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="8dp"
+					android:layout_marginTop="4dp"
+					android:layout_marginBottom="4dp"
+					android:text="Go to this day"
+					android:textColor="#FFFFFF"
+					android:textSize="12sp"
+					android:gravity="center"
+					android:background="@drawable/rounded_button"
+					android:src="@drawable/go"
+					android:layout_alignBottom="@+id/dayPicked"
+					android:layout_alignTop="@+id/dayPicked"
+					android:layout_toRightOf="@+id/dayPicked"/>
+
+			</RelativeLayout>
+
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:layout_below="@+id/dayPicked"
+				android:background="@android:color/darker_gray"/>
+
+			<TextView android:id="@+id/emptyWeek"
+				android:gravity="center"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textSize="20sp"
+				android:text="No Events" />
+
+			<ExpandableListView
+				android:id="@+id/weekViewEvents"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+			</ExpandableListView>
+
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/monthview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:id="@+id/leftRightToggleMV"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:gravity="center">
+
+			<ImageButton
+				android:id="@+id/toggleRightMV"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_marginLeft="5dp"
+				android:background="@android:color/transparent"
+				android:layout_toEndOf="@+id/viewDateMV"
+				android:src="@drawable/rightbutton"/>
+
+			<TextView
+				android:id="@+id/viewDateMV"
+				android:text="@string/todaysDate"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="20sp"
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"/>
+
+			<ImageButton
+				android:id="@+id/toggleLeftMV"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_marginRight="5dp"
+				android:layout_toStartOf="@+id/viewDateMV"
+				android:background="@android:color/transparent"
+				android:src="@drawable/leftbutton"/>
+
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:id="@+id/midHomePageMV"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:background="@android:color/darker_gray"/>
+
+			<GridView
+				android:id="@+id/monthCalendarView"
+				android:layout_width="match_parent"
+				android:layout_height="275dp"
+				android:numColumns="7" >
+			</GridView>
+
+			<RelativeLayout
+				android:id="@+id/dayLabelMonth"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:paddingBottom="0dp">
+
+				<TextView
+					android:id="@+id/dayPickedMonth"
+					android:gravity="left"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="7dp"
+					android:textSize="18sp" />
+
+				<ImageButton
+					android:id="@+id/goToDayPickedMonth"
+					android:layout_width="150dp"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="8dp"
+					android:layout_marginTop="4dp"
+					android:layout_marginBottom="4dp"
+					android:text="Go to this day"
+					android:textColor="#FFFFFF"
+					android:textSize="12sp"
+					android:gravity="center"
+					android:background="@drawable/rounded_button"
+					android:src="@drawable/go"
+					android:layout_alignBottom="@+id/dayPickedMonth"
+					android:layout_alignTop="@+id/dayPickedMonth"
+					android:layout_toRightOf="@+id/dayPickedMonth"/>
+
+			</RelativeLayout>
+
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:layout_below="@+id/dayPickedMonth"
+				android:background="@android:color/darker_gray"/>
+
+			<TextView android:id="@+id/emptyMonth"
+				android:gravity="center"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textSize="20sp"
+				android:text="No Events" />
+
+			<ExpandableListView
+				android:id="@+id/monthViewEvents"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+			</ExpandableListView>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/yearview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:id="@+id/leftRightToggleYV"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:gravity="center">
+
+			<ImageButton
+				android:id="@+id/toggleRightYV"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_marginLeft="5dp"
+				android:background="@android:color/transparent"
+				android:layout_toEndOf="@+id/viewDateYV"
+				android:src="@drawable/rightbutton"/>
+
+			<TextView
+				android:id="@+id/viewDateYV"
+				android:text="@string/todaysDate"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="20sp"
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"/>
+
+			<ImageButton
+				android:id="@+id/toggleLeftYV"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_marginRight="5dp"
+				android:layout_toStartOf="@+id/viewDateYV"
+				android:background="@android:color/transparent"
+				android:src="@drawable/leftbutton"/>
+
+
+		</RelativeLayout>
+
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@android:color/darker_gray"/>
+
+
+		<GridLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+		</GridLayout>
+
+	</LinearLayout>
+
+
+
+</ViewFlipper><!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/layout/homepage.xml -->

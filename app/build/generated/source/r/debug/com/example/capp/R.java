@@ -70,21 +70,21 @@ public final class R {
     }
     public static final class id {
         public static final int TabHost01=0x7f0c0020;
-        public static final int action_day=0x7f0c005c;
-        public static final int action_month=0x7f0c005e;
-        public static final int action_week=0x7f0c005d;
-        public static final int action_year=0x7f0c005f;
+        public static final int action_day=0x7f0c006a;
+        public static final int action_month=0x7f0c006c;
+        public static final int action_week=0x7f0c006b;
+        public static final int action_year=0x7f0c006d;
         public static final int addEvent=0x7f0c000a;
         public static final int addEventButton=0x7f0c001e;
         public static final int allDayCheckBox=0x7f0c0011;
         public static final int allDayText=0x7f0c0010;
         public static final int backButton=0x7f0c000b;
-        public static final int buttonCreateAccount=0x7f0c005b;
+        public static final int buttonCreateAccount=0x7f0c0069;
         public static final int buttonSignIn=0x7f0c0001;
         public static final int buttonSignUP=0x7f0c0000;
         public static final int calendar=0x7f0c0017;
         public static final int calendarText=0x7f0c0016;
-        public static final int calendar_day_gridcell=0x7f0c0057;
+        public static final int calendar_day_gridcell=0x7f0c0065;
         public static final int color=0x7f0c0019;
         public static final int colorText=0x7f0c0018;
         public static final int createEventBody=0x7f0c000c;
@@ -94,7 +94,7 @@ public final class R {
         public static final int datePickerLayout=0x7f0c0021;
         public static final int dayLabel=0x7f0c003f;
         public static final int dayLabelMonth=0x7f0c004b;
-        public static final int dayOfWeekLabel=0x7f0c0056;
+        public static final int dayOfWeekLabel=0x7f0c0064;
         public static final int dayPicked=0x7f0c0040;
         public static final int dayPickedMonth=0x7f0c004c;
         public static final int dayview=0x7f0c002f;
@@ -104,10 +104,10 @@ public final class R {
         public static final int doneButton1=0x7f0c0023;
         public static final int doneButton2=0x7f0c0026;
         public static final int edit=0x7f0c002d;
-        public static final int editTextConfirmPassword=0x7f0c0059;
-        public static final int editTextPassword=0x7f0c005a;
+        public static final int editTextConfirmPassword=0x7f0c0067;
+        public static final int editTextPassword=0x7f0c0068;
         public static final int editTextPasswordToLogin=0x7f0c0003;
-        public static final int editTextUserName=0x7f0c0058;
+        public static final int editTextUserName=0x7f0c0066;
         public static final int editTextUserNameToLogin=0x7f0c0002;
         public static final int empty=0x7f0c0035;
         public static final int emptyMonth=0x7f0c004e;
@@ -121,6 +121,7 @@ public final class R {
         public static final int goToDayPicked=0x7f0c0041;
         public static final int goToDayPickedMonth=0x7f0c004d;
         public static final int homepage=0x7f0c0007;
+        public static final int january=0x7f0c0056;
         public static final int leftRightToggle=0x7f0c0030;
         public static final int leftRightToggleMV=0x7f0c0045;
         public static final int leftRightToggleWV=0x7f0c0038;
@@ -141,7 +142,7 @@ public final class R {
         public static final int rectspace=0x7f0c0028;
         public static final int remind=0x7f0c0012;
         public static final int remindText=0x7f0c0013;
-        public static final int screen_gridcell=0x7f0c0055;
+        public static final int screen_gridcell=0x7f0c0063;
         public static final int searchButton=0x7f0c001f;
         public static final int startDateAndTime=0x7f0c000e;
         public static final int switchButton=0x7f0c001d;
@@ -164,6 +165,19 @@ public final class R {
         public static final int weekCalendarView=0x7f0c003d;
         public static final int weekViewEvents=0x7f0c0043;
         public static final int weekview=0x7f0c0037;
+        public static final int yearViewApr=0x7f0c005a;
+        public static final int yearViewAug=0x7f0c005e;
+        public static final int yearViewDec=0x7f0c0062;
+        public static final int yearViewFeb=0x7f0c0058;
+        public static final int yearViewGridLayout=0x7f0c0055;
+        public static final int yearViewJan=0x7f0c0057;
+        public static final int yearViewJul=0x7f0c005d;
+        public static final int yearViewJun=0x7f0c005c;
+        public static final int yearViewMar=0x7f0c0059;
+        public static final int yearViewMay=0x7f0c005b;
+        public static final int yearViewNov=0x7f0c0061;
+        public static final int yearViewOct=0x7f0c0060;
+        public static final int yearViewSep=0x7f0c005f;
         public static final int yearview=0x7f0c0050;
     }
     public static final class layout {

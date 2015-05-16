@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+	
+    <ImageView 
+		android:id="@+id/rectfrontspace" 
+		android:layout_height="50dp" 
+		android:layout_width="35dp" 
+		android:src="@drawable/rectangle">
+	</ImageView>
+	
+    <ImageView 
+		android:id="@+id/rectspace" 
+		android:layout_height="2dp" 
+		android:layout_width="5dp"
+		android:layout_toRightOf="@+id/rectfrontspace" 
+		android:src="@drawable/rectangle">
+	</ImageView>
+	
+    <ImageView 
+		android:id="@+id/rectimage" 
+		android:layout_height="46dp" 
+		android:layout_width="5dp"
+		android:layout_toRightOf="@+id/rectfrontspace"
+		android:layout_below="@+id/rectspace"
+		android:src="@drawable/rectangle">
+	</ImageView>
+    
+    <TextView 
+        android:id="@+id/eventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rectimage"
+        android:textSize="16sp"
+        android:paddingTop = "4dp"
+        android:paddingLeft="10dp"/>
+    
+    <TextView 
+        android:id="@+id/eventTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/eventName"
+        android:paddingLeft="10dp"
+        android:textSize="13sp"
+		android:layout_below="@+id/eventName"/>
+    
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_height="50dp" 
+		android:layout_width="20dp"
+		android:paddingRight="8dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_delete"/>
+    
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_height="50dp" 
+		android:layout_width="20dp"
+		android:paddingRight="8dp"
+        android:layout_toLeftOf="@+id/delete"
+        android:src="@drawable/ic_edit" />
+    
+</RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/layout/group_item.xml -->

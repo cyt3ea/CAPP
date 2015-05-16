@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res"><file name="slide_in_right" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\anim\slide_in_right.xml" qualifiers="" type="anim"/><file name="slide_out_left" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\anim\slide_out_left.xml" qualifiers="" type="anim"/><file name="addeventbutton" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\addeventbutton.png" qualifiers="hdpi-v4" type="drawable"/><file name="borderframe" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\borderframe.xml" qualifiers="hdpi-v4" type="drawable"/><file name="go" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\go.png" qualifiers="hdpi-v4" type="drawable"/><file name="gridborderframe" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\gridborderframe.xml" qualifiers="hdpi-v4" type="drawable"/><file name="ic_delete" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\ic_delete.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_edit" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\ic_edit.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="leftbutton" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\leftbutton.png" qualifiers="hdpi-v4" type="drawable"/><file name="logo" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\logo.png" qualifiers="hdpi-v4" type="drawable"/><file name="rectangle" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\rectangle.xml" qualifiers="hdpi-v4" type="drawable"/><file name="rightbutton" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\rightbutton.png" qualifiers="hdpi-v4" type="drawable"/><file name="rounded_button" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\rounded_button.xml" qualifiers="hdpi-v4" type="drawable"/><file name="searchbutton" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\searchbutton.png" qualifiers="hdpi-v4" type="drawable"/><file name="splash_back" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\splash_back.jpg" qualifiers="hdpi-v4" type="drawable"/><file name="switchbutton" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\switchbutton.png" qualifiers="hdpi-v4" type="drawable"/><file name="triangle" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\triangle.png" qualifiers="hdpi-v4" type="drawable"/><file name="usericon" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\usericon.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-xxhdpi\ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="activity_main" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\activity_main.xml" qualifiers="" type="layout"/><file name="child_item" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\child_item.xml" qualifiers="" type="layout"/><file name="create_new_event" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\create_new_event.xml" qualifiers="" type="layout"/><file name="custom_actionbar" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\custom_actionbar.xml" qualifiers="" type="layout"/><file name="custom_dialog_layout" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\custom_dialog_layout.xml" qualifiers="" type="layout"/><file name="group_item" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\group_item.xml" qualifiers="" type="layout"/><file name="homepage" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\homepage.xml" qualifiers="" type="layout"/><file name="screen_gridcell" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\screen_gridcell.xml" qualifiers="" type="layout"/><file name="signup" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\signup.xml" qualifiers="" type="layout"/><file name="splash" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\layout\splash.xml" qualifiers="" type="layout"/><file name="view" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\menu\view.xml" qualifiers="" type="menu"/><file name="splash_sound" path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\raw\splash_sound.mp3" qualifiers="" type="raw"/><file path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\values\array.xml" qualifiers=""><string-array name="color_array">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <item>Black</item>
+    </string-array><string-array name="color_item_labels">
+        <item>Red<font fgcolor="#FF0000">red</font></item>
+        <item><FONT COLOR="#FF9249">Orange</FONT></item>
+        <item><FONT COLOR="#FFDB2B">Yellow</FONT></item>
+        <item><FONT COLOR="#A5FF7F">Green</FONT></item>
+        <item><FONT COLOR="#7F92FF">Blue</FONT></item>
+        <item><FONT COLOR="#8900F9">Purple</FONT></item>
+        <item><FONT COLOR="#FFA7DC">Pink</FONT></item>
+        <item><FONT COLOR="#000000">Black</FONT></item>
+      </string-array><string-array name="reminder_array">
+        <item>None</item>
+        <item>At Time of Event</item>
+        <item>5 Minutes Before</item>
+        <item>15 Minutes Before</item>
+        <item>30 Minutes Before</item>
+        <item>1 Hour Before</item>
+        <item>2 Hours Before</item>
+        <item>1 Day Before</item>
+        <item>2 Days Before</item>
+        <item>1 Week Before</item>
+    </string-array><string-array name="calendar_array">
+        <item>Default</item>
+        <item>Academic</item>
+    </string-array></file><file path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\values\colors.xml" qualifiers=""><item name="darkgreen" type="color">#FF669900</item><item name="green" type="color">#FF99CC00</item><item name="darkorange" type="color">#FFFF8800</item><item name="blue" type="color">#FF33B5E5</item><item name="red" type="color">#FFFF4444</item><item name="orange" type="color">#FFFFBB33</item><item name="darkpurple" type="color">#FF9933CC</item><item name="darkred" type="color">#FFCC0000</item><item name="purple" type="color">#FFAA66CC</item><item name="darkblue" type="color">#FF0099CC</item><integer-array name="androidcolors">
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/green</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+        <item>@color/darkblue</item>
+        <item>@color/darkpurple</item>
+        <item>@color/darkgreen</item>
+        <item>@color/darkorange</item>
+        <item>@color/darkred</item>
+    </integer-array></file><file path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_vertical_margin">16dp</dimen><dimen name="activity_horizontal_margin">16dp</dimen></file><file path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\values\strings.xml" qualifiers=""><string name="more">More Information Goes Here</string><color name="lightgray">#A0A0A0</color><string name="title">Event Main Info</string><color name="black">#000000</color><string name="action_year">Year</string><color name="reds">#FF0000</color><color name="transparent">#00000000</color><string name="action_month">Month</string><string name="hello_world">Hello world!</string><string name="action_week">Week</string><color name="oranges">#FF6A00</color><string name="app_name">CAPP</string><color name="blacks">#000000</color><string name="action_addEvent">Add Event</string><string name="action_day">Day</string><color name="blues">#7F92FF</color><color name="pinks">#FFA7DC</color><string name="todaysDate">December 31, 2000</string><color name="greens">#A5FF7F</color><color name="yellows">#FFDB2B</color><string name="userName">Username</string><string name="action_switch">Switch Calendar</string><color name="purples">#8900F9</color><string name="action_search">Search</string><color name="grey">#F0F0F0</color></file><file path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style></file><file path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file><file path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\values-w820dp\dimens.xml" qualifiers="w820dp-v13"><dimen name="activity_horizontal_margin">64dp</dimen></file></source><source path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\build\generated\res\rs\release"/><source path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\release\res"/></dataSet><mergedItems/></merger>
