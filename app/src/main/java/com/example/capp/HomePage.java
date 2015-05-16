@@ -165,16 +165,6 @@ public class HomePage extends Activity implements OnClickListener{
 		yearViewNov = (GridView) this.findViewById(R.id.yearViewNov);
 		yearViewDec = (GridView) this.findViewById(R.id.yearViewDec);
 		setGridViewParams(yearViewJan);
-		yearViewJan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> a, View v, int position,
-									long id) {
-				Log.d("January clicked", "Success");
-				month = 0;
-				openMonthView();
-			}
-		});
 		setGridViewParams(yearViewFeb);
 		setGridViewParams(yearViewMar);
 		setGridViewParams(yearViewApr);
