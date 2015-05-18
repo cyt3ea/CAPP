@@ -365,11 +365,192 @@
 			android:layout_height="1dp"
 			android:background="@android:color/darker_gray"/>
 
+		<ScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
 
-		<GridLayout
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content" >
-		</GridLayout>
+			<GridLayout
+				android:id="@+id/yearViewGridLayout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:columnCount="3">
+
+				<TextView
+					android:id="@+id/january"
+					android:text="January"
+					android:layout_gravity="center"
+					android:layout_column="0"
+					android:layout_row="0"/>
+
+				<TextView
+					android:text="February"
+					android:layout_column="1"
+					android:layout_gravity="center"
+					android:layout_row="0"/>
+
+				<TextView
+					android:text="March"
+					android:layout_column="2"
+					android:layout_gravity="center"
+					android:layout_row="0"/>
+
+				<GridView
+					android:id="@+id/yearViewJan"
+					android:layout_marginLeft="4dp"
+					android:layout_row="1"
+					android:layout_column="0"
+					android:numColumns="7">
+				</GridView>
+
+				<GridView
+					android:id="@+id/yearViewFeb"
+					android:layout_marginLeft="4dp"
+					android:layout_marginRight="4dp"
+					android:layout_row="1"
+					android:layout_column="1"
+					android:numColumns="7" >
+				</GridView>
+
+				<GridView
+					android:id="@+id/yearViewMar"
+					android:layout_marginRight="4dp"
+					android:layout_row="1"
+					android:layout_column="2"
+					android:numColumns="7" >
+				</GridView>
+
+				<TextView
+					android:text="April"
+					android:layout_gravity="center"
+					android:layout_column="0"
+					android:layout_row="2"/>
+
+				<TextView
+					android:text="May"
+					android:layout_column="1"
+					android:layout_gravity="center"
+					android:layout_row="2"/>
+
+				<TextView
+					android:text="June"
+					android:layout_column="2"
+					android:layout_gravity="center"
+					android:layout_row="2"/>
+
+				<GridView
+					android:id="@+id/yearViewApr"
+					android:layout_marginLeft="4dp"
+					android:layout_row="3"
+					android:layout_column="0"
+					android:numColumns="7">
+				</GridView>
+
+				<GridView
+					android:id="@+id/yearViewMay"
+					android:layout_marginLeft="4dp"
+					android:layout_marginRight="4dp"
+					android:layout_row="3"
+					android:layout_column="1"
+					android:numColumns="7" >
+				</GridView>
+
+				<GridView
+					android:id="@+id/yearViewJun"
+					android:layout_marginRight="4dp"
+					android:layout_row="3"
+					android:layout_column="2"
+					android:numColumns="7" >
+				</GridView>
+
+				<TextView
+					android:text="July"
+					android:layout_gravity="center"
+					android:layout_column="0"
+					android:layout_row="4"/>
+
+				<TextView
+					android:text="August"
+					android:layout_column="1"
+					android:layout_gravity="center"
+					android:layout_row="4"/>
+
+				<TextView
+					android:text="September"
+					android:layout_column="2"
+					android:layout_gravity="center"
+					android:layout_row="4"/>
+
+				<GridView
+					android:id="@+id/yearViewJul"
+					android:layout_marginLeft="4dp"
+					android:layout_row="5"
+					android:layout_column="0"
+					android:numColumns="7">
+				</GridView>
+
+				<GridView
+					android:id="@+id/yearViewAug"
+					android:layout_marginLeft="4dp"
+					android:layout_marginRight="4dp"
+					android:layout_row="5"
+					android:layout_column="1"
+					android:numColumns="7" >
+				</GridView>
+
+				<GridView
+					android:id="@+id/yearViewSep"
+					android:layout_marginRight="4dp"
+					android:layout_row="5"
+					android:layout_column="2"
+					android:numColumns="7" >
+				</GridView>
+
+				<TextView
+					android:text="October"
+					android:layout_gravity="center"
+					android:layout_column="0"
+					android:layout_row="6"/>
+
+				<TextView
+					android:text="November"
+					android:layout_column="1"
+					android:layout_gravity="center"
+					android:layout_row="6"/>
+
+				<TextView
+					android:text="December"
+					android:layout_column="2"
+					android:layout_gravity="center"
+					android:layout_row="6"/>
+
+				<GridView
+					android:id="@+id/yearViewOct"
+					android:layout_marginLeft="4dp"
+					android:layout_row="7"
+					android:layout_column="0"
+					android:numColumns="7">
+				</GridView>
+
+				<GridView
+					android:id="@+id/yearViewNov"
+					android:layout_marginLeft="4dp"
+					android:layout_marginRight="4dp"
+					android:layout_row="7"
+					android:layout_column="1"
+					android:numColumns="7" >
+				</GridView>
+
+				<GridView
+					android:id="@+id/yearViewDec"
+					android:layout_marginRight="4dp"
+					android:layout_row="7"
+					android:layout_column="2"
+					android:numColumns="7" >
+				</GridView>
+
+			</GridLayout>
+
+		</ScrollView>
 
 	</LinearLayout>
 

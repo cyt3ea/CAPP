@@ -52,6 +52,13 @@
         <item>2 Days Before</item>
         <item>1 Week Before</item>
     </string-array>
+    <string-array name="repeat_array">
+        <item>None</item>
+        <item>Every Day</item>
+        <item>Every Week</item>
+        <item>Every Month</item>
+        <item>Every Year</item>
+    </string-array>
     <!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <color name="black">#000000</color>

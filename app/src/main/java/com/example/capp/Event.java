@@ -7,7 +7,7 @@ import android.os.Parcelable;
 
 public class Event implements Parcelable, Comparable{
 
-	String eventName, location, descrip, calendar, color;
+	String eventName, location, descrip, calendar, color, repeat;
 	int startTimeHour, startTimeMin, endTimeHour, endTimeMin;
 	int[] startDate = new int[3]; //month, day, year
 	int allDay;
@@ -36,10 +36,11 @@ public class Event implements Parcelable, Comparable{
 		endDate[2] = 2012;
 		calendar = "Default";
 		color = "Red";
+		repeat = "0"; // 0 for none, 1 for everyday, 2-0000000 for weekly, 4-000... for monthly, 5 for yearly
 	}
 	public Event(String eventName, String location, String descrip, int sth, int stm, int eth,
 			int etm, int month, int day, int year, int allDay, int reminder,
-			int priv, int endMonth, int endDay, int endYear, String cal, String col, long id) {
+			int priv, int endMonth, int endDay, int endYear, String cal, String col, long id, String r) {
 		this.eventName = eventName;
 		this.location = location;
 		this.descrip = descrip;
@@ -59,6 +60,7 @@ public class Event implements Parcelable, Comparable{
 		calendar = cal;
 		color = col;
 		this.id = id;
+		repeat = r;
 	}
 
 	public void setCalendar(String cal) { 
@@ -73,6 +75,8 @@ public class Event implements Parcelable, Comparable{
 	public String getColor() { 
 		return color;
 	}
+	public String getRepeat() { return repeat; }
+	public void setRepeat(String s) { repeat = s; }
 	
 	public int getPriv() { 
 		return priv;
@@ -184,7 +188,7 @@ public class Event implements Parcelable, Comparable{
 		return eventName + " " + location + " " + descrip + " " + startTimeHour + " " +startTimeMin + " " + 
 		endTimeHour + " " + endTimeMin + " " + startDate[0]+ "/" + startDate[1] + "/" + startDate[2] + " " + 
 		allDay + " " + remind + " " + priv + " " + endDate[0] + "/" + endDate[1] + "/" + endDate[2] + " " + 
-		calendar + " " + color + " " + id;
+		calendar + " " + color + " " + repeat + " " + id;
 	}
 	@Override
 	public int compareTo(Object e) {
@@ -205,7 +209,7 @@ public class Event implements Parcelable, Comparable{
 	}
 	
 	public Event(Parcel in){
-		String[] data = new String[19];
+		String[] data = new String[20];
 
 		in.readStringArray(data);
 		this.eventName = data[0];
@@ -227,6 +231,7 @@ public class Event implements Parcelable, Comparable{
 		this.calendar = data[16];
 		this.color = data[17];
 		this.id = Long.parseLong(data[18]);
+		this.repeat = data[19];
 	}
 
 	@Override
@@ -255,7 +260,8 @@ public class Event implements Parcelable, Comparable{
 				Integer.toString(this.endDate[2]),
 				this.calendar,
 				this.color,
-				Long.toString(this.id)});
+				Long.toString(this.id),
+				this.repeat});
 	}
 	public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
 		public Event createFromParcel(Parcel in) {

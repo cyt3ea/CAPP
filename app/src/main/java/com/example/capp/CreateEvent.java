@@ -1,15 +1,22 @@
 package com.example.capp;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,10 +25,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -40,14 +50,18 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 	String currentTime = "";
 	LayoutInflater inflater;
 	View newEventLayout;
-	Spinner spinner, calendarSpinner, colorSpinner;
+	Spinner spinner, calendarSpinner, colorSpinner, repeatSpinner;
 	EditText evTitle, evLocation, evDescrip;
 	CheckBox allDayCheck, privateCheck;
 	int remind = -1;
 	Event editEvent;
 	MyEventsDataBaseAdapter eventsDBAdapter;
-	Intent intentExtras;	
-	
+	Intent intentExtras;
+	GridCellRepeatAdapter repeatAdapter;
+	GridView repeatGrid;
+	View topDivide, botDivide;
+	String repeat = "0";
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
@@ -56,7 +70,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 
 		eventsDBAdapter = new MyEventsDataBaseAdapter(this);
 		eventsDBAdapter = eventsDBAdapter.open();
-		
+
 		spinner = (Spinner) findViewById(R.id.remind); //When to remind
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 				R.array.reminder_array, android.R.layout.simple_spinner_item);
@@ -71,6 +85,51 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 		calendarSpinner.setAdapter(adapterC);
 		calendarSpinner.setSelection(0);
 
+		repeatGrid = (GridView) findViewById(R.id.repeatGrid);
+
+		repeatSpinner = (Spinner) findViewById(R.id.repeat);
+		ArrayAdapter<CharSequence> adapterRepeat = ArrayAdapter.createFromResource(this,
+				R.array.repeat_array, android.R.layout.simple_spinner_item);
+		adapterRepeat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		repeatSpinner.setAdapter(adapterRepeat);
+		repeatSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+				botDivide = findViewById(R.id.repeatGridBottomDivide);
+				topDivide = findViewById(R.id.repeatGridTopDivide);
+				if(position == 2) { //if event is repeated weekly
+					repeatAdapter = new GridCellRepeatAdapter(CreateEvent.this, R.id.repeat_day_gridcell, "weekly", day, month, year);
+					repeatGrid.setAdapter(repeatAdapter);
+					ViewGroup.LayoutParams layoutParams = repeatGrid.getLayoutParams();
+					layoutParams.height = 100;
+					repeatGrid.setLayoutParams(layoutParams);
+					repeatGrid.setVisibility(View.VISIBLE);
+					botDivide.setVisibility(View.VISIBLE);
+					topDivide.setVisibility(View.VISIBLE);
+				}
+				else if(position == 3) { //if event is repeated monthly
+					repeatAdapter = new GridCellRepeatAdapter(CreateEvent.this, R.id.repeat_day_gridcell, "monthly", day, month, year);
+					repeatGrid.setAdapter(repeatAdapter);
+					ViewGroup.LayoutParams layoutParams = repeatGrid.getLayoutParams();
+					layoutParams.height = 500;
+					repeatGrid.setLayoutParams(layoutParams);
+					repeatGrid.setVisibility(View.VISIBLE);
+					botDivide.setVisibility(View.VISIBLE);
+					topDivide.setVisibility(View.VISIBLE);
+				}
+				else {
+					repeatGrid.setVisibility(View.GONE);
+					botDivide.setVisibility(View.GONE);
+					topDivide.setVisibility(View.GONE);
+				}
+			}
+			@Override
+			public void onNothingSelected(AdapterView<?> adapterView) {
+				repeatSpinner.setSelection(0);
+				repeatGrid.setVisibility(View.GONE);
+			}
+		});
+
 		colorSpinner = (Spinner) findViewById(R.id.color); //Event color
 		final ArrayList<String> colorList = new ArrayList<String>(Arrays.asList("Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "Black"));
 		ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, colorList) {
@@ -79,86 +138,86 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				if (v == null) {
 					Context mContext = this.getContext();
 					LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		            v = vi.inflate(android.R.layout.simple_spinner_item, parent, false);
+					v = vi.inflate(android.R.layout.simple_spinner_item, parent, false);
 				}
 
 				TextView tv = ((TextView) v);
 				tv.setText(colorList.get(position));
 
 				switch (position) {
-				case 0:
-					tv.setTextColor(getResources().getColor(R.color.reds));
-					break;
-				case 1:
-					tv.setTextColor(getResources().getColor(R.color.oranges));
-					break;
-				case 2:
-					tv.setTextColor(getResources().getColor(R.color.yellows));
-					break;
-				case 3:
-					tv.setTextColor(getResources().getColor(R.color.greens));
-					break;
-				case 4:
-					tv.setTextColor(getResources().getColor(R.color.blues));
-					break;
-				case 5:
-					tv.setTextColor(getResources().getColor(R.color.purples));
-					break;
-				case 6:
-					tv.setTextColor(getResources().getColor(R.color.pinks));
-					break;
-				case 7:
-					tv.setTextColor(getResources().getColor(R.color.blacks));
-					break;
+					case 0:
+						tv.setTextColor(getResources().getColor(R.color.reds));
+						break;
+					case 1:
+						tv.setTextColor(getResources().getColor(R.color.oranges));
+						break;
+					case 2:
+						tv.setTextColor(getResources().getColor(R.color.yellows));
+						break;
+					case 3:
+						tv.setTextColor(getResources().getColor(R.color.greens));
+						break;
+					case 4:
+						tv.setTextColor(getResources().getColor(R.color.blues));
+						break;
+					case 5:
+						tv.setTextColor(getResources().getColor(R.color.purples));
+						break;
+					case 6:
+						tv.setTextColor(getResources().getColor(R.color.pinks));
+						break;
+					case 7:
+						tv.setTextColor(getResources().getColor(R.color.blacks));
+						break;
 				}
-				return v;  
-		    }
-			
+				return v;
+			}
+
 			@Override
 			public View getDropDownView(int position, View convertView, ViewGroup parent){
 				View v = convertView;
 				if (v == null) {
 					Context mContext = this.getContext();
 					LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		            v = vi.inflate(android.R.layout.simple_spinner_dropdown_item, parent, false);
+					v = vi.inflate(android.R.layout.simple_spinner_dropdown_item, parent, false);
 				}
 
 				TextView tv = ((TextView) v);
 				tv.setText(colorList.get(position));
 
 				switch (position) {
-				case 0:
-					tv.setTextColor(getResources().getColor(R.color.reds));
-					break;
-				case 1:
-					tv.setTextColor(getResources().getColor(R.color.oranges));
-					break;
-				case 2:
-					tv.setTextColor(getResources().getColor(R.color.yellows));
-					break;
-				case 3:
-					tv.setTextColor(getResources().getColor(R.color.greens));
-					break;
-				case 4:
-					tv.setTextColor(getResources().getColor(R.color.blues));
-					break;
-				case 5:
-					tv.setTextColor(getResources().getColor(R.color.purples));
-					break;
-				case 6:
-					tv.setTextColor(getResources().getColor(R.color.pinks));
-					break;
-				case 7:
-					tv.setTextColor(getResources().getColor(R.color.blacks));
-					break;
+					case 0:
+						tv.setTextColor(getResources().getColor(R.color.reds));
+						break;
+					case 1:
+						tv.setTextColor(getResources().getColor(R.color.oranges));
+						break;
+					case 2:
+						tv.setTextColor(getResources().getColor(R.color.yellows));
+						break;
+					case 3:
+						tv.setTextColor(getResources().getColor(R.color.greens));
+						break;
+					case 4:
+						tv.setTextColor(getResources().getColor(R.color.blues));
+						break;
+					case 5:
+						tv.setTextColor(getResources().getColor(R.color.purples));
+						break;
+					case 6:
+						tv.setTextColor(getResources().getColor(R.color.pinks));
+						break;
+					case 7:
+						tv.setTextColor(getResources().getColor(R.color.blacks));
+						break;
 				}
-				return v;  
-			}              
-		}; 
+				return v;
+			}
+		};
 		spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		colorSpinner.setAdapter(spinnerAdapter);
 		colorSpinner.setSelection(0);
-		
+
 		c = Calendar.getInstance();
 		month = c.get(Calendar.MONTH);
 		day = c.get(Calendar.DATE);
@@ -166,64 +225,86 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 		currentTime = df.format(Calendar.getInstance().getTime());
 
 		startDateText = (TextView) findViewById(R.id.startDateAndTime);
+		startDateText.addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void afterTextChanged(Editable s) {}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start,int before, int count) {
+				if(startDatePicker !=null) {
+					day = startDatePicker.getDate().getDayOfMonth();
+					month = startDatePicker.getDate().getMonth();
+					year = startDatePicker.getDate().getYear();
+					if(repeatAdapter.getView().equals("weekly"))
+						repeatAdapter = new GridCellRepeatAdapter(CreateEvent.this, R.id.repeat_day_gridcell, "weekly", day, month, year);
+					else if(repeatAdapter.getView().equals("monthly"))
+						repeatAdapter = new GridCellRepeatAdapter(CreateEvent.this, R.id.repeat_day_gridcell, "monthly", day, month, year);
+					repeatGrid.setAdapter(repeatAdapter);
+				}
+			}
+		});
 		endDateText = (TextView) findViewById(R.id.endDateAndTime);
 
 		startDateText.setText("Starts: " + months[month] + " " + day + ", " + year + " | " + currentTime);
 		endDateText.setText("Ends: " + months[month] + " " + day + ", " + year + " | " + currentTime);
 
-		endDatePicker = new CustomDialog(CreateEvent.this, "End Date and Time", endDateText, "Ends: ", null);	
+		endDatePicker = new CustomDialog(CreateEvent.this, "End Date and Time", endDateText, "Ends: ", null);
 		startDatePicker = new CustomDialog(CreateEvent.this, "Start Date and Time", startDateText, "Starts: ", endDatePicker);
-		
+
 		Button addButton = (Button) findViewById(R.id.addEvent);
 		Button backButton = (Button) findViewById(R.id.backButton);
 		addButton.setOnClickListener(this);
 		backButton.setOnClickListener(this);
-		
+
 		evTitle=(EditText)findViewById(R.id.eventTitle);
 		evLocation=(EditText)findViewById(R.id.eventLocation);
 		evDescrip=(EditText)findViewById(R.id.description);
 		allDayCheck = (CheckBox)findViewById(R.id.allDayCheckBox);
 		allDayCheck.setOnClickListener(new OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-            	int startDay = startDatePicker.getDate().getDayOfMonth();
-            	int startMonth = startDatePicker.getDate().getMonth();
-            	int startYear = startDatePicker.getDate().getYear();
-            	int endDay = endDatePicker.getDate().getDayOfMonth();
-            	int endMonth = endDatePicker.getDate().getMonth();
-            	int endYear = endDatePicker.getDate().getYear();
-            	int startHour = startDatePicker.getTime().getCurrentHour();
-            	int startMin = startDatePicker.getTime().getCurrentMinute();
-            	int endHour = endDatePicker.getTime().getCurrentHour();
-            	int endMin = endDatePicker.getTime().getCurrentMinute();
-                if(allDayCheck.isChecked()){
-                	endDatePicker.getTime().setEnabled(false);
-                	startDatePicker.getTime().setEnabled(false);
-                	endDatePicker.setCount(1);
-                	startDatePicker.setCount(1);
-                	startDatePicker.getTV().setText("Starts: " + months[startMonth] + " " + startDay + ", " + startYear + " | " + "All Day");
-            		endDatePicker.getTV().setText("Ends: " + months[endMonth] + " " + endDay + ", " + endYear + " | " + "All Day");
-    				//Toast toast = Toast.makeText(getApplicationContext(), "Cannot change time since 'All Day' is checked.", Toast.LENGTH_LONG);
-    				//toast.show();
-                }
-                else{
-                	endDatePicker.getTime().setEnabled(true);
-                	startDatePicker.getTime().setEnabled(true);
-                	c.set(Calendar.HOUR_OF_DAY, startHour);
-                	c.set(Calendar.MINUTE, startMin);
-            		currentTime = df.format(c.getTime());
-                	startDatePicker.getTV().setText("Starts: " + months[startMonth] + " " + startDay + ", " + startYear + " | " + currentTime);
-                	c.set(Calendar.HOUR_OF_DAY, endHour);
-                	c.set(Calendar.MINUTE, endMin);
-            		currentTime = df.format(c.getTime());
-            		endDatePicker.getTV().setText("Ends: " + months[endMonth] + " " + endDay + ", " + endYear + " | " + currentTime);
-                }
-            }
-        });
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				int startDay = startDatePicker.getDate().getDayOfMonth();
+				int startMonth = startDatePicker.getDate().getMonth();
+				int startYear = startDatePicker.getDate().getYear();
+				int endDay = endDatePicker.getDate().getDayOfMonth();
+				int endMonth = endDatePicker.getDate().getMonth();
+				int endYear = endDatePicker.getDate().getYear();
+				int startHour = startDatePicker.getTime().getCurrentHour();
+				int startMin = startDatePicker.getTime().getCurrentMinute();
+				int endHour = endDatePicker.getTime().getCurrentHour();
+				int endMin = endDatePicker.getTime().getCurrentMinute();
+				if(allDayCheck.isChecked()){
+					endDatePicker.getTime().setEnabled(false);
+					startDatePicker.getTime().setEnabled(false);
+					endDatePicker.setCount(1);
+					startDatePicker.setCount(1);
+					startDatePicker.getTV().setText("Starts: " + months[startMonth] + " " + startDay + ", " + startYear + " | " + "All Day");
+					endDatePicker.getTV().setText("Ends: " + months[endMonth] + " " + endDay + ", " + endYear + " | " + "All Day");
+					//Toast toast = Toast.makeText(getApplicationContext(), "Cannot change time since 'All Day' is checked.", Toast.LENGTH_LONG);
+					//toast.show();
+				}
+				else{
+					endDatePicker.getTime().setEnabled(true);
+					startDatePicker.getTime().setEnabled(true);
+					c.set(Calendar.HOUR_OF_DAY, startHour);
+					c.set(Calendar.MINUTE, startMin);
+					currentTime = df.format(c.getTime());
+					startDatePicker.getTV().setText("Starts: " + months[startMonth] + " " + startDay + ", " + startYear + " | " + currentTime);
+					c.set(Calendar.HOUR_OF_DAY, endHour);
+					c.set(Calendar.MINUTE, endMin);
+					currentTime = df.format(c.getTime());
+					endDatePicker.getTV().setText("Ends: " + months[endMonth] + " " + endDay + ", " + endYear + " | " + currentTime);
+				}
+			}
+		});
 		privateCheck = (CheckBox)findViewById(R.id.privateCheckBox);
-		
+
 		intentExtras = getIntent();
 		if(intentExtras.hasExtra("EVENT")) {
 			editEvent = (Event) intentExtras.getParcelableExtra("EVENT");
@@ -310,16 +391,26 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				spinner.setSelection(7);
 			if(tempRemind == 60*24*7)
 				spinner.setSelection(8);
-			
+
 			if(editEvent.getCalendar().equals("Default"))
 				calendarSpinner.setSelection(0);
 			if(editEvent.getCalendar().equals("Academic"))
 				calendarSpinner.setSelection(1);
 			//What to do with calendar spinner???
+			if(editEvent.getRepeat().substring(0,1).equals(0))
+				repeatSpinner.setSelection(0);
+			else if(editEvent.getRepeat().substring(0,1).equals(1))
+				repeatSpinner.setSelection(1);
+			else if(editEvent.getRepeat().substring(0,1).equals(2))
+				repeatSpinner.setSelection(2);
+			else if(editEvent.getRepeat().substring(0,1).equals(3))
+				repeatSpinner.setSelection(3);
+			else if(editEvent.getRepeat().substring(0,1).equals(4))
+				repeatSpinner.setSelection(4);
 		}
 	}
 
-	public void onClick(View v) { 
+	public void onClick(View v) {
 		if(v.getId() == R.id.startDateAndTime) {
 			startDatePicker.show();
 		}
@@ -344,9 +435,10 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			int priv = 0;
 			String remindSpin = spinner.getSelectedItem().toString();
 			String calendar = calendarSpinner.getSelectedItem().toString();
-			
+			String repeatSpin = repeatSpinner.getSelectedItem().toString();
+
 			Log.v("START DATE: ", startDatePicker.getDate().getMonth() + "/" + startDatePicker.getDate().getDayOfMonth() + startDatePicker.getDate().getYear());
-			
+
 			if(remindSpin.equals("None"))
 				remind = -1;
 			else if(remindSpin.equals("At Time of Event"))
@@ -384,7 +476,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				color = "#FFA7DC";
 			else if(color.equals("Black"))
 				color = "#000000";
-			
+
 			if(allDayCheck.isChecked()) {
 				allDay = 1;
 				startTimeH = -1;
@@ -399,8 +491,96 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			CharSequence text = "";
 			int duration = Toast.LENGTH_SHORT;
 
+			if(repeatSpin.equals("Every Day"))
+				repeat = "1";
+			else if(repeatSpin.equals("Every Week")) {
+				ArrayList<Integer> tempList = repeatAdapter.getClicked();
+				repeat = "2-";
+				for(int x : tempList) {
+					if(x == 0 )
+						repeat = repeat + 0;
+					else
+						repeat = repeat + 1;
+				}
+			}
+			else if(repeatSpin.equals("Every Month")) {
+				ArrayList<Integer> tempList = repeatAdapter.getClicked();
+				repeat = "3-";
+				for(int x = 0; x < tempList.size(); x++) { //only add dates clicked
+					if(tempList.get(x) == 1)
+						if(x < 10)
+							repeat = repeat + "0" + (x+1);
+						else
+							repeat = repeat + (x+1);
+				}
+			}
+			else if(repeatSpin.equals("Every Year")) {
+				repeat = "4";
+			}
+
+			int dayGap = 99;
+			Log.v("COMPARING:", startMonth + "/" + startDay + "/" + startYear + " " + endMonth + "/" + endDay + "/" + endYear + " " + repeat + " " + repeat.length());
+			if((startMonth != endMonth || startDay != endDay || startYear != endYear) && repeat.length() != 1) {
+				int counter=0;
+				int first = 0;
+				int last = 0;
+				Log.v("Repeating: ", repeat + " " + repeat.length() + repeat.substring(2, 2+1));
+				if(repeat.length() == 9) {
+					for(int x = 2; x<9; x++) {
+						String temp = repeat.substring(x, x+1);
+						if(temp.equals("0"))
+							counter++;
+						else {
+							if(counter<dayGap && first != 0) {
+								dayGap = counter;
+								last = x;
+							}
+							if(first == 0)
+								first = x;
+							counter = 0;
+						}
+						Log.v("Repeat Cycle: ", temp + " " + dayGap + " " + first + " " + last);
+					}
+					Log.v("F & L:", first + " " + last);
+					if(8-last + first-2 > dayGap)
+						dayGap=last-first;
+				}
+				else {
+					for(int y = 2; y<repeat.length(); y+=2) {
+						String prevNum = repeat.substring(y, y+2);
+						String nextNum = repeat.substring(y+2, y+4);
+						if(prevNum.substring(0,1).equals("0"))
+							prevNum = prevNum.substring(1,2);
+						if(nextNum.substring(0,1).equals("0"))
+							nextNum = nextNum.substring(1, 2);
+						counter = Integer.parseInt(nextNum) - Integer.parseInt(prevNum);
+						if(counter < dayGap) {
+							dayGap = counter;
+						}
+					}
+				}
+			}
+
+			Calendar cStart = Calendar.getInstance();
+			cStart.set(Calendar.DAY_OF_MONTH, startDay);
+			cStart.set(Calendar.MONTH, startMonth);
+			cStart.set(Calendar.YEAR, startYear);
+			Calendar cEnd = Calendar.getInstance();
+			cEnd.set(Calendar.DAY_OF_MONTH, endDay);
+			cEnd.set(Calendar.MONTH, endMonth);
+			cEnd.set(Calendar.YEAR, endYear);
+
+			long diff = cEnd.getTime().getTime() - cStart.getTime().getTime();
+			Log.v("Days: " , "" + TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS) + dayGap);
+
+
 			if(title.equals("")) {
 				text = "Cannot make event with no title.";
+				Toast toast = Toast.makeText(context, text, duration);
+				toast.show();
+			}
+			else if(diff >= dayGap) {
+				text = "Cannot repeat an event that does not end before the next repeat.";
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
 			}
@@ -421,13 +601,14 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
 			}
-			else if(intentExtras.hasExtra("EVENT")) { 
+			else if(intentExtras.hasExtra("EVENT")) {
 				Event newEvent = new Event(title, location, description,
 						startTimeH, startTimeM, endTimeH, endTimeM,
 						startMonth, startDay, startYear,
-						allDay, remind, priv, 
+						allDay, remind, priv,
 						endMonth, endDay, endYear,
-						calendar, color, editEvent.getID());
+						calendar, color, editEvent.getID(), repeat);
+				Log.v("Created Event", newEvent.toString());
 				Intent i = new Intent();
 				i.putExtra("newEvent", newEvent);
 				setResult(Activity.RESULT_OK, i);
@@ -435,27 +616,29 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				finish();
 			}
 			else {
+				Log.v("Repeat: ", repeat + "" );
 				Event newEvent = new Event(title, location, description,
 						startTimeH, startTimeM, endTimeH, endTimeM,
 						startMonth, startDay, startYear,
-						allDay, remind, priv, 
+						allDay, remind, priv,
 						endMonth, endDay, endYear,
-						calendar, color, -1);
+						calendar, color, -1, repeat);
 				Intent i = new Intent();
+				Log.v("Created Event: ", newEvent.toString());
 				i.putExtra("newEvent", newEvent);
 				setResult(Activity.RESULT_OK, i);
 
 				finish();
 			}
 		}
-		else if(v.getId() == R.id.backButton) { 
+		else if(v.getId() == R.id.backButton) {
 			finish();
 		}
 	}
 
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int position,
-			long id) {
+							   long id) {
 		// TODO Auto-generated method stub
 
 	}
@@ -483,16 +666,16 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 
 			setTitle(title);
 			setContentView(R.layout.custom_dialog_layout);
-			
+
 			calendar = Calendar.getInstance();
 
 			text = label;
 			dialog = d;
-			
+
 			// get our tabHost from the xml
 			TabHost tabHost = (TabHost)findViewById(R.id.TabHost01);
-			tabHost.setup();	            
-			
+			tabHost.setup();
+
 			// create tab 1
 			TabHost.TabSpec spec1 = tabHost.newTabSpec("tab1");
 			spec1.setIndicator("Date");
@@ -557,24 +740,146 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			Log.v("Setting time: ", timePicker.getCurrentHour() + ":" + timePicker.getCurrentMinute());
 
 		}
-		public DatePicker getDate() { 
+		public DatePicker getDate() {
 			return datePicker;
 		}
-		public TimePicker getTime() { 
+		public TimePicker getTime() {
 			return timePicker;
 		}
-		public TextView getTV() { 
+		public TextView getTV() {
 			return tv;
 		}
-		public String getText() { 
+		public String getText() {
 			return text;
 		}
-		public int getCount() { 
+		public int getCount() {
 			return count;
 		}
 		public void setCount(int c) {
 			count = c;
 		}
 	}
+
+	public class GridCellRepeatAdapter extends BaseAdapter implements OnClickListener {
+
+		private static final String tag = "GridCellAdapter";
+		private final Context _context;
+		private final ArrayList<String> list;
+		private final ArrayList<Integer> clicked;
+		private static final int DAY_OFFSET = 1;
+		private final String[] weekdays = new String[] {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" };
+		private final String[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+		private final int[] daysOfMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		private final int[] permDate = new int[3];
+		private Button gridcell;
+		String repeat;
+		int day, month, year;
+
+		public GridCellRepeatAdapter(Context context, int textViewResourceId, String v, int dd, int mm, int yy) {
+			super();
+			this._context = context;
+			this.list = new ArrayList<String>();
+			this.clicked = new ArrayList<Integer>();
+			repeat = v;
+			day = dd;
+			month = mm;
+			year = yy;
+			if(repeat.equals("weekly"))
+				printWeek();
+			else if(repeat.equals("monthly"))
+				printMonth();
+		}
+
+		private String getView() {
+			return repeat;
+		}
+
+		private void printMonth() {
+			for(int i = 1; i <=31; i++) {
+				Log.d("Printing Month", i + "");
+				list.add(i + "");
+				if(i == day)
+					clicked.add(1);
+				else
+					clicked.add(0);
+			}
+		}
+
+		private void printWeek() {
+			for(int i = 0; i <7; i++) {
+				Log.d("Printing Week", weekdays[i]);
+				list.add(weekdays[i]);
+				clicked.add(0);
+			}
+			int dayOfWeek = -1;
+			Calendar c = Calendar.getInstance();
+			c.set(Calendar.DAY_OF_MONTH, day);
+			c.set(Calendar.MONTH, month);
+			c.set(Calendar.YEAR, year);
+			dayOfWeek = c.get(Calendar.DAY_OF_WEEK)-1;
+			Log.d("DayOfWeek: ", dayOfWeek + " " + day + " " + month + " " + year);
+			if(dayOfWeek != -1)
+				clicked.set(dayOfWeek, 1);
+		}
+
+		public ArrayList<Integer> getClicked() {
+			return clicked;
+		}
+
+		@Override
+		public void onClick(View v) {
+
+			gridcell = (Button) v.findViewById(R.id.repeat_day_gridcell);
+
+			String cellNum = (String) v.getTag();
+			if (clicked.get(Integer.parseInt(cellNum)) == 0) {
+				gridcell.setBackgroundColor(getResources().getColor(R.color.blue));
+				clicked.set(Integer.parseInt(cellNum), 1);
+			} else {
+				gridcell.setBackgroundColor(Color.WHITE);
+				clicked.set(Integer.parseInt(cellNum), 0);
+			}
+		}
+
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+			return list.size();
+		}
+
+		@Override
+		public String getItem(int position) {
+			// TODO Auto-generated method stub
+			return list.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			// TODO Auto-generated method stub
+			return position;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			// TODO Auto-generated method stub
+			View row = convertView;
+			if (row == null) {
+				LayoutInflater inflater = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+				row = inflater.inflate(R.layout.repeat_screen_gridcell, parent, false);
+			}
+			gridcell = (Button) row.findViewById(R.id.repeat_day_gridcell);
+			if (clicked.get((position)) == 1) {
+				gridcell.setBackgroundColor(getResources().getColor(R.color.blue));
+				gridcell.setEnabled(false);
+			}
+
+			gridcell.setOnClickListener(this);
+			gridcell.setText(list.get(position));
+			gridcell.setTag(position + "");
+
+			return row;
+		}
+
+	};
 }
 

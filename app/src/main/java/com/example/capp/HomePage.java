@@ -636,7 +636,7 @@ public class HomePage extends Activity implements OnClickListener{
 								tempEvent.getStartDate()[1] + "", tempEvent.getStartDate()[2] + "", tempEvent.getAllDay() + "",
 								tempEvent.getRemind() + "", tempEvent.getPriv() + "", tempEvent.getEndDate()[0] + "",
 								tempEvent.getEndDate()[1] + "", tempEvent.getEndDate()[2] + "", tempEvent.getCalendar(),
-								tempEvent.getColor());
+								tempEvent.getColor(), tempEvent.getRepeat());
 						tempEvent.setID(entry_id);
 						Toast.makeText(HomePage.this, "Event Successfully Created", Toast.LENGTH_LONG).show();
 					}
