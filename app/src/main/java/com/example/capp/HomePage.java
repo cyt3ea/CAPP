@@ -1,7 +1,9 @@
 package com.example.capp;
 import android.animation.ObjectAnimator;
 import android.graphics.Point;
+import android.support.v4.view.MotionEventCompat;
 import android.view.Display;
+import android.view.MotionEvent;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.GridLayoutAnimationController;
@@ -20,6 +22,7 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -226,6 +229,32 @@ public class HomePage extends Activity implements OnClickListener{
 		rightToggleYV.setOnClickListener(this);
 
 		viewFlipper = (ViewFlipper) findViewById(R.id.myViewFlipper);
+		viewFlipper.setOnTouchListener(new OnSwipeTouchListener(HomePage.this) {
+			public void onSwipeTop() {
+				Toast.makeText(HomePage.this, "top", Toast.LENGTH_SHORT).show();
+			}
+
+			public void onSwipeRight() {
+				Toast.makeText(HomePage.this, "right", Toast.LENGTH_SHORT).show();
+				viewFlipper.setInAnimation(slideInLeft);
+				viewFlipper.setOutAnimation(slideOutRight);
+				viewFlipper.showPrevious();
+			}
+
+			public void onSwipeLeft() {
+				Toast.makeText(HomePage.this, "left", Toast.LENGTH_SHORT).show();
+				viewFlipper.setInAnimation(slideInRight);
+				viewFlipper.setOutAnimation(slideOutLeft);
+				viewFlipper.showNext();
+			}
+			public void onSwipeBottom() {
+				Toast.makeText(HomePage.this, "bottom", Toast.LENGTH_SHORT).show();
+			}
+
+			public boolean onTouch(View v, MotionEvent event) {
+				return gestureDetector.onTouchEvent(event);
+			}
+		});
 
 		dayViewLV = (ExpandableListView) findViewById(R.id.defaultDayViewEvents);
 		expListAdapter = new ExpandableListAdapter(this, eventList);
@@ -313,6 +342,18 @@ public class HomePage extends Activity implements OnClickListener{
 		year = c.get(Calendar.YEAR);
 		dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 		switch (item.getItemId()) {
+			case R.id.action_home:
+				openDayView();
+				return true;
+			case R.id.action_profile:
+				return true;
+			case R.id.action_search:
+				return true;
+			case R.id.action_notifications:
+				return true;
+			case R.id.action_more:
+				return true;
+			/*
 			case R.id.action_day:
 				openDayView();
 				return true;
@@ -325,6 +366,7 @@ public class HomePage extends Activity implements OnClickListener{
 			case R.id.action_year:
 				openYearView();
 				return true;
+				*/
 			default:
 				return super.onOptionsItemSelected(item);
 		}
@@ -394,52 +436,10 @@ public class HomePage extends Activity implements OnClickListener{
 		int tempYear = Integer.parseInt(temp[2]);
 
 		Log.v("DATE: ", month + " " + day + " " + year);
-		eventList.clear();
 
-		//only shows events for that day
-		for(Event e : tempList) {
-			//Log.v("EVENT DATE: ", e.getStartDate()[0] + " " + e.getStartDate()[1] + " " + e.getStartDate()[2]);
-			if(e.getStartDate()[1] == tempDay && e.getEndDate()[1] == tempDay) {
-				if(e.getStartDate()[0] == tempMonth && e.getEndDate()[0] == tempMonth) {
-					if(e.getStartDate()[2] == tempYear && e.getEndDate()[2] == tempYear) {
-						eventList.add(e);
-						Log.v("Event added to list: ", e.toString());
-					}
-				}
-			}
-			else if(e.getStartDate()[2] <= tempYear && e.getEndDate()[2] >= tempYear) {
-				if(e.getStartDate()[0] <= tempMonth && e.getEndDate()[0] >= tempMonth) {
-					if(e.getStartDate()[1] <= tempDay && e.getEndDate()[1] >= tempDay) {
-						Log.v("start date", e.getStartDate()[1] + " " + tempDay);
-						if(e.getStartTimeHour() == -1) {
-							//do nothing
-						}
-						else if(e.getStartDate()[1] == tempDay) {
-							e.setEndTimeHour(23);
-							e.setEndTimeMin(59);
-						}
-						else if(e.getEndDate()[1] == tempDay) {
-							e.setStartTimeHour(0);
-							e.setStartTimeMin(0);
-						}
-						else {
-							e.setStartTimeHour(-1);
-							e.setStartTimeMin(-1);
-							e.setEndTimeHour(-1);
-							e.setEndTimeMin(-1);
-						}
-						eventList.add(e);
-					}
-				}
-			}
-		}
-		Collections.sort(eventList);
-		expMonthListAdapter.setEventList(eventList);
-		expMonthListAdapter.notifyDataSetChanged();
+		getEventsForThatDay(expMonthListAdapter, tempDay, tempMonth, tempYear);
 
 		viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.monthview)));
-		//adapter = new GridCellAdapter(HomePage.this, R.id.calendar_day_gridcell, month, year, expListAdapter, dayPickedMonth);
-		//adapter.notifyDataSetChanged();
 
 		todaysDateTextView=(TextView)findViewById(R.id.viewDateMV);
 		todaysDateTextView.setText(months[month] + " " + Integer.toString(year));
@@ -469,46 +469,7 @@ public class HomePage extends Activity implements OnClickListener{
 		int tempYear = Integer.parseInt(temp[2]);
 
 		Log.v("DATE: ", month + " " + day + " " + year);
-		eventList.clear();
-
-		//only shows events for that day
-		for(Event e : tempList) {
-			//Log.v("EVENT DATE: ", e.getStartDate()[0] + " " + e.getStartDate()[1] + " " + e.getStartDate()[2]);
-			if(e.getStartDate()[1] == tempDay && e.getEndDate()[1] == tempDay) {
-				if(e.getStartDate()[0] == tempMonth && e.getEndDate()[0] == tempMonth) {
-					if(e.getStartDate()[2] == tempYear && e.getEndDate()[2] == tempYear) {
-						eventList.add(e);
-						Log.v("Event added to list: ", e.toString());
-					}
-				}
-			}
-			else if(e.getStartDate()[2] <= tempYear && e.getEndDate()[2] >= tempYear) {
-				if(e.getStartDate()[0] <= tempMonth && e.getEndDate()[0] >= tempMonth) {
-					if(e.getStartDate()[1] <= tempDay && e.getEndDate()[1] >= tempDay) {
-						Log.v("start date", e.getStartDate()[1] + " " + tempDay);
-						if(e.getStartTimeHour() == -1) {
-							//do nothing
-						}
-						else if(e.getStartDate()[1] == tempDay) {
-							e.setEndTimeHour(23);
-							e.setEndTimeMin(59);
-						}
-						else if(e.getEndDate()[1] == tempDay) {
-							e.setStartTimeHour(0);
-							e.setStartTimeMin(0);
-						}
-						else {
-							e.setStartTimeHour(-1);
-							e.setStartTimeMin(-1);
-							e.setEndTimeHour(-1);
-							e.setEndTimeMin(-1);
-						}
-						eventList.add(e);
-					}
-				}
-			}
-		}
-		Collections.sort(eventList);
+		getEventsForThatDay(expWeekListAdapter, tempDay, tempMonth, tempYear);
 
 		if(dayOfWeek != 1) {
 			if(day - dayOfWeek < 0) {
@@ -551,17 +512,13 @@ public class HomePage extends Activity implements OnClickListener{
 		if(startMonth == endMonth) {
 			todaysDateTextView.setText(months[startMonth].substring(0,3) + "  "
 					+ Integer.toString(startDay) + " - " + Integer.toString(endDay));
-		}
-		else {
+		} else {
 			todaysDateTextView.setText(months[startMonth].substring(0,3) + "  "
 					+ Integer.toString(startDay) + " - " + months[endMonth].substring(0,3) + "  "
 					+ Integer.toString(endDay));
 		}
 		viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.weekview)));
 
-		expWeekListAdapter.setEventList(eventList);
-		expWeekListAdapter.notifyDataSetChanged();
-		Log.d("Notified Changes: ", eventList.toString());
 		view = "week";
 	}
 
@@ -574,50 +531,202 @@ public class HomePage extends Activity implements OnClickListener{
 		todaysDateTextView.setText(months[month] + " " + Integer.toString(day) + ", "
 				+ Integer.toString(year));
 
+		getEventsForThatDay(expListAdapter, day, month, year);
+	}
+
+	public void getEventsForThatDay(ExpandableListAdapter expList, int dd, int mm, int yy) {
 		ArrayList<Event> tempList = new ArrayList<Event>();
 		tempList = myEventsDataBaseAdapter.getAllEvents();
 		Log.v("EVENTS IN DATABASE: ", tempList.toString());
 		eventList.clear();
 
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.DAY_OF_MONTH, dd);
+		c.set(Calendar.MONTH, mm);
+		c.set(Calendar.YEAR, yy);
+		int dayOfWeekNum = c.get(Calendar.DAY_OF_WEEK) - 1;
+
 		//only shows events for that day
-		for(Event e : tempList) {
+		for (Event e : tempList) {
+			Log.v("EVENT BEING ADDED: ", e.toString());
 			//Log.v("EVENT DATE: ", e.getStartDate()[0] + " " + e.getStartDate()[1] + " " + e.getStartDate()[2]);
-			if(e.getStartDate()[1] == day && e.getEndDate()[1] == day) {
-				if(e.getStartDate()[0] == month && e.getEndDate()[0] == month) {
-					if(e.getStartDate()[2] == year && e.getEndDate()[2] == year) {
-						eventList.add(e);
-						Log.v("Event added to list: ", e.toString());
+			if (e.getStartDate()[1] == dd && e.getEndDate()[1] == dd) {
+				if (e.getStartDate()[0] == mm && e.getEndDate()[0] == mm) {
+					if (e.getStartDate()[2] == yy && e.getEndDate()[2] == yy) {
+						if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString())) {
+							eventList.add(e);
+							Log.v("Event added to list: ", e.toString());
+						}
 					}
 				}
-			}
-			else if(e.getStartDate()[2] <= year && e.getEndDate()[2] >= year) {
-				if(e.getStartDate()[0] <= month && e.getEndDate()[0] >= month) {
-					if(e.getStartDate()[1] <= day && e.getEndDate()[1] >= day) {
-						Log.v("start date", e.getStartDate()[1] + " " + day);
-						if(e.getStartTimeHour() == -1) {
+			} else if (e.getStartDate()[2] <= yy && e.getEndDate()[2] >= yy) {
+				if (e.getStartDate()[0] <= mm && e.getEndDate()[0] >= mm) {
+					if (e.getStartDate()[1] <= dd && e.getEndDate()[1] >= dd) {
+						Log.v("start date", e.getStartDate()[1] + " " + dd);
+						if (e.getStartTimeHour() == -1) {
 							//do nothing
-						}
-						else if(e.getStartDate()[1] == day) {
+						} else if (e.getStartDate()[1] == dd) {
 							e.setEndTimeHour(23);
 							e.setEndTimeMin(59);
-						}
-						else if(e.getEndDate()[1] == day) {
+						} else if (e.getEndDate()[1] == dd) {
 							e.setStartTimeHour(0);
 							e.setStartTimeMin(0);
-						}
-						else {
+						} else {
 							e.setStartTimeHour(-1);
 							e.setStartTimeMin(-1);
 							e.setEndTimeHour(-1);
 							e.setEndTimeMin(-1);
 						}
-						eventList.add(e);
+						if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString())) {
+							Log.v("Event added to list: ", e.toString());
+							eventList.add(e);
+						}
+					}
+				}
+			}
+			Log.v("repeat length: ", e.getRepeat());
+			if (e.getRepeat().length() > 1 && !eventList.contains(e)) {
+				//e.setStartDate(mm, dd, yy);
+				Calendar cStart = Calendar.getInstance();
+				cStart.set(Calendar.DAY_OF_MONTH, e.getStartDate()[1]);
+				cStart.set(Calendar.MONTH, e.getStartDate()[0]);
+				cStart.set(Calendar.YEAR, e.getStartDate()[2]);
+				Calendar cEnd = Calendar.getInstance();
+				cEnd.set(Calendar.DAY_OF_MONTH, e.getEndDate()[1]);
+				cEnd.set(Calendar.MONTH, e.getEndDate()[0]);
+				cEnd.set(Calendar.YEAR, e.getEndDate()[2]);
+				long diff = Math.abs(cEnd.getTime().getTime() - cStart.getTime().getTime());
+				diff = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+				int diffInt = (int) diff;
+				Log.v("Diff: ", diffInt + " ");
+				int tempdd, tempmm, tempyy;
+				tempmm = mm;
+				tempdd = dd;
+				tempyy = yy;
+				if(e.getRepeat().length() == 9) {
+					if(e.getRepeatAsArrayList().get(dayOfWeekNum) == 1 && !eventList.contains(e)) {
+						e.setStartDate(mm, dd, yy);
+						if (tempdd + diffInt > daysOfMonth[mm]) {
+							if (tempmm == 11) {
+								tempmm = 0;
+								tempyy++;
+								tempdd = diffInt - daysOfMonth[11] - tempdd;
+							} else {
+								tempmm++;
+								tempdd = diffInt - daysOfMonth[tempmm - 1] - tempdd;
+							}
+						} else {
+							tempdd = tempdd + diffInt;
+						}
+						e.setEndDate(tempmm, tempdd, tempyy);
+					}
+				}
+				else if (e.getRepeat().length() != 9) {
+					Log.v("repeating monthly: ", dd + " " + diffInt + " " + e.getStartDate()[1]);
+					for(int j = 0; j < e.getRepeatAsArrayList().size(); j++) {
+						if (dd - diffInt <= e.getRepeatAsArrayList().get(j)) {
+							tempdd = e.getRepeatAsArrayList().get(j);
+							Log.v("Within the diff", "yay");
+							break;
+						}
+					}
+					if (e.getRepeatAsArrayList().contains(tempdd) && !eventList.contains(e)) {
+						e.setStartDate(mm, tempdd, yy);
+						if (tempdd + diffInt > daysOfMonth[mm]) {
+							if (tempmm == 11) {
+								tempmm = 0;
+								tempyy++;
+								tempdd = diffInt - daysOfMonth[11] - tempdd;
+							} else {
+								tempmm++;
+								tempdd = diffInt - daysOfMonth[tempmm - 1] - tempdd;
+							}
+						} else {
+							tempdd = tempdd + diffInt;
+						}
+						e.setEndDate(tempmm, tempdd, tempyy);
+					}
+				}
+				/*
+				else {
+					//if (!(e.getRepeatAsArrayList().contains(dd) || e.getRepeatAsArrayList().get(dayOfWeekNum) == 1) && !eventList.contains(e)) {
+					for (int j = 0; j < diffInt; j++) {
+						Log.v("TEMP DATES START: ", tempmm + "/" + tempdd + "/" + tempyy);
+						if (tempdd - 1 <= 0) {
+							if (tempmm == 0) {
+								tempmm = 11;
+								tempyy--;
+								tempdd = daysOfMonth[tempmm];
+							} else {
+								tempmm--;
+								tempdd--;
+							}
+						} else
+							tempdd = tempdd - 1;
+						Calendar cdar = Calendar.getInstance();
+						cdar.set(Calendar.DAY_OF_MONTH, tempdd);
+						cdar.set(Calendar.MONTH, tempmm);
+						cdar.set(Calendar.YEAR, tempyy);
+						int tempDayOfWeekNum = cdar.get(Calendar.DAY_OF_WEEK) - 1;
+						Log.v("TEMP DATES MID: ", tempmm + "/" + tempdd + "/" + tempyy + " " + tempDayOfWeekNum);
+						if (e.getRepeatAsArrayList().get(tempDayOfWeekNum) == 1 || e.getRepeatAsArrayList().contains(dd)) {
+							e.setStartDate(tempmm, tempdd, tempyy);
+							if (tempdd + diffInt > daysOfMonth[mm]) {
+								if (tempmm == 11) {
+									tempmm = 0;
+									tempyy++;
+									tempdd = diffInt - daysOfMonth[11] - tempdd;
+								} else {
+									tempmm++;
+									tempdd = diffInt - daysOfMonth[tempmm - 1] - tempdd;
+								}
+							} else {
+								tempdd = tempdd + diffInt;
+							}
+							e.setEndDate(tempmm, tempdd, tempyy);
+							Log.v("TEMP DATES END: ", tempmm + "/" + tempdd + "/" + tempyy + " " + tempDayOfWeekNum);
+						}
+					}
+				}
+				*/
+				Log.v("Getting all dates:", e.getStartDateAsOneString() + " " + e.getEndDateAsOneString() + " " + mm + "/" + dd + "/" + yy + " " + diffInt);
+				if (e.getStartDate()[1] == dd && e.getEndDate()[1] == dd) {
+					if (e.getStartDate()[0] == mm && e.getEndDate()[0] == mm) {
+						if (e.getStartDate()[2] == yy && e.getEndDate()[2] == yy) {
+							if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString())) {
+								eventList.add(e);
+								Log.v("Event added to list: ", e.toString());
+							}
+						}
+					}
+				} else if (e.getStartDate()[2] <= yy && e.getEndDate()[2] >= yy) {
+					if (e.getStartDate()[0] <= mm && e.getEndDate()[0] >= mm) {
+						if (e.getStartDate()[1] <= dd && e.getEndDate()[1] >= dd) {
+							Log.v("start date", e.getStartDate()[1] + " " + dd);
+							if (e.getStartTimeHour() == -1) {
+								//do nothing
+							} else if (e.getStartDate()[1] == dd) {
+								e.setEndTimeHour(23);
+								e.setEndTimeMin(59);
+							} else if (e.getEndDate()[1] == dd) {
+								e.setStartTimeHour(0);
+								e.setStartTimeMin(0);
+							} else {
+								e.setStartTimeHour(-1);
+								e.setStartTimeMin(-1);
+								e.setEndTimeHour(-1);
+								e.setEndTimeMin(-1);
+							}
+							if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString()))
+								eventList.add(e);
+						}
 					}
 				}
 			}
 		}
 		Collections.sort(eventList);
-		expListAdapter.notifyDataSetChanged();
+		expList.setEventList(eventList);
+		expList.notifyDataSetChanged();
 	}
 
 	@Override
@@ -627,7 +736,8 @@ public class HomePage extends Activity implements OnClickListener{
 			case (ActivityTwoRequestCode) : {
 				if (resultCode == Activity.RESULT_OK && resultCode != Activity.RESULT_CANCELED) {
 					// TODO Extract the data returned from the child Activity.
-					Event tempEvent = (Event)data.getExtras().get("newEvent");
+					Event tempEvent = (Event) data.getExtras().get("newEvent");
+					String editChoice = (String) data.getExtras().get("edit");
 					Log.v("TEMP EVENT: ", tempEvent.toString());
 					if(tempEvent.getID() == -1) {
 						long entry_id = myEventsDataBaseAdapter.insertEntry(userName, tempEvent.getEventName(), tempEvent.getLocation(),
@@ -636,14 +746,47 @@ public class HomePage extends Activity implements OnClickListener{
 								tempEvent.getStartDate()[1] + "", tempEvent.getStartDate()[2] + "", tempEvent.getAllDay() + "",
 								tempEvent.getRemind() + "", tempEvent.getPriv() + "", tempEvent.getEndDate()[0] + "",
 								tempEvent.getEndDate()[1] + "", tempEvent.getEndDate()[2] + "", tempEvent.getCalendar(),
-								tempEvent.getColor(), tempEvent.getRepeat());
+								tempEvent.getColor(), tempEvent.getRepeat(), tempEvent.getRepeatExcept());
 						tempEvent.setID(entry_id);
 						Toast.makeText(HomePage.this, "Event Successfully Created", Toast.LENGTH_LONG).show();
 					}
 					else {
-						myEventsDataBaseAdapter.updateEntry(tempEvent, tempEvent.getID());
-						Log.v("UPDATING: ", tempEvent.toString());
-						Toast.makeText(HomePage.this, "Event Successfully Updated", Toast.LENGTH_LONG).show();
+						if(editChoice.equals("nochanges")) {
+							Toast.makeText(HomePage.this, "No Changes Were Made", Toast.LENGTH_LONG).show();
+						}
+						else if(editChoice.equals("editall")) {
+							myEventsDataBaseAdapter.updateEntry(tempEvent, tempEvent.getID());
+							Log.v("UPDATING ALL: ", tempEvent.toString());
+							Toast.makeText(HomePage.this, "Event Successfully Updated", Toast.LENGTH_LONG).show();
+						}
+						else if(editChoice.equals("editselected")) {
+							Log.v("UPDATING SELECTED: ", tempEvent.toString());
+							long entry_id = myEventsDataBaseAdapter.insertEntry(userName, tempEvent.getEventName(), tempEvent.getLocation(),
+									tempEvent.getDescrip(), tempEvent.getStartTimeHour() + "", tempEvent.getStartTimeMin() + "",
+									tempEvent.getEndTimeHour() + "", tempEvent.getEndTimeMin() + "", tempEvent.getStartDate()[0] + "",
+									tempEvent.getStartDate()[1] + "", tempEvent.getStartDate()[2] + "", tempEvent.getAllDay() + "",
+									tempEvent.getRemind() + "", tempEvent.getPriv() + "", tempEvent.getEndDate()[0] + "",
+									tempEvent.getEndDate()[1] + "", tempEvent.getEndDate()[2] + "", tempEvent.getCalendar(),
+									tempEvent.getColor(), "0", "");
+							//tempEvent.setID(entry_id);
+							//Event newTempEvent = tempEvent;
+							//newTempEvent.setRepeat("1");
+							//newTempEvent.setRepeatExcept("");
+							//newTempEvent.setID(entry_id);
+							//myEventsDataBaseAdapter.updateEntry(tempEvent, newTempEvent.getID());
+							tempEvent = myEventsDataBaseAdapter.getSingleEntry_byID(tempEvent.getID());
+							int[] startDate = tempEvent.getStartDate();
+							String month = Integer.toString(startDate[0]);
+							String day = Integer.toString(startDate[1]);
+							String year = Integer.toString(startDate[2]);
+							if(day.length() < 2)
+								day = "0" + day;
+							if(month.length() < 2)
+								month = "0" + month;
+							String repeatExceptThis = month + day + year;
+							tempEvent.setRepeatExcept(tempEvent.getRepeat() + repeatExceptThis);
+							myEventsDataBaseAdapter.updateEntry(tempEvent, tempEvent.getID());
+						}
 
 					}
 					//eventList.add(tempEvent);
@@ -1203,50 +1346,7 @@ public class HomePage extends Activity implements OnClickListener{
 					Log.d("REACHED", "here");
 				}
 				Log.d(tag, "Parsed Date: " + tempMonth + "/" + tempDay + "/" + tempYear);
-				ArrayList<Event> eventList = new ArrayList<Event>();
-				ArrayList<Event> tempList = new ArrayList<Event>();
-				Log.d(tag, "Event List Retrieved");
-				tempList = myEventsDataBaseAdapter.getAllEvents();
-				Log.v("EVENTS IN DATABASE: ", tempList.toString());
-				//eventList.clear();
-
-				//only shows events for that day
-				for (Event e : tempList) {
-					//Log.v("EVENT DATE: ", e.getStartDate()[0] + " " + e.getStartDate()[1] + " " + e.getStartDate()[2]);
-					if (e.getStartDate()[1] == tempDay && e.getEndDate()[1] == tempDay) {
-						if (e.getStartDate()[0] == tempMonth && e.getEndDate()[0] == tempMonth) {
-							if (e.getStartDate()[2] == tempYear && e.getEndDate()[2] == tempYear) {
-								eventList.add(e);
-								Log.v("Event added to list: ", e.toString());
-							}
-						}
-					} else if (e.getStartDate()[2] <= tempYear && e.getEndDate()[2] >= tempYear) {
-						if (e.getStartDate()[0] <= tempMonth && e.getEndDate()[0] >= tempMonth) {
-							if (e.getStartDate()[1] <= tempDay && e.getEndDate()[1] >= tempDay) {
-								Log.v("start date", e.getStartDate()[1] + " " + tempDay);
-								if (e.getStartTimeHour() == -1) {
-									//do nothing
-								} else if (e.getStartDate()[1] == tempDay) {
-									e.setEndTimeHour(23);
-									e.setEndTimeMin(59);
-								} else if (e.getEndDate()[1] == tempDay) {
-									e.setStartTimeHour(0);
-									e.setStartTimeMin(0);
-								} else {
-									e.setStartTimeHour(-1);
-									e.setStartTimeMin(-1);
-									e.setEndTimeHour(-1);
-									e.setEndTimeMin(-1);
-								}
-								eventList.add(e);
-							}
-						}
-					}
-				}
-				Collections.sort(eventList);
-				Log.d(tag, eventList.toString());
-				expLA.setEventList(eventList);
-				expLA.notifyDataSetChanged();
+				((HomePage)_context).getEventsForThatDay(expLA, tempDay, tempMonth, tempYear);
 
 			}
 			catch (ParseException e) {

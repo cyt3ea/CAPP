@@ -1,13 +1,15 @@
 package com.example.capp;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 
 public class Event implements Parcelable, Comparable{
 
-	String eventName, location, descrip, calendar, color, repeat;
+	String eventName, location, descrip, calendar, color, repeat, repeatExcept;
 	int startTimeHour, startTimeMin, endTimeHour, endTimeMin;
 	int[] startDate = new int[3]; //month, day, year
 	int allDay;
@@ -37,10 +39,11 @@ public class Event implements Parcelable, Comparable{
 		calendar = "Default";
 		color = "Red";
 		repeat = "0"; // 0 for none, 1 for everyday, 2-0000000 for weekly, 4-000... for monthly, 5 for yearly
+		repeatExcept = "";
 	}
 	public Event(String eventName, String location, String descrip, int sth, int stm, int eth,
 			int etm, int month, int day, int year, int allDay, int reminder,
-			int priv, int endMonth, int endDay, int endYear, String cal, String col, long id, String r) {
+			int priv, int endMonth, int endDay, int endYear, String cal, String col, long id, String r, String rE) {
 		this.eventName = eventName;
 		this.location = location;
 		this.descrip = descrip;
@@ -61,6 +64,7 @@ public class Event implements Parcelable, Comparable{
 		color = col;
 		this.id = id;
 		repeat = r;
+		repeatExcept = rE;
 	}
 
 	public void setCalendar(String cal) { 
@@ -77,6 +81,8 @@ public class Event implements Parcelable, Comparable{
 	}
 	public String getRepeat() { return repeat; }
 	public void setRepeat(String s) { repeat = s; }
+	public String getRepeatExcept() { return repeatExcept; }
+	public void setRepeatExcept(String s) { repeatExcept = s; }
 	
 	public int getPriv() { 
 		return priv;
@@ -183,13 +189,90 @@ public class Event implements Parcelable, Comparable{
 		this.endTimeMin = endTime;
 	}
 
+	public String getStartDateAsOneString() {
+		String month = String.valueOf(startDate[0]);
+		String day = String.valueOf(startDate[1]);
+		String year = String.valueOf(startDate[2]);
+		if(month.length() < 2)
+			month = "0" + month;
+		if(day.length() < 2)
+			day = "0" + day;
+		//Log.v("Get Start Date: ", month + day + year);
+		return month + day + year;
+	}
+
+	public String getEndDateAsOneString() {
+		String month = String.valueOf(endDate[0]);
+		String day = String.valueOf(endDate[1]);
+		String year = String.valueOf(endDate[2]);
+		if(month.length() < 2)
+			month = "0" + month;
+		if(day.length() < 2)
+			day = "0" + day;
+		//Log.v("Get Start Date: ", month + day + year);
+		return month + day + year;
+	}
+
+	public ArrayList<String> getRepeatExceptAsArrayList() {
+		ArrayList<String> tempList = new ArrayList<String>();
+		for (int x = 0; x <= repeatExcept.length() - 8; x += 8) {
+				String temp = repeatExcept.substring(x, x+8);
+				tempList.add(temp);
+		}
+		Log.v("Get Repeat Except: ", tempList.toString());
+		return tempList;
+	}
+
+	public ArrayList<Integer> getRepeatAsArrayList() {
+		ArrayList<Integer> tempList = new ArrayList<Integer>();
+		//Log.v("REPEAT STRING: ", repeat);
+		if (repeat.length() == 9) {
+			for (int x = 2; x < repeat.length(); x++) {
+				String temp = repeat.substring(x, x + 1);
+				tempList.add(Integer.parseInt(temp));
+			}
+		}
+		else if(repeat.length() != 1){
+			for(int y = 2; y<repeat.length()-1; y+=2) {
+				String temp = "";
+				if(y+2 > repeat.length() -1) {
+					//Log.v("What's happening...", repeat.substring(y));
+					temp = repeat.substring(y);
+				}
+				else {
+					//Log.v("What's happening...", repeat.substring(y, y + 2));
+					temp = repeat.substring(y, y + 2);
+				}
+				if(temp.substring(0,1).equals("0"))
+					temp = temp.substring(1);
+				tempList.add(Integer.parseInt(temp));
+			}
+		}
+		//Log.v("Get Repeat Except: ", tempList.toString());
+		return tempList;
+	}
+
 	public String toString() {
 		//return eventName + " at " + location;
 		return eventName + " " + location + " " + descrip + " " + startTimeHour + " " +startTimeMin + " " + 
 		endTimeHour + " " + endTimeMin + " " + startDate[0]+ "/" + startDate[1] + "/" + startDate[2] + " " + 
 		allDay + " " + remind + " " + priv + " " + endDate[0] + "/" + endDate[1] + "/" + endDate[2] + " " + 
-		calendar + " " + color + " " + repeat + " " + id;
+		calendar + " " + color + " " + repeat + " " + repeatExcept + " " + id;
 	}
+
+	public boolean equals(Event e) {
+		if(eventName.equals(e.getEventName()) && location.equals(e.getLocation()) && descrip.equals(e.getDescrip()) &&
+				startTimeHour == e.getStartTimeHour() && startTimeMin == e.getStartTimeMin() && endTimeHour == e.getEndTimeHour() &&
+				endTimeMin == e.getEndTimeMin() && startDate[0] == e.getStartDate()[0] && startDate[1] == e.getStartDate()[1] &&
+				startDate[2] == e.getStartDate()[2] && allDay == e.getAllDay() && remind == e.getRemind() && priv == e.getPriv() &&
+				endDate[0] == e.getEndDate()[0] && endDate[1] == e.getEndDate()[1] && endDate[2] == e.getEndDate()[2] &&
+				calendar.equals(e.getCalendar()) && color.equals(e.getColor()) && repeat.equals(e.getRepeat()) &&
+				repeatExcept.equals(e.getRepeatExcept()) && id == e.getID())
+			return true;
+		else
+			return false;
+	}
+
 	@Override
 	public int compareTo(Object e) {
 		Event event = (Event) e;
@@ -209,7 +292,7 @@ public class Event implements Parcelable, Comparable{
 	}
 	
 	public Event(Parcel in){
-		String[] data = new String[20];
+		String[] data = new String[21];
 
 		in.readStringArray(data);
 		this.eventName = data[0];
@@ -232,6 +315,7 @@ public class Event implements Parcelable, Comparable{
 		this.color = data[17];
 		this.id = Long.parseLong(data[18]);
 		this.repeat = data[19];
+		this.repeatExcept = data[20];
 	}
 
 	@Override
@@ -261,7 +345,8 @@ public class Event implements Parcelable, Comparable{
 				this.calendar,
 				this.color,
 				Long.toString(this.id),
-				this.repeat});
+				this.repeat,
+				this.repeatExcept});
 	}
 	public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
 		public Event createFromParcel(Parcel in) {

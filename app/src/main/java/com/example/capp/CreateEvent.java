@@ -10,8 +10,10 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -61,6 +63,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 	GridView repeatGrid;
 	View topDivide, botDivide;
 	String repeat = "0";
+	String repeatExcept = "";
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -95,10 +98,15 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 		repeatSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+				Log.v("RepeatSpinnerListener: ", "HERE");
 				botDivide = findViewById(R.id.repeatGridBottomDivide);
 				topDivide = findViewById(R.id.repeatGridTopDivide);
 				if(position == 2) { //if event is repeated weekly
 					repeatAdapter = new GridCellRepeatAdapter(CreateEvent.this, R.id.repeat_day_gridcell, "weekly", day, month, year);
+					if(editEvent != null) {
+						repeatAdapter.updateHighlighted(editEvent.getRepeat());
+						editEvent = null;
+					}
 					repeatGrid.setAdapter(repeatAdapter);
 					ViewGroup.LayoutParams layoutParams = repeatGrid.getLayoutParams();
 					layoutParams.height = 100;
@@ -109,6 +117,10 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				}
 				else if(position == 3) { //if event is repeated monthly
 					repeatAdapter = new GridCellRepeatAdapter(CreateEvent.this, R.id.repeat_day_gridcell, "monthly", day, month, year);
+					if(editEvent != null) {
+						repeatAdapter.updateHighlighted(editEvent.getRepeat());
+						editEvent = null;
+					}
 					repeatGrid.setAdapter(repeatAdapter);
 					ViewGroup.LayoutParams layoutParams = repeatGrid.getLayoutParams();
 					layoutParams.height = 500;
@@ -235,10 +247,12 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 
 			@Override
 			public void onTextChanged(CharSequence s, int start,int before, int count) {
-				if(startDatePicker !=null) {
+				if(startDatePicker != null) {
 					day = startDatePicker.getDate().getDayOfMonth();
 					month = startDatePicker.getDate().getMonth();
 					year = startDatePicker.getDate().getYear();
+				}
+				if(startDatePicker !=null && repeatAdapter != null) {
 					if(repeatAdapter.getView().equals("weekly"))
 						repeatAdapter = new GridCellRepeatAdapter(CreateEvent.this, R.id.repeat_day_gridcell, "weekly", day, month, year);
 					else if(repeatAdapter.getView().equals("monthly"))
@@ -310,7 +324,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			editEvent = (Event) intentExtras.getParcelableExtra("EVENT");
 
 			Log.v("EDIT EVENT", editEvent.toString());
-			editEvent = eventsDBAdapter.getSingleEntry_byID(editEvent.getID());
+			//editEvent = eventsDBAdapter.getSingleEntry_byID(editEvent.getID());
 			Log.v("EDIT EVENT", editEvent.toString());
 			evTitle.setText(editEvent.getEventName());
 			evLocation.setText(editEvent.getLocation());
@@ -397,15 +411,19 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			if(editEvent.getCalendar().equals("Academic"))
 				calendarSpinner.setSelection(1);
 			//What to do with calendar spinner???
-			if(editEvent.getRepeat().substring(0,1).equals(0))
+
+			repeatExcept = editEvent.getRepeatExcept();
+
+			/********** PUT THIS SET OF IF STATEMENTS LAST, THE REPEAT SPINNER LISTENER WILL SET EDITEVENT TO NULL IF REPEATED WEEKLY OR MONTHLY ***********/
+			if(editEvent.getRepeat().substring(0,1).equals("0"))
 				repeatSpinner.setSelection(0);
-			else if(editEvent.getRepeat().substring(0,1).equals(1))
+			else if(editEvent.getRepeat().substring(0,1).equals("1"))
 				repeatSpinner.setSelection(1);
-			else if(editEvent.getRepeat().substring(0,1).equals(2))
+			else if(editEvent.getRepeat().substring(0,1).equals("2"))
 				repeatSpinner.setSelection(2);
-			else if(editEvent.getRepeat().substring(0,1).equals(3))
+			else if(editEvent.getRepeat().substring(0,1).equals("3"))
 				repeatSpinner.setSelection(3);
-			else if(editEvent.getRepeat().substring(0,1).equals(4))
+			else if(editEvent.getRepeat().substring(0,1).equals("4"))
 				repeatSpinner.setSelection(4);
 		}
 	}
@@ -418,6 +436,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			endDatePicker.show();
 		}
 		else if(v.getId() == R.id.addEvent) {
+			editEvent = (Event) intentExtras.getParcelableExtra("EVENT");
 			String title = evTitle.getText().toString();
 			String location = evLocation.getText().toString();
 			String description = evDescrip.getText().toString();
@@ -531,9 +550,9 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 						if(temp.equals("0"))
 							counter++;
 						else {
+							last = x;
 							if(counter<dayGap && first != 0) {
 								dayGap = counter;
-								last = x;
 							}
 							if(first == 0)
 								first = x;
@@ -541,23 +560,37 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 						}
 						Log.v("Repeat Cycle: ", temp + " " + dayGap + " " + first + " " + last);
 					}
-					Log.v("F & L:", first + " " + last);
-					if(8-last + first-2 > dayGap)
-						dayGap=last-first;
+					if(8-last + first-2 < dayGap)
+						dayGap=8-last + first-2;
+					Log.v("F & L:", first + " " + last + " " + (8-last + first-2) + " " + dayGap);
 				}
 				else {
-					for(int y = 2; y<repeat.length(); y+=2) {
+					for(int y = 2; y<repeat.length()-2; y+=2) {
 						String prevNum = repeat.substring(y, y+2);
 						String nextNum = repeat.substring(y+2, y+4);
+						Log.v("Prev & Next Num: ", prevNum + " " + nextNum);
 						if(prevNum.substring(0,1).equals("0"))
 							prevNum = prevNum.substring(1,2);
 						if(nextNum.substring(0,1).equals("0"))
 							nextNum = nextNum.substring(1, 2);
-						counter = Integer.parseInt(nextNum) - Integer.parseInt(prevNum);
+						if(y == 2)
+							first = Integer.parseInt(prevNum);
+						if(y == repeat.length()-4)
+							last = Integer.parseInt(nextNum);
+						counter = Integer.parseInt(nextNum) - Integer.parseInt(prevNum) - 1;
 						if(counter < dayGap) {
 							dayGap = counter;
 						}
 					}
+					if(last <= 28) {
+						if (28 - last + first < dayGap)
+							dayGap = 28 - last + first;
+					}
+					else if(last == 30 || last == 29 || last == 31) {
+						if (first < dayGap)
+							dayGap = first;
+					}
+					Log.v("F & L:", first + " " + last + " " + " " + dayGap);
 				}
 			}
 
@@ -571,17 +604,18 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			cEnd.set(Calendar.YEAR, endYear);
 
 			long diff = cEnd.getTime().getTime() - cStart.getTime().getTime();
-			Log.v("Days: " , "" + TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS) + dayGap);
-
+			diff = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+			long dayGapLong = dayGap;
+			Log.v("Days: ", "" + diff + " " + dayGapLong);
 
 			if(title.equals("")) {
 				text = "Cannot make event with no title.";
 				Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
 			}
-			else if(diff >= dayGap) {
-				text = "Cannot repeat an event that does not end before the next repeat.";
-				Toast toast = Toast.makeText(context, text, duration);
+			else if(diff > dayGapLong) {
+				text = "Cannot repeat an event that does not end before the next repeat. Program takes into account 28 days as the shortest month for repeating monthly.";
+				Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
 				toast.show();
 			}
 			else if((endYear < startYear) ||
@@ -602,18 +636,65 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				toast.show();
 			}
 			else if(intentExtras.hasExtra("EVENT")) {
-				Event newEvent = new Event(title, location, description,
+				final Event newEvent = new Event(title, location, description,
 						startTimeH, startTimeM, endTimeH, endTimeM,
 						startMonth, startDay, startYear,
 						allDay, remind, priv,
 						endMonth, endDay, endYear,
-						calendar, color, editEvent.getID(), repeat);
-				Log.v("Created Event", newEvent.toString());
-				Intent i = new Intent();
-				i.putExtra("newEvent", newEvent);
-				setResult(Activity.RESULT_OK, i);
-				eventsDBAdapter.close();
-				finish();
+						calendar, color, editEvent.getID(), repeat, repeatExcept);
+				if(newEvent.getRepeat().equals(editEvent.getRepeat()) && !newEvent.getRepeat().equals("0")) {
+					new AlertDialog.Builder(CreateEvent.this)
+							.setTitle("Edit Event")
+							.setMessage("This event is repeated. Edit all repeated events or only the event selected? (Edit Selected will set repeat to none)")
+							.setPositiveButton("Edit All", new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int which) {
+									Log.v("Editing All Events", newEvent.toString());
+									Intent i = new Intent();
+									i.putExtra("newEvent", newEvent);
+									if(newEvent.equals(editEvent))
+										i.putExtra("edit", "nochanges");
+									else
+										i.putExtra("edit", "editall");
+									setResult(Activity.RESULT_OK, i);
+									eventsDBAdapter.close();
+									finish();
+									Toast.makeText(CreateEvent.this, "Edited All Events", Toast.LENGTH_LONG).show();
+								}
+							})
+							.setNeutralButton("Edit Selected", new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int which) {
+									// continue with delete
+									Log.v("Editing All Events", newEvent.toString());
+									Intent i = new Intent();
+									i.putExtra("newEvent", newEvent);
+									if(newEvent.equals(editEvent))
+										i.putExtra("edit", "nochanges");
+									else
+										i.putExtra("edit", "editselected");
+									setResult(Activity.RESULT_OK, i);
+									eventsDBAdapter.close();
+									finish();
+									Toast.makeText(CreateEvent.this, "Edited Selected Event", Toast.LENGTH_LONG).show();
+								}
+							})
+							.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int which) {
+									// do nothing
+								}
+							})
+							.setIcon(android.R.drawable.ic_dialog_alert)
+							.show();
+				}
+				else {
+					Intent i = new Intent();
+					i.putExtra("newEvent", newEvent);
+					i.putExtra("edit", "editall");
+					setResult(Activity.RESULT_OK, i);
+					eventsDBAdapter.close();
+					finish();
+					Toast.makeText(CreateEvent.this, "Edited Event", Toast.LENGTH_LONG).show();
+				}
+
 			}
 			else {
 				Log.v("Repeat: ", repeat + "" );
@@ -622,7 +703,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 						startMonth, startDay, startYear,
 						allDay, remind, priv,
 						endMonth, endDay, endYear,
-						calendar, color, -1, repeat);
+						calendar, color, -1, repeat, repeatExcept);
 				Intent i = new Intent();
 				Log.v("Created Event: ", newEvent.toString());
 				i.putExtra("newEvent", newEvent);
@@ -796,7 +877,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 
 		private void printMonth() {
 			for(int i = 1; i <=31; i++) {
-				Log.d("Printing Month", i + "");
+				//Log.d("Printing Month", i + "");
 				list.add(i + "");
 				if(i == day)
 					clicked.add(1);
@@ -807,7 +888,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 
 		private void printWeek() {
 			for(int i = 0; i <7; i++) {
-				Log.d("Printing Week", weekdays[i]);
+				//Log.d("Printing Week", weekdays[i]);
 				list.add(weekdays[i]);
 				clicked.add(0);
 			}
@@ -817,9 +898,18 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			c.set(Calendar.MONTH, month);
 			c.set(Calendar.YEAR, year);
 			dayOfWeek = c.get(Calendar.DAY_OF_WEEK)-1;
-			Log.d("DayOfWeek: ", dayOfWeek + " " + day + " " + month + " " + year);
+			//Log.d("DayOfWeek: ", dayOfWeek + " " + day + " " + month + " " + year);
 			if(dayOfWeek != -1)
 				clicked.set(dayOfWeek, 1);
+		}
+
+		public int getDayOfWeek() {
+			Calendar c = Calendar.getInstance();
+			c.set(Calendar.DAY_OF_MONTH, day);
+			c.set(Calendar.MONTH, month);
+			c.set(Calendar.YEAR, year);
+			return c.get(Calendar.DAY_OF_WEEK)-1;
+
 		}
 
 		public ArrayList<Integer> getClicked() {
@@ -839,6 +929,26 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				gridcell.setBackgroundColor(Color.WHITE);
 				clicked.set(Integer.parseInt(cellNum), 0);
 			}
+		}
+
+		public void updateHighlighted(String s) {
+			if(s.length() == 9) {
+				for(int x = 2; x<9; x++) {
+					String temp = s.substring(x, x+1);
+					clicked.set(x-2, Integer.parseInt(temp));
+				}
+			}
+			else {
+				for(int y = 2; y<s.length(); y+=2) {
+					String prevNum = s.substring(y, y+2);
+					Log.v("Prev Num: ", prevNum);
+					if(prevNum.substring(0,1).equals("0"))
+						prevNum = prevNum.substring(1,2);
+					clicked.set(Integer.parseInt(prevNum)-1, 1);
+				}
+			}
+			Log.v("Clicked Changed: ", clicked.toString());
+			notifyDataSetChanged();
 		}
 
 		@Override
@@ -870,7 +980,8 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			gridcell = (Button) row.findViewById(R.id.repeat_day_gridcell);
 			if (clicked.get((position)) == 1) {
 				gridcell.setBackgroundColor(getResources().getColor(R.color.blue));
-				gridcell.setEnabled(false);
+				if(position + 1 == day || position == getDayOfWeek())
+					gridcell.setEnabled(false);
 			}
 
 			gridcell.setOnClickListener(this);

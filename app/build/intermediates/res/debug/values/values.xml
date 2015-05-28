@@ -110,12 +110,12 @@
     <!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_addEvent">Add Event</string>
-    <string name="action_day">Day</string>
-    <string name="action_month">Month</string>
+    <string name="action_home">Home</string>
+    <string name="action_more">More</string>
+    <string name="action_notifications">Notifications</string>
+    <string name="action_profile">Profile</string>
     <string name="action_search">Search</string>
     <string name="action_switch">Switch Calendar</string>
-    <string name="action_week">Week</string>
-    <string name="action_year">Year</string>
     <string name="app_name">CAPP</string>
     <string name="hello_world">Hello world!</string>
     <string name="more">More Information Goes Here</string>

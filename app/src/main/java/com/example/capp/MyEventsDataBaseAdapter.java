@@ -20,7 +20,7 @@ public class MyEventsDataBaseAdapter {
 	// TODO: Create public field for each column in your table.
 	// SQL Statement to create a new database.
 	static final String DATABASE_CREATE = "create table " + "EVENTS" +
-			"( " + KEY_ID + " integer primary key autoincrement," + "USERNAME  varchar(25),EVENTNAME varchar(100),LOCATION varchar(100), DESCRIPTION varchar(255), START_HOUR varchar(5), START_MIN varchar(5), END_HOUR varchar(5), END_MIN varchar(5), START_DAY varchar(5), START_MONTH varchar(25), START_YEAR varchar(5), ALLDAY varchar(1), REMIND varchar(5), PRIVATE varchar(5), END_DAY varchar(5), END_MONTH varchar(25), END_YEAR varchar(5), CALENDAR varchar(50), COLOR varchar(20), REPEAT varchar(65));";
+			"( " + KEY_ID + " integer primary key autoincrement," + "USERNAME  varchar(25),EVENTNAME varchar(100),LOCATION varchar(100), DESCRIPTION varchar(255), START_HOUR varchar(5), START_MIN varchar(5), END_HOUR varchar(5), END_MIN varchar(5), START_DAY varchar(5), START_MONTH varchar(25), START_YEAR varchar(5), ALLDAY varchar(1), REMIND varchar(5), PRIVATE varchar(5), END_DAY varchar(5), END_MONTH varchar(25), END_YEAR varchar(5), CALENDAR varchar(50), COLOR varchar(20), REPEAT varchar(65), REPEATEXCEPT varchar(200));";
 
 	// Variable to hold the database instance
 	public  SQLiteDatabase db;
@@ -57,7 +57,7 @@ public class MyEventsDataBaseAdapter {
 	// Method to insert a record in Table
 	public long insertEntry(String userName, String eventName, String location, String description, String startHour, String startMin, String endHour, String endMin,
 			String startDay, String startMonth, String startYear, String allDay, String remind,
-			String priv, String endDay, String endMonth, String endYear, String calendar, String color, String repeat)
+			String priv, String endDay, String endMonth, String endYear, String calendar, String color, String repeat, String repeatExcept)
 	{
 		ContentValues newValues = new ContentValues();
 		// Assign values for each column.
@@ -81,6 +81,7 @@ public class MyEventsDataBaseAdapter {
 		newValues.put("CALENDAR", calendar);
 		newValues.put("COLOR", color);
 		newValues.put("REPEAT", repeat);
+		newValues.put("REPEATEXCEPT", repeatExcept);
 
 		//db.insert("EVENTS", null, newValues);
 		Toast.makeText(context, "Event Added", Toast.LENGTH_LONG).show();
@@ -89,7 +90,7 @@ public class MyEventsDataBaseAdapter {
 
 	public Event getSingleEntry_byID(long id)
 	{
-	    String[] columns = new String[]{KEY_ID, "USERNAME", "EVENTNAME", "LOCATION", "DESCRIPTION", "START_HOUR", "START_MIN", "END_HOUR", "END_MIN", "START_DAY", "START_MONTH", "START_YEAR", "ALLDAY", "REMIND", "PRIVATE", "END_DAY", "END_MONTH", "END_YEAR", "CALENDAR", "COLOR", "REPEAT"};
+	    String[] columns = new String[]{KEY_ID, "USERNAME", "EVENTNAME", "LOCATION", "DESCRIPTION", "START_HOUR", "START_MIN", "END_HOUR", "END_MIN", "START_DAY", "START_MONTH", "START_YEAR", "ALLDAY", "REMIND", "PRIVATE", "END_DAY", "END_MONTH", "END_YEAR", "CALENDAR", "COLOR", "REPEAT", "REPEATEXCEPT"};
 		Cursor cursor = db.query("EVENTS", columns, KEY_ID + " =?", new String[] { String.valueOf(id) }, null, null, null, null);
 		if(cursor.getCount()<1) // UserName Not Exist
 			return null;
@@ -103,7 +104,7 @@ public class MyEventsDataBaseAdapter {
 	                Integer.parseInt(cursor.getString(12)), Integer.parseInt(cursor.getString(13)),
 	                Integer.parseInt(cursor.getString(14)), Integer.parseInt(cursor.getString(15)),
 	                Integer.parseInt(cursor.getString(16)), Integer.parseInt(cursor.getString(17)),
-	                cursor.getString(18), cursor.getString(19), Long.parseLong(cursor.getString(0)), cursor.getString(20));
+	                cursor.getString(18), cursor.getString(19), Long.parseLong(cursor.getString(0)), cursor.getString(20), cursor.getString(21));
 		Log.v("SINGLE ENTRY: ", event.toString());
 		return event;
 	}
@@ -140,6 +141,7 @@ public class MyEventsDataBaseAdapter {
 		newValues.put("CALENDAR", event.getCalendar());
 		newValues.put("COLOR", event.getColor());
 		newValues.put("REPEAT", event.getRepeat());
+		newValues.put("REPEATEXCEPT", event.getRepeatExcept());
 
 		db.update("EVENTS", newValues, KEY_ID + " = ?", new String[] { String.valueOf(id) });
 	}
@@ -157,7 +159,8 @@ public class MyEventsDataBaseAdapter {
 	    				" " + cursor.getString(5) + " " + cursor.getString(6) + " " + cursor.getString(7) + " " + cursor.getString(8) + " "
 	    				+ cursor.getString(9) + " " + cursor.getString(10) + " " + cursor.getString(11) + " " + cursor.getString(12) + " " 
 	    				+ cursor.getString(13) + " " + cursor.getString(14) + " " + cursor.getString(15) + cursor.getString(16) + " " + 
-	    				cursor.getString(17) + " " + cursor.getString(18) + " " + cursor.getString(19) + " " + cursor.getString(20));
+	    				cursor.getString(17) + " " + cursor.getString(18) + " " + cursor.getString(19) + " " + cursor.getString(20) + " " +
+						cursor.getString(21));
 	            Event event = new Event(cursor.getString(2),
 		                cursor.getString(3), cursor.getString(4), Integer.parseInt(cursor.getString(5)),
 		                Integer.parseInt(cursor.getString(6)), Integer.parseInt(cursor.getString(7)),
@@ -166,7 +169,8 @@ public class MyEventsDataBaseAdapter {
 		                Integer.parseInt(cursor.getString(12)), Integer.parseInt(cursor.getString(13)),
 		                Integer.parseInt(cursor.getString(14)), Integer.parseInt(cursor.getString(15)),
 		                Integer.parseInt(cursor.getString(16)), Integer.parseInt(cursor.getString(17)),
-		                cursor.getString(18), cursor.getString(19), Long.parseLong(cursor.getString(0)), cursor.getString(20));
+		                cursor.getString(18), cursor.getString(19), Long.parseLong(cursor.getString(0)),
+						cursor.getString(20), cursor.getString(21));
 	            // Adding contact to list
 	            eventList.add(event);
 	        } while (cursor.moveToNext());

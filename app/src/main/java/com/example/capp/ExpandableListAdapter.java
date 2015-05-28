@@ -105,25 +105,69 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		ImageView delete = (ImageView) convertView.findViewById(R.id.delete);
 		delete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	new AlertDialog.Builder(context)
-                .setTitle("Delete Event")
-                .setMessage("Are you sure you want to delete this event?")
-                .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) { 
-                        // continue with delete
-                    	eventsDBAdapter.delete_byID(getGroup(groupPosition).getID());
-                    	eventList.remove(getGroup(groupPosition));
-                    	notifyDataSetChanged();
-    					Toast.makeText(context, "Event Successfully Deleted", Toast.LENGTH_LONG).show();
-                    }
-                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) { 
-                        // do nothing
-                    }
-                 })
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                 .show();
+				if(!getGroup(groupPosition).getRepeat().equals("0")) {
+					new AlertDialog.Builder(context)
+							.setTitle("Delete Event")
+							.setMessage("This event is repeated. Do you want to delete all events or only the selected event?")
+							.setPositiveButton("Delete All", new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int which) {
+									// continue with delete
+									eventsDBAdapter.delete_byID(getGroup(groupPosition).getID());
+									eventList.remove(getGroup(groupPosition));
+									notifyDataSetChanged();
+									Toast.makeText(context, "All Events Deleted", Toast.LENGTH_LONG).show();
+								}
+							})
+							.setNeutralButton("Delete Selected", new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int which) {
+									// continue with delete
+									Event tempEvent = getGroup(groupPosition);
+									Log.v("Selected Event: ", getGroup(groupPosition).toString());
+									int[] startDate = tempEvent.getStartDate();
+									String month = Integer.toString(startDate[0]);
+									String day = Integer.toString(startDate[1]);
+									String year = Integer.toString(startDate[2]);
+									if(day.length() < 2)
+										day = "0" + day;
+									if(month.length() < 2)
+										month = "0" + month;
+									String repeatExceptThis = month + day + year;
+									tempEvent.setRepeatExcept(tempEvent.getRepeatExcept() + repeatExceptThis);
+									eventsDBAdapter.updateEntry(tempEvent, tempEvent.getID());
+									eventList.remove(getGroup(groupPosition));
+									notifyDataSetChanged();
+									Toast.makeText(context, "Selected Event Deleted", Toast.LENGTH_LONG).show();
+								}
+							})
+							.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int which) {
+									// do nothing
+								}
+							})
+							.setIcon(android.R.drawable.ic_dialog_alert)
+							.show();
+				}
+				else {
+					new AlertDialog.Builder(context)
+							.setTitle("Delete Event")
+							.setMessage("Are you sure you want to delete this event?")
+							.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int which) {
+									// continue with delete
+									eventsDBAdapter.delete_byID(getGroup(groupPosition).getID());
+									eventList.remove(getGroup(groupPosition));
+									notifyDataSetChanged();
+									Toast.makeText(context, "Event Successfully Deleted", Toast.LENGTH_LONG).show();
+								}
+							})
+							.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog, int which) {
+									// do nothing
+								}
+							})
+							.setIcon(android.R.drawable.ic_dialog_alert)
+							.show();
+				}
             }
         });
 		ImageView edit = (ImageView) convertView.findViewById(R.id.edit);

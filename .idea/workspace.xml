@@ -18,75 +18,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6003521d-16fb-4c68-bfa9-ebf49ab32164" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/repeat_screen_gridcell.xml" />
-      <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\build\intermediates\classes\debug\com\example\capp\HomePage$6.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/OnSwipeTouchListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$CustomDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$CustomDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent$CustomDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent$CustomDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$GridCellRepeatAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$GridCellRepeatAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/Event$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/Event$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/Event.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/Event.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$GridCellAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$GridCellAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/MyEventsDataBaseAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/MyEventsDataBaseAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$array.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$array.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$menu.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$raw.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$string.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/SignUPActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/SignUPActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/SignUPActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/SignUPActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-release.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-release.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/Event.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/Event.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/MyEventsDataBaseAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/MyEventsDataBaseAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/capp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/capp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/example/capp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/example/capp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/array.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/array.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/create_new_event.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/create_new_event.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_new_event.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_new_event.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/layout/homepage.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/layout/homepage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/lint-results-release-fatal.html" afterPath="$PROJECT_DIR$/app/build/outputs/lint-results-release-fatal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/layout/screen_gridcell.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/layout/screen_gridcell.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/view.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/view.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CAPP.iws" />
@@ -126,74 +108,140 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="CAPP" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+            </PATH>
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="CAPP" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="homepage.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
+      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8888888">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.56962025">
+              <caret line="246" column="58" selection-start-line="246" selection-start-column="58" selection-end-line="246" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2396#2403#0" expanded="true" />
+                <element signature="e#2676#2684#0" expanded="true" />
+                <element signature="e#2749#2775#0" expanded="true" />
+                <element signature="e#8744#8745#0" expanded="true" />
+                <element signature="e#8818#8819#0" expanded="true" />
+                <element signature="e#9446#9447#0" expanded="true" />
+                <element signature="e#9499#9500#0" expanded="true" />
+                <element signature="e#16580#16587#0" expanded="true" />
+                <element signature="e#17788#17795#0" expanded="true" />
+                <element signature="e#20061#20068#0" expanded="true" />
+                <element signature="e#38647#38648#0" expanded="true" />
+                <element signature="e#38672#38673#0" expanded="true" />
+                <element signature="e#38718#38719#0" expanded="true" />
+                <element signature="e#38745#38746#0" expanded="true" />
+                <element signature="e#38792#38793#0" expanded="true" />
+                <element signature="e#38822#38823#0" expanded="true" />
+                <element signature="e#46147#46148#0" expanded="true" />
+                <element signature="e#46180#46181#0" expanded="true" />
+                <element signature="e#46349#46350#0" expanded="true" />
+                <element signature="e#46394#46395#0" expanded="true" />
+                <element signature="e#46440#46441#0" expanded="true" />
+                <element signature="e#46460#46461#0" expanded="true" />
+                <element signature="e#46496#46497#0" expanded="true" />
+                <element signature="e#46526#46527#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnSwipeTouchListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/OnSwipeTouchListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/view.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding>
+                <element signature="e#325#346#0" expanded="true" />
+                <element signature="e#828#851#0" expanded="true" />
+                <element signature="e#1087#1117#0" expanded="true" />
+                <element signature="e#1349#1370#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.48">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom_actionbar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_actionbar.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.275862">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
+      <file leaf-file-name="ExpandableListAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="580" column="0" selection-start-line="580" selection-start-column="0" selection-end-line="580" selection-end-column="0" />
+              <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2275#2282#0" expanded="true" />
-                <element signature="e#2555#2563#0" expanded="true" />
-                <element signature="e#2628#2654#0" expanded="true" />
-                <element signature="e#15332#15339#0" expanded="true" />
-                <element signature="e#18029#18036#0" expanded="true" />
-                <element signature="e#21536#21543#0" expanded="true" />
-                <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-                <element signature="e#40451#40452#0" expanded="true" />
-                <element signature="e#40481#40482#0" expanded="true" />
-                <element signature="e#41948#41955#0" expanded="true" />
-                <element signature="e#42004#42011#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1392#1393#0" expanded="true" />
+                <element signature="e#1457#1458#0" expanded="true" />
+                <element signature="e#1472#1473#0" expanded="true" />
+                <element signature="e#2583#2584#0" expanded="true" />
+                <element signature="e#2613#2614#0" expanded="true" />
+                <element signature="e#2659#2660#0" expanded="true" />
+                <element signature="e#2686#2687#0" expanded="true" />
+                <element signature="e#3388#6301#0" expanded="true" />
+                <element signature="e#3736#4130#0" expanded="true" />
+                <element signature="e#4129#4130#0" expanded="true" />
+                <element signature="e#4176#5172#0" expanded="true" />
+                <element signature="e#5171#5172#0" expanded="true" />
+                <element signature="e#6300#6301#0" expanded="true" />
+                <element signature="e#6398#6758#0" expanded="true" />
+                <element signature="e#6757#6758#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateEvent.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28353658">
-              <caret line="567" column="51" selection-start-line="567" selection-start-column="51" selection-end-line="567" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5348#5356#0" expanded="true" />
-                <element signature="e#10101#12022#0" expanded="true" />
-                <element signature="e#12021#12022#0" expanded="true" />
-                <element signature="method#CustomDialog#0;class#CustomDialog#0;class#CreateEvent#0" expanded="false" />
-                <element signature="e#29124#29125#0" expanded="true" />
-                <element signature="e#29146#29147#0" expanded="true" />
-                <element signature="e#29888#29889#0" expanded="true" />
-                <element signature="e#29911#29912#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyEventsDataBaseAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/MyEventsDataBaseAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.206897">
-              <caret line="22" column="502" selection-start-line="22" selection-start-column="502" selection-end-line="22" selection-end-column="502" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -206,6 +254,7 @@
         <option value="valueResourceFile" />
         <option value="resourceFile" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -1402,7 +1451,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/anim.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_left.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rounded_button.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_out_left.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_in_right.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
@@ -1411,10 +1459,14 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/homepage.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/repeat_screen_gridcell.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/create_new_event.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/Event.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/MyEventsDataBaseAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/Event.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/OnSwipeTouchListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
       </list>
     </option>
   </component>
@@ -1432,10 +1484,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1320" />
-    <option name="height" value="780" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1302" />
+    <option name="height" value="766" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1463,8 +1515,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1479,6 +1529,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1581,6 +1632,126 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1594,6 +1765,7 @@
       <pane id="PackagesPane">
         <subPane />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1605,7 +1777,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Galaxy_Nexus_API_19" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="331" />
     <property name="ExportApk.ApkPath" value="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app" />
@@ -1817,11 +1989,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="780" extended-state="0" />
+    <frame x="1" y="1" width="1302" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29695025" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2955665" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16984127" sideWeight="0.49881235" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1829,13 +2001,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930756" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32460317" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3234811" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38202247" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38752052" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16984127" sideWeight="0.49881235" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17230274" sideWeight="0.49881235" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16984127" sideWeight="0.49881235" order="5" side_tool="false" content_ui="tabs" />
@@ -1898,36 +2070,36 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>664</line>
+          <line>807</line>
           <properties class="com.example.capp.HomePage" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>332</line>
+          <line>374</line>
           <properties class="com.example.capp.HomePage" method="openYearView" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>1270</line>
+          <line>1370</line>
           <properties class="com.example.capp.HomePage.GridCellAdapter" method="getItemId" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>959</line>
+          <line>1102</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>795</line>
+          <line>938</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>360</line>
+          <line>402</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -1937,48 +2109,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1101" column="35" selection-start-line="1101" selection-start-column="35" selection-end-line="1101" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2275#2282#0" expanded="true" />
-            <element signature="e#2555#2563#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#15332#15339#0" expanded="true" />
-            <element signature="e#18029#18036#0" expanded="true" />
-            <element signature="e#21536#21543#0" expanded="true" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#40451#40452#0" expanded="true" />
-            <element signature="e#40481#40482#0" expanded="true" />
-            <element signature="e#41948#41955#0" expanded="true" />
-            <element signature="e#42004#42011#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="17" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="17" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -1987,86 +2137,54 @@
           <caret line="1101" column="35" selection-start-line="1101" selection-start-column="35" selection-end-line="1101" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2275#2282#0" expanded="true" />
-            <element signature="e#2555#2563#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#15332#15339#0" expanded="true" />
-            <element signature="e#18029#18036#0" expanded="true" />
-            <element signature="e#21536#21543#0" expanded="true" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#40451#40452#0" expanded="true" />
-            <element signature="e#40481#40482#0" expanded="true" />
-            <element signature="e#41948#41955#0" expanded="true" />
-            <element signature="e#42004#42011#0" expanded="true" />
+            <element signature="e#2396#2403#0" expanded="true" />
+            <element signature="e#2676#2684#0" expanded="true" />
+            <element signature="e#2749#2775#0" expanded="true" />
+            <element signature="e#8744#8745#0" expanded="true" />
+            <element signature="e#8818#8819#0" expanded="true" />
+            <element signature="e#9446#9447#0" expanded="true" />
+            <element signature="e#9499#9500#0" expanded="true" />
+            <element signature="e#16580#16587#0" expanded="true" />
+            <element signature="e#17788#17795#0" expanded="true" />
+            <element signature="e#20061#20068#0" expanded="true" />
+            <element signature="e#38647#38648#0" expanded="true" />
+            <element signature="e#38672#38673#0" expanded="true" />
+            <element signature="e#38718#38719#0" expanded="true" />
+            <element signature="e#38745#38746#0" expanded="true" />
+            <element signature="e#38792#38793#0" expanded="true" />
+            <element signature="e#38822#38823#0" expanded="true" />
+            <element signature="e#46147#46148#0" expanded="true" />
+            <element signature="e#46180#46181#0" expanded="true" />
+            <element signature="e#46349#46350#0" expanded="true" />
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46440#46441#0" expanded="true" />
+            <element signature="e#46460#46461#0" expanded="true" />
+            <element signature="e#46496#46497#0" expanded="true" />
+            <element signature="e#46526#46527#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="17" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1101" column="35" selection-start-line="1101" selection-start-column="35" selection-end-line="1101" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2275#2282#0" expanded="true" />
-            <element signature="e#2555#2563#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#15332#15339#0" expanded="true" />
-            <element signature="e#18029#18036#0" expanded="true" />
-            <element signature="e#21536#21543#0" expanded="true" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#40451#40452#0" expanded="true" />
-            <element signature="e#40481#40482#0" expanded="true" />
-            <element signature="e#41948#41955#0" expanded="true" />
-            <element signature="e#42004#42011#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2075,42 +2193,54 @@
           <caret line="761" column="39" selection-start-line="761" selection-start-column="39" selection-end-line="761" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2275#2282#0" expanded="true" />
-            <element signature="e#2555#2563#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#15332#15339#0" expanded="true" />
-            <element signature="e#18029#18036#0" expanded="true" />
-            <element signature="e#21536#21543#0" expanded="true" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#40451#40452#0" expanded="true" />
-            <element signature="e#40481#40482#0" expanded="true" />
-            <element signature="e#41948#41955#0" expanded="true" />
-            <element signature="e#42004#42011#0" expanded="true" />
+            <element signature="e#2396#2403#0" expanded="true" />
+            <element signature="e#2676#2684#0" expanded="true" />
+            <element signature="e#2749#2775#0" expanded="true" />
+            <element signature="e#8744#8745#0" expanded="true" />
+            <element signature="e#8818#8819#0" expanded="true" />
+            <element signature="e#9446#9447#0" expanded="true" />
+            <element signature="e#9499#9500#0" expanded="true" />
+            <element signature="e#16580#16587#0" expanded="true" />
+            <element signature="e#17788#17795#0" expanded="true" />
+            <element signature="e#20061#20068#0" expanded="true" />
+            <element signature="e#38647#38648#0" expanded="true" />
+            <element signature="e#38672#38673#0" expanded="true" />
+            <element signature="e#38718#38719#0" expanded="true" />
+            <element signature="e#38745#38746#0" expanded="true" />
+            <element signature="e#38792#38793#0" expanded="true" />
+            <element signature="e#38822#38823#0" expanded="true" />
+            <element signature="e#46147#46148#0" expanded="true" />
+            <element signature="e#46180#46181#0" expanded="true" />
+            <element signature="e#46349#46350#0" expanded="true" />
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46440#46441#0" expanded="true" />
+            <element signature="e#46460#46461#0" expanded="true" />
+            <element signature="e#46496#46497#0" expanded="true" />
+            <element signature="e#46526#46527#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2119,42 +2249,54 @@
           <caret line="758" column="19" selection-start-line="758" selection-start-column="19" selection-end-line="758" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2275#2282#0" expanded="true" />
-            <element signature="e#2555#2563#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#15332#15339#0" expanded="true" />
-            <element signature="e#18029#18036#0" expanded="true" />
-            <element signature="e#21536#21543#0" expanded="true" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#40451#40452#0" expanded="true" />
-            <element signature="e#40481#40482#0" expanded="true" />
-            <element signature="e#41948#41955#0" expanded="true" />
-            <element signature="e#42004#42011#0" expanded="true" />
+            <element signature="e#2396#2403#0" expanded="true" />
+            <element signature="e#2676#2684#0" expanded="true" />
+            <element signature="e#2749#2775#0" expanded="true" />
+            <element signature="e#8744#8745#0" expanded="true" />
+            <element signature="e#8818#8819#0" expanded="true" />
+            <element signature="e#9446#9447#0" expanded="true" />
+            <element signature="e#9499#9500#0" expanded="true" />
+            <element signature="e#16580#16587#0" expanded="true" />
+            <element signature="e#17788#17795#0" expanded="true" />
+            <element signature="e#20061#20068#0" expanded="true" />
+            <element signature="e#38647#38648#0" expanded="true" />
+            <element signature="e#38672#38673#0" expanded="true" />
+            <element signature="e#38718#38719#0" expanded="true" />
+            <element signature="e#38745#38746#0" expanded="true" />
+            <element signature="e#38792#38793#0" expanded="true" />
+            <element signature="e#38822#38823#0" expanded="true" />
+            <element signature="e#46147#46148#0" expanded="true" />
+            <element signature="e#46180#46181#0" expanded="true" />
+            <element signature="e#46349#46350#0" expanded="true" />
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46440#46441#0" expanded="true" />
+            <element signature="e#46460#46461#0" expanded="true" />
+            <element signature="e#46496#46497#0" expanded="true" />
+            <element signature="e#46526#46527#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2163,42 +2305,54 @@
           <caret line="761" column="14" selection-start-line="761" selection-start-column="14" selection-end-line="761" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2275#2282#0" expanded="true" />
-            <element signature="e#2555#2563#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#15332#15339#0" expanded="true" />
-            <element signature="e#18029#18036#0" expanded="true" />
-            <element signature="e#21536#21543#0" expanded="true" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#40451#40452#0" expanded="true" />
-            <element signature="e#40481#40482#0" expanded="true" />
-            <element signature="e#41948#41955#0" expanded="true" />
-            <element signature="e#42004#42011#0" expanded="true" />
+            <element signature="e#2396#2403#0" expanded="true" />
+            <element signature="e#2676#2684#0" expanded="true" />
+            <element signature="e#2749#2775#0" expanded="true" />
+            <element signature="e#8744#8745#0" expanded="true" />
+            <element signature="e#8818#8819#0" expanded="true" />
+            <element signature="e#9446#9447#0" expanded="true" />
+            <element signature="e#9499#9500#0" expanded="true" />
+            <element signature="e#16580#16587#0" expanded="true" />
+            <element signature="e#17788#17795#0" expanded="true" />
+            <element signature="e#20061#20068#0" expanded="true" />
+            <element signature="e#38647#38648#0" expanded="true" />
+            <element signature="e#38672#38673#0" expanded="true" />
+            <element signature="e#38718#38719#0" expanded="true" />
+            <element signature="e#38745#38746#0" expanded="true" />
+            <element signature="e#38792#38793#0" expanded="true" />
+            <element signature="e#38822#38823#0" expanded="true" />
+            <element signature="e#46147#46148#0" expanded="true" />
+            <element signature="e#46180#46181#0" expanded="true" />
+            <element signature="e#46349#46350#0" expanded="true" />
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46440#46441#0" expanded="true" />
+            <element signature="e#46460#46461#0" expanded="true" />
+            <element signature="e#46496#46497#0" expanded="true" />
+            <element signature="e#46526#46527#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2207,42 +2361,54 @@
           <caret line="961" column="17" selection-start-line="961" selection-start-column="17" selection-end-line="961" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2275#2282#0" expanded="true" />
-            <element signature="e#2555#2563#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#15332#15339#0" expanded="true" />
-            <element signature="e#18029#18036#0" expanded="true" />
-            <element signature="e#21536#21543#0" expanded="true" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#40451#40452#0" expanded="true" />
-            <element signature="e#40481#40482#0" expanded="true" />
-            <element signature="e#41948#41955#0" expanded="true" />
-            <element signature="e#42004#42011#0" expanded="true" />
+            <element signature="e#2396#2403#0" expanded="true" />
+            <element signature="e#2676#2684#0" expanded="true" />
+            <element signature="e#2749#2775#0" expanded="true" />
+            <element signature="e#8744#8745#0" expanded="true" />
+            <element signature="e#8818#8819#0" expanded="true" />
+            <element signature="e#9446#9447#0" expanded="true" />
+            <element signature="e#9499#9500#0" expanded="true" />
+            <element signature="e#16580#16587#0" expanded="true" />
+            <element signature="e#17788#17795#0" expanded="true" />
+            <element signature="e#20061#20068#0" expanded="true" />
+            <element signature="e#38647#38648#0" expanded="true" />
+            <element signature="e#38672#38673#0" expanded="true" />
+            <element signature="e#38718#38719#0" expanded="true" />
+            <element signature="e#38745#38746#0" expanded="true" />
+            <element signature="e#38792#38793#0" expanded="true" />
+            <element signature="e#38822#38823#0" expanded="true" />
+            <element signature="e#46147#46148#0" expanded="true" />
+            <element signature="e#46180#46181#0" expanded="true" />
+            <element signature="e#46349#46350#0" expanded="true" />
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46440#46441#0" expanded="true" />
+            <element signature="e#46460#46461#0" expanded="true" />
+            <element signature="e#46496#46497#0" expanded="true" />
+            <element signature="e#46526#46527#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
@@ -2251,18 +2417,30 @@
           <caret line="541" column="9" selection-start-line="541" selection-start-column="9" selection-end-line="541" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2275#2282#0" expanded="true" />
-            <element signature="e#2555#2563#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#15332#15339#0" expanded="true" />
-            <element signature="e#18029#18036#0" expanded="true" />
-            <element signature="e#21536#21543#0" expanded="true" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#40451#40452#0" expanded="true" />
-            <element signature="e#40481#40482#0" expanded="true" />
-            <element signature="e#41948#41955#0" expanded="true" />
-            <element signature="e#42004#42011#0" expanded="true" />
+            <element signature="e#2396#2403#0" expanded="true" />
+            <element signature="e#2676#2684#0" expanded="true" />
+            <element signature="e#2749#2775#0" expanded="true" />
+            <element signature="e#8744#8745#0" expanded="true" />
+            <element signature="e#8818#8819#0" expanded="true" />
+            <element signature="e#9446#9447#0" expanded="true" />
+            <element signature="e#9499#9500#0" expanded="true" />
+            <element signature="e#16580#16587#0" expanded="true" />
+            <element signature="e#17788#17795#0" expanded="true" />
+            <element signature="e#20061#20068#0" expanded="true" />
+            <element signature="e#38647#38648#0" expanded="true" />
+            <element signature="e#38672#38673#0" expanded="true" />
+            <element signature="e#38718#38719#0" expanded="true" />
+            <element signature="e#38745#38746#0" expanded="true" />
+            <element signature="e#38792#38793#0" expanded="true" />
+            <element signature="e#38822#38823#0" expanded="true" />
+            <element signature="e#46147#46148#0" expanded="true" />
+            <element signature="e#46180#46181#0" expanded="true" />
+            <element signature="e#46349#46350#0" expanded="true" />
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46440#46441#0" expanded="true" />
+            <element signature="e#46460#46461#0" expanded="true" />
+            <element signature="e#46496#46497#0" expanded="true" />
+            <element signature="e#46526#46527#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2365,37 +2543,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rounded_button.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/group_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.881029">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.75">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2417,36 +2568,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_gridcell.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8888888">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/repeat_screen_gridcell.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.62069">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/array.xml">
@@ -2458,68 +2598,173 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/create_new_event.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.9310346">
           <caret line="227" column="49" selection-start-line="227" selection-start-column="49" selection-end-line="227" selection-end-column="49" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/MyEventsDataBaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="36" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.62069">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/group_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.72121215">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/child_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4121212">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.48">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_actionbar.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.275862">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="e#325#346#0" expanded="true" />
+            <element signature="e#828#851#0" expanded="true" />
+            <element signature="e#1087#1117#0" expanded="true" />
+            <element signature="e#1349#1370#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/Event.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="214" column="33" selection-start-line="214" selection-start-column="33" selection-end-line="214" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/MyEventsDataBaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.206897">
-          <caret line="22" column="502" selection-start-line="22" selection-start-column="502" selection-end-line="22" selection-end-column="502" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="580" column="0" selection-start-line="580" selection-start-column="0" selection-end-line="580" selection-end-column="0" />
+          <caret line="221" column="8" selection-start-line="221" selection-start-column="8" selection-end-line="221" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2275#2282#0" expanded="true" />
-            <element signature="e#2555#2563#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#15332#15339#0" expanded="true" />
-            <element signature="e#18029#18036#0" expanded="true" />
-            <element signature="e#21536#21543#0" expanded="true" />
-            <element signature="method#printMonth#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="method#printWeek#0;class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
-            <element signature="e#40451#40452#0" expanded="true" />
-            <element signature="e#40481#40482#0" expanded="true" />
-            <element signature="e#41948#41955#0" expanded="true" />
-            <element signature="e#42004#42011#0" expanded="true" />
+            <element signature="e#4895#4903#0" expanded="true" />
+            <element signature="e#5218#5227#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28353658">
-          <caret line="567" column="51" selection-start-line="567" selection-start-column="51" selection-end-line="567" selection-end-column="51" />
+        <state vertical-scroll-proportion="-3.5172415">
+          <caret line="669" column="44" selection-start-line="669" selection-start-column="44" selection-end-line="669" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
+          <folding>
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#2583#2584#0" expanded="true" />
+            <element signature="e#2613#2614#0" expanded="true" />
+            <element signature="e#2659#2660#0" expanded="true" />
+            <element signature="e#2686#2687#0" expanded="true" />
+            <element signature="e#3388#6301#0" expanded="true" />
+            <element signature="e#3736#4130#0" expanded="true" />
+            <element signature="e#4129#4130#0" expanded="true" />
+            <element signature="e#4176#5172#0" expanded="true" />
+            <element signature="e#5171#5172#0" expanded="true" />
+            <element signature="e#6300#6301#0" expanded="true" />
+            <element signature="e#6398#6758#0" expanded="true" />
+            <element signature="e#6757#6758#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/OnSwipeTouchListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5348#5356#0" expanded="true" />
-            <element signature="e#10101#12022#0" expanded="true" />
-            <element signature="e#12021#12022#0" expanded="true" />
-            <element signature="method#CustomDialog#0;class#CustomDialog#0;class#CreateEvent#0" expanded="false" />
-            <element signature="e#29124#29125#0" expanded="true" />
-            <element signature="e#29146#29147#0" expanded="true" />
-            <element signature="e#29888#29889#0" expanded="true" />
-            <element signature="e#29911#29912#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56962025">
+          <caret line="246" column="58" selection-start-line="246" selection-start-column="58" selection-end-line="246" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2396#2403#0" expanded="true" />
+            <element signature="e#2676#2684#0" expanded="true" />
+            <element signature="e#2749#2775#0" expanded="true" />
+            <element signature="e#8744#8745#0" expanded="true" />
+            <element signature="e#8818#8819#0" expanded="true" />
+            <element signature="e#9446#9447#0" expanded="true" />
+            <element signature="e#9499#9500#0" expanded="true" />
+            <element signature="e#16580#16587#0" expanded="true" />
+            <element signature="e#17788#17795#0" expanded="true" />
+            <element signature="e#20061#20068#0" expanded="true" />
+            <element signature="e#38647#38648#0" expanded="true" />
+            <element signature="e#38672#38673#0" expanded="true" />
+            <element signature="e#38718#38719#0" expanded="true" />
+            <element signature="e#38745#38746#0" expanded="true" />
+            <element signature="e#38792#38793#0" expanded="true" />
+            <element signature="e#38822#38823#0" expanded="true" />
+            <element signature="e#46147#46148#0" expanded="true" />
+            <element signature="e#46180#46181#0" expanded="true" />
+            <element signature="e#46349#46350#0" expanded="true" />
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46440#46441#0" expanded="true" />
+            <element signature="e#46460#46461#0" expanded="true" />
+            <element signature="e#46496#46497#0" expanded="true" />
+            <element signature="e#46526#46527#0" expanded="true" />
           </folding>
         </state>
       </provider>
