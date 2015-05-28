@@ -23,28 +23,29 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int black=0x7f070000;
-        public static final int blacks=0x7f070001;
-        public static final int blue=0x7f070002;
-        public static final int blues=0x7f070003;
-        public static final int darkblue=0x7f070004;
-        public static final int darkgreen=0x7f070005;
-        public static final int darkorange=0x7f070006;
-        public static final int darkpurple=0x7f070007;
-        public static final int darkred=0x7f070008;
-        public static final int green=0x7f070009;
-        public static final int greens=0x7f07000a;
-        public static final int grey=0x7f07000b;
-        public static final int lightgray=0x7f07000c;
-        public static final int orange=0x7f07000d;
-        public static final int oranges=0x7f07000e;
-        public static final int pinks=0x7f07000f;
-        public static final int purple=0x7f070010;
-        public static final int purples=0x7f070011;
-        public static final int red=0x7f070012;
-        public static final int reds=0x7f070013;
-        public static final int transparent=0x7f070014;
-        public static final int yellows=0x7f070015;
+        public static final int actionbarpurple=0x7f070000;
+        public static final int black=0x7f070001;
+        public static final int blacks=0x7f070002;
+        public static final int blue=0x7f070003;
+        public static final int blues=0x7f070004;
+        public static final int darkblue=0x7f070005;
+        public static final int darkgreen=0x7f070006;
+        public static final int darkorange=0x7f070007;
+        public static final int darkpurple=0x7f070008;
+        public static final int darkred=0x7f070009;
+        public static final int green=0x7f07000a;
+        public static final int greens=0x7f07000b;
+        public static final int grey=0x7f07000c;
+        public static final int lightgray=0x7f07000d;
+        public static final int orange=0x7f07000e;
+        public static final int oranges=0x7f07000f;
+        public static final int pinks=0x7f070010;
+        public static final int purple=0x7f070011;
+        public static final int purples=0x7f070012;
+        public static final int red=0x7f070013;
+        public static final int reds=0x7f070014;
+        public static final int transparent=0x7f070015;
+        public static final int yellows=0x7f070016;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f080000;
@@ -53,26 +54,31 @@ public final class R {
     public static final class drawable {
         public static final int addeventbutton=0x7f020000;
         public static final int borderframe=0x7f020001;
-        public static final int go=0x7f020002;
-        public static final int gridborderframe=0x7f020003;
-        public static final int homeaction=0x7f020004;
-        public static final int ic_delete=0x7f020005;
-        public static final int ic_edit=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int leftbutton=0x7f020008;
-        public static final int logo=0x7f020009;
-        public static final int moreaction=0x7f02000a;
-        public static final int notificationsaction=0x7f02000b;
-        public static final int profileaction=0x7f02000c;
-        public static final int rectangle=0x7f02000d;
-        public static final int rightbutton=0x7f02000e;
-        public static final int rounded_button=0x7f02000f;
-        public static final int searchaction=0x7f020010;
-        public static final int searchbutton=0x7f020011;
-        public static final int splash_back=0x7f020012;
-        public static final int switchbutton=0x7f020013;
-        public static final int triangle=0x7f020014;
-        public static final int usericon=0x7f020015;
+        public static final int filterbutton=0x7f020002;
+        public static final int go=0x7f020003;
+        public static final int gridborderframe=0x7f020004;
+        public static final int homeaction=0x7f020005;
+        public static final int homeactionpressed=0x7f020006;
+        public static final int ic_delete=0x7f020007;
+        public static final int ic_edit=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int leftbutton=0x7f02000a;
+        public static final int logo=0x7f02000b;
+        public static final int moreaction=0x7f02000c;
+        public static final int moreactionpressed=0x7f02000d;
+        public static final int notificationsaction=0x7f02000e;
+        public static final int notificationsactionpressed=0x7f02000f;
+        public static final int profileaction=0x7f020010;
+        public static final int profileactionpressed=0x7f020011;
+        public static final int rectangle=0x7f020012;
+        public static final int rightbutton=0x7f020013;
+        public static final int rounded_button=0x7f020014;
+        public static final int searchaction=0x7f020015;
+        public static final int searchactionpressed=0x7f020016;
+        public static final int splash_back=0x7f020017;
+        public static final int switchbutton=0x7f020018;
+        public static final int triangle=0x7f020019;
+        public static final int usericon=0x7f02001a;
     }
     public static final class id {
         public static final int TabHost01=0x7f0c0025;
@@ -125,6 +131,7 @@ public final class R {
         public static final int eventName=0x7f0c002f;
         public static final int eventTime=0x7f0c0030;
         public static final int eventTitle=0x7f0c000d;
+        public static final int filterButton=0x7f0c0024;
         public static final int goToDayPicked=0x7f0c0046;
         public static final int goToDayPickedMonth=0x7f0c0052;
         public static final int homepage=0x7f0c0007;
@@ -156,7 +163,6 @@ public final class R {
         public static final int repeatText=0x7f0c001a;
         public static final int repeat_day_gridcell=0x7f0c0069;
         public static final int screen_gridcell=0x7f0c0068;
-        public static final int searchButton=0x7f0c0024;
         public static final int startDateAndTime=0x7f0c000e;
         public static final int switchButton=0x7f0c0022;
         public static final int timePicker=0x7f0c002a;

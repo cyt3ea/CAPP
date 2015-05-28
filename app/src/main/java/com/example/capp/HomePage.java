@@ -1,7 +1,9 @@
 package com.example.capp;
 import android.animation.ObjectAnimator;
 import android.graphics.Point;
+import android.os.Handler;
 import android.support.v4.view.MotionEventCompat;
+import android.util.AttributeSet;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.animation.Animation;
@@ -77,7 +79,7 @@ public class HomePage extends Activity implements OnClickListener{
 	GridLayout yearViewGridLayout;
 	Animation slideOutRight, slideOutLeft, slideInRight, slideInLeft;
 	OnSwipeTouchListener gestureDetector;
-
+	MenuItem itemHolder;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -376,6 +378,8 @@ public class HomePage extends Activity implements OnClickListener{
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu items for use in the action bar
 		getMenuInflater().inflate(R.menu.view, menu);
+		itemHolder = menu.getItem(0);
+		itemHolder.setIcon(getResources().getDrawable(R.drawable.homeactionpressed));
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -391,14 +395,65 @@ public class HomePage extends Activity implements OnClickListener{
 				dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 				openDayView();
 				viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.dayview)));
+
+				if(itemHolder.getItemId() == R.id.action_profile)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.profileaction));
+				else if(itemHolder.getItemId() == R.id.action_search)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.searchaction));
+				else if(itemHolder.getItemId() == R.id.action_notifications)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.notificationsaction));
+				else if(itemHolder.getItemId() == R.id.action_more)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.moreaction));
+				itemHolder = item;
+				item.setIcon(getResources().getDrawable(R.drawable.homeactionpressed));
 				return true;
 			case R.id.action_profile:
+				if(itemHolder.getItemId() == R.id.action_home)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.homeaction));
+				else if(itemHolder.getItemId() == R.id.action_search)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.searchaction));
+				else if(itemHolder.getItemId() == R.id.action_notifications)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.notificationsaction));
+				else if(itemHolder.getItemId() == R.id.action_more)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.moreaction));
+				itemHolder = item;
+				item.setIcon(getResources().getDrawable(R.drawable.profileactionpressed));
 				return true;
 			case R.id.action_search:
+				if(itemHolder.getItemId() == R.id.action_profile)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.profileaction));
+				else if(itemHolder.getItemId() == R.id.action_home)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.homeaction));
+				else if(itemHolder.getItemId() == R.id.action_notifications)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.notificationsaction));
+				else if(itemHolder.getItemId() == R.id.action_more)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.moreaction));
+				itemHolder = item;
+				item.setIcon(getResources().getDrawable(R.drawable.searchactionpressed));
 				return true;
 			case R.id.action_notifications:
+				if(itemHolder.getItemId() == R.id.action_profile)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.profileaction));
+				else if(itemHolder.getItemId() == R.id.action_search)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.searchaction));
+				else if(itemHolder.getItemId() == R.id.action_home)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.homeaction));
+				else if(itemHolder.getItemId() == R.id.action_more)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.moreaction));
+				itemHolder = item;
+				item.setIcon(getResources().getDrawable(R.drawable.notificationsactionpressed));
 				return true;
 			case R.id.action_more:
+				if(itemHolder.getItemId() == R.id.action_profile)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.profileaction));
+				else if(itemHolder.getItemId() == R.id.action_search)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.searchaction));
+				else if(itemHolder.getItemId() == R.id.action_notifications)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.notificationsaction));
+				else if(itemHolder.getItemId() == R.id.action_home)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.homeaction));
+				itemHolder = item;
+				item.setIcon(getResources().getDrawable(R.drawable.moreactionpressed));
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);

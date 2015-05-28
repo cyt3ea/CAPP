@@ -29,22 +29,25 @@
         android:layout_height="50dp"
         android:layout_marginRight="-5dp"
 		android:layout_toLeftOf="@+id/addEventButton"
+        android:background="@color/transparent"
         android:src="@drawable/switchbutton"/>
         
     <ImageButton
         android:id="@+id/addEventButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_toLeftOf="@+id/searchButton"
+        android:layout_toLeftOf="@+id/filterButton"
         android:layout_marginRight="-5dp"
+        android:background="@color/transparent"
         android:src="@drawable/addeventbutton"/>
         
     <ImageButton
-        android:id="@+id/searchButton"
+        android:id="@+id/filterButton"
         android:layout_alignParentRight="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/searchbutton"/>
+        android:background="@color/transparent"
+        android:src="@drawable/filterbutton"/>
     
     
 </RelativeLayout>
