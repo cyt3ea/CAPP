@@ -77,7 +77,7 @@ public class HomePage extends Activity implements OnClickListener{
 	int width, height;
 	GridView yearViewJan, yearViewFeb, yearViewMar, yearViewApr, yearViewMay, yearViewJun, yearViewJul, yearViewAug, yearViewSep, yearViewOct, yearViewNov, yearViewDec;
 	GridLayout yearViewGridLayout;
-	Animation slideOutRight, slideOutLeft, slideInRight, slideInLeft;
+	Animation slideOutRight, slideOutLeft, slideInRight, slideInLeft, slideInRightVF, slideInLeftVF;
 	OnSwipeTouchListener gestureDetector;
 	MenuItem itemHolder;
 
@@ -137,7 +137,8 @@ public class HomePage extends Activity implements OnClickListener{
 			};
 		});
 		slideInRight = AnimationUtils.loadAnimation(HomePage.this, R.anim.slide_in_right);
-		slideInRight.setAnimationListener(new Animation.AnimationListener() {
+		slideInRightVF = AnimationUtils.loadAnimation(HomePage.this, R.anim.slide_in_right);
+		slideInRightVF.setAnimationListener(new Animation.AnimationListener() {
 			public void onAnimationStart(Animation anim) {
 				c = Calendar.getInstance();
 				month = c.get(Calendar.MONTH);
@@ -159,7 +160,8 @@ public class HomePage extends Activity implements OnClickListener{
 			};
 		});
 		slideInLeft = AnimationUtils.loadAnimation(HomePage.this, android.R.anim.slide_in_left);
-		slideInLeft.setAnimationListener(new Animation.AnimationListener() {
+		slideInLeftVF = AnimationUtils.loadAnimation(HomePage.this, android.R.anim.slide_in_left);
+		slideInLeftVF.setAnimationListener(new Animation.AnimationListener() {
 			public void onAnimationStart(Animation anim) {
 				c = Calendar.getInstance();
 				month = c.get(Calendar.MONTH);
@@ -184,6 +186,8 @@ public class HomePage extends Activity implements OnClickListener{
 		slideInLeft.setDuration(200);
 		slideOutLeft.setDuration(200);
 		slideOutRight.setDuration(200);
+		slideInRightVF.setDuration(200);
+		slideInLeftVF.setDuration(200);
 
 		Display display = getWindowManager().getDefaultDisplay();
 		Point size = new Point();
@@ -278,13 +282,13 @@ public class HomePage extends Activity implements OnClickListener{
 
 			public void onSwipeRight() {
 				//Toast.makeText(HomePage.this, "right", Toast.LENGTH_SHORT).show();
-				viewFlipper.setInAnimation(slideInLeft);
+				viewFlipper.setInAnimation(slideInLeftVF);
 				viewFlipper.showPrevious();
 			}
 
 			public void onSwipeLeft() {
 				//Toast.makeText(HomePage.this, "left", Toast.LENGTH_SHORT).show();
-				viewFlipper.setInAnimation(slideInRight);
+				viewFlipper.setInAnimation(slideInRightVF);
 				viewFlipper.showNext();
 			}
 			public void onSwipeBottom() {
