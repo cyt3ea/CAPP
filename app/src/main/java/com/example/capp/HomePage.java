@@ -76,6 +76,7 @@ public class HomePage extends Activity implements OnClickListener{
 	GridView yearViewJan, yearViewFeb, yearViewMar, yearViewApr, yearViewMay, yearViewJun, yearViewJul, yearViewAug, yearViewSep, yearViewOct, yearViewNov, yearViewDec;
 	GridLayout yearViewGridLayout;
 	Animation slideOutRight, slideOutLeft, slideInRight, slideInLeft;
+	OnSwipeTouchListener gestureDetector;
 
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -90,15 +91,10 @@ public class HomePage extends Activity implements OnClickListener{
 		slideOutRight = AnimationUtils.loadAnimation(HomePage.this, android.R.anim.slide_out_right);
 		slideOutRight.setAnimationListener(new Animation.AnimationListener() {
 			public void onAnimationStart(Animation anim) {
-			}
-
-			;
+			};
 
 			public void onAnimationRepeat(Animation anim) {
-			}
-
-			;
-
+			};
 			public void onAnimationEnd(Animation anim) {
 				slideInLeft.setDuration(200);
 				if (view.equals("week")) {
@@ -139,17 +135,59 @@ public class HomePage extends Activity implements OnClickListener{
 			};
 		});
 		slideInRight = AnimationUtils.loadAnimation(HomePage.this, R.anim.slide_in_right);
+		slideInRight.setAnimationListener(new Animation.AnimationListener() {
+			public void onAnimationStart(Animation anim) {
+				c = Calendar.getInstance();
+				month = c.get(Calendar.MONTH);
+				day = c.get(Calendar.DATE);
+				year = c.get(Calendar.YEAR);
+				dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+				if(view.equals("day"))
+					openWeekView();
+				else if(view.equals("week"))
+					openMonthView();
+				else if(view.equals("month"))
+					openYearView();
+				else if(view.equals("year"))
+					openDayView();
+			};
+			public void onAnimationRepeat(Animation anim) {
+			};
+			public void onAnimationEnd(Animation anim) {
+			};
+		});
 		slideInLeft = AnimationUtils.loadAnimation(HomePage.this, android.R.anim.slide_in_left);
+		slideInLeft.setAnimationListener(new Animation.AnimationListener() {
+			public void onAnimationStart(Animation anim) {
+				c = Calendar.getInstance();
+				month = c.get(Calendar.MONTH);
+				day = c.get(Calendar.DATE);
+				year = c.get(Calendar.YEAR);
+				dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+				if(view.equals("day"))
+					openYearView();
+				else if(view.equals("week"))
+					openDayView();
+				else if(view.equals("month"))
+					openWeekView();
+				else if(view.equals("year"))
+					openMonthView();
+			};
+			public void onAnimationRepeat(Animation anim) {
+			};
+			public void onAnimationEnd(Animation anim) {
+			};
+		});
+		slideInRight.setDuration(200);
+		slideInLeft.setDuration(200);
+		slideOutLeft.setDuration(200);
+		slideOutRight.setDuration(200);
 
 		Display display = getWindowManager().getDefaultDisplay();
 		Point size = new Point();
 		display.getSize(size);
 		width = size.x;
 		height = size.y;
-		//view = "day";
-		//openDayView();
-
-		//eventList.add(new Event());
 
 		yearViewGridLayout = (GridLayout) this.findViewById(R.id.yearViewGridLayout);
 
@@ -229,26 +267,26 @@ public class HomePage extends Activity implements OnClickListener{
 		rightToggleYV.setOnClickListener(this);
 
 		viewFlipper = (ViewFlipper) findViewById(R.id.myViewFlipper);
-		viewFlipper.setOnTouchListener(new OnSwipeTouchListener(HomePage.this) {
+
+		viewFlipper.setOnTouchListener(gestureDetector = new OnSwipeTouchListener(HomePage.this) {
+
 			public void onSwipeTop() {
-				Toast.makeText(HomePage.this, "top", Toast.LENGTH_SHORT).show();
+				//Toast.makeText(HomePage.this, "top", Toast.LENGTH_SHORT).show();
 			}
 
 			public void onSwipeRight() {
-				Toast.makeText(HomePage.this, "right", Toast.LENGTH_SHORT).show();
+				//Toast.makeText(HomePage.this, "right", Toast.LENGTH_SHORT).show();
 				viewFlipper.setInAnimation(slideInLeft);
-				viewFlipper.setOutAnimation(slideOutRight);
 				viewFlipper.showPrevious();
 			}
 
 			public void onSwipeLeft() {
-				Toast.makeText(HomePage.this, "left", Toast.LENGTH_SHORT).show();
+				//Toast.makeText(HomePage.this, "left", Toast.LENGTH_SHORT).show();
 				viewFlipper.setInAnimation(slideInRight);
-				viewFlipper.setOutAnimation(slideOutLeft);
 				viewFlipper.showNext();
 			}
 			public void onSwipeBottom() {
-				Toast.makeText(HomePage.this, "bottom", Toast.LENGTH_SHORT).show();
+				//Toast.makeText(HomePage.this, "bottom", Toast.LENGTH_SHORT).show();
 			}
 
 			public boolean onTouch(View v, MotionEvent event) {
@@ -296,6 +334,7 @@ public class HomePage extends Activity implements OnClickListener{
 				year = Integer.parseInt(temp[2]);
 				//point.setVisibility(View.INVISIBLE);
 				openDayView();
+				viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.dayview)));
 			}
 		});
 
@@ -310,9 +349,16 @@ public class HomePage extends Activity implements OnClickListener{
 				year = Integer.parseInt(temp[2]);
 				//point.setVisibility(View.INVISIBLE);
 				openDayView();
+				viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.dayview)));
 			}
 		});
 		openDayView();
+	}
+
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent ev){
+		super.dispatchTouchEvent(ev);
+		return gestureDetector.onTouch(viewFlipper.getCurrentView(), ev);
 	}
 
 	public void setGridViewParams(GridView x) {
@@ -336,14 +382,15 @@ public class HomePage extends Activity implements OnClickListener{
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle presses on the action bar items
-		c = Calendar.getInstance();
-		month = c.get(Calendar.MONTH);
-		day = c.get(Calendar.DATE);
-		year = c.get(Calendar.YEAR);
-		dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 		switch (item.getItemId()) {
 			case R.id.action_home:
+				c = Calendar.getInstance();
+				month = c.get(Calendar.MONTH);
+				day = c.get(Calendar.DATE);
+				year = c.get(Calendar.YEAR);
+				dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 				openDayView();
+				viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.dayview)));
 				return true;
 			case R.id.action_profile:
 				return true;
@@ -353,20 +400,6 @@ public class HomePage extends Activity implements OnClickListener{
 				return true;
 			case R.id.action_more:
 				return true;
-			/*
-			case R.id.action_day:
-				openDayView();
-				return true;
-			case R.id.action_week:
-				openWeekView();
-				return true;
-			case R.id.action_month:
-				openMonthView();
-				return true;
-			case R.id.action_year:
-				openYearView();
-				return true;
-				*/
 			default:
 				return super.onOptionsItemSelected(item);
 		}
@@ -374,7 +407,7 @@ public class HomePage extends Activity implements OnClickListener{
 
 	private void openYearView() {
 		// TODO Auto-generated method stub
-
+		//Toast.makeText(HomePage.this, "Year View", Toast.LENGTH_SHORT).show();
 		view = "year";
 
 		adapterYear = new GridCellAdapter(HomePage.this, R.id.calendar_day_gridcell, 0, year, expMonthListAdapter, dayPickedMonth, view);
@@ -402,13 +435,14 @@ public class HomePage extends Activity implements OnClickListener{
 		adapterYear = new GridCellAdapter(HomePage.this, R.id.calendar_day_gridcell, 11, year, expMonthListAdapter, dayPickedMonth, view);
 		yearViewDec.setAdapter(adapterYear);
 
-		viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.yearview)));
+		//viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.yearview)));
 		todaysDateTextView=(TextView)findViewById(R.id.viewDateYV);
 		todaysDateTextView.setText(Integer.toString(year));
 	}
 
 	private void openMonthView() {
 		// TODO Auto-generated method stub
+		//Toast.makeText(HomePage.this, "Month View", Toast.LENGTH_SHORT).show();
 
 		if(!view.equals("month")) {
 			dayPickedMonth.setText(months[month] + " " + day + ", " + year);
@@ -439,7 +473,7 @@ public class HomePage extends Activity implements OnClickListener{
 
 		getEventsForThatDay(expMonthListAdapter, tempDay, tempMonth, tempYear);
 
-		viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.monthview)));
+		//viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.monthview)));
 
 		todaysDateTextView=(TextView)findViewById(R.id.viewDateMV);
 		todaysDateTextView.setText(months[month] + " " + Integer.toString(year));
@@ -447,6 +481,8 @@ public class HomePage extends Activity implements OnClickListener{
 
 	private void openWeekView() {
 		// TODO Auto-generated method stuff
+
+		//Toast.makeText(HomePage.this, "Week View", Toast.LENGTH_SHORT).show();
 
 		if(weekAdapter == null) {
 			weekAdapter = new GridCellAdapter(HomePage.this, R.id.calendar_day_gridcell, month, year, day, expWeekListAdapter, dayPicked, point);
@@ -517,7 +553,7 @@ public class HomePage extends Activity implements OnClickListener{
 					+ Integer.toString(startDay) + " - " + months[endMonth].substring(0,3) + "  "
 					+ Integer.toString(endDay));
 		}
-		viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.weekview)));
+		//viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.weekview)));
 
 		view = "week";
 	}
@@ -526,7 +562,9 @@ public class HomePage extends Activity implements OnClickListener{
 		// TODO Auto-generated method stub
 		view = "day";
 
-		viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.dayview)));
+		//Toast.makeText(HomePage.this, "Day View", Toast.LENGTH_SHORT).show();
+
+		//viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.dayview)));
 		todaysDateTextView=(TextView)findViewById(R.id.viewDate);
 		todaysDateTextView.setText(months[month] + " " + Integer.toString(day) + ", "
 				+ Integer.toString(year));
