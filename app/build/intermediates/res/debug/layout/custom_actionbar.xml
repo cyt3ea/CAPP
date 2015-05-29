@@ -29,7 +29,7 @@
         android:layout_height="50dp"
         android:layout_marginRight="-5dp"
 		android:layout_toLeftOf="@+id/addEventButton"
-        android:background="@color/transparent"
+        android:background="?android:selectableItemBackground"
         android:src="@drawable/switchbutton"/>
         
     <ImageButton
@@ -38,7 +38,7 @@
         android:layout_height="50dp"
         android:layout_toLeftOf="@+id/filterButton"
         android:layout_marginRight="-5dp"
-        android:background="@color/transparent"
+        android:background="?android:selectableItemBackground"
         android:src="@drawable/addeventbutton"/>
         
     <ImageButton
@@ -46,7 +46,7 @@
         android:layout_alignParentRight="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@color/transparent"
+        android:background="?android:selectableItemBackground"
         android:src="@drawable/filterbutton"/>
     
     

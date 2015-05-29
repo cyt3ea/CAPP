@@ -414,8 +414,8 @@ public class HomePage extends Activity implements OnClickListener{
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.searchaction));
 				else if(itemHolder.getItemId() == R.id.action_notifications)
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.notificationsaction));
-				else if(itemHolder.getItemId() == R.id.action_more)
-					itemHolder.setIcon(getResources().getDrawable(R.drawable.moreaction));
+				else if(itemHolder.getItemId() == R.id.action_group)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.groupaction));
 				itemHolder = item;
 				item.setIcon(getResources().getDrawable(R.drawable.homeactionpressed));
 				return true;
@@ -426,8 +426,8 @@ public class HomePage extends Activity implements OnClickListener{
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.searchaction));
 				else if(itemHolder.getItemId() == R.id.action_notifications)
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.notificationsaction));
-				else if(itemHolder.getItemId() == R.id.action_more)
-					itemHolder.setIcon(getResources().getDrawable(R.drawable.moreaction));
+				else if(itemHolder.getItemId() == R.id.action_group)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.groupaction));
 				itemHolder = item;
 				item.setIcon(getResources().getDrawable(R.drawable.profileactionpressed));
 				return true;
@@ -438,8 +438,8 @@ public class HomePage extends Activity implements OnClickListener{
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.homeaction));
 				else if(itemHolder.getItemId() == R.id.action_notifications)
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.notificationsaction));
-				else if(itemHolder.getItemId() == R.id.action_more)
-					itemHolder.setIcon(getResources().getDrawable(R.drawable.moreaction));
+				else if(itemHolder.getItemId() == R.id.action_group)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.groupaction));
 				itemHolder = item;
 				item.setIcon(getResources().getDrawable(R.drawable.searchactionpressed));
 				return true;
@@ -450,12 +450,12 @@ public class HomePage extends Activity implements OnClickListener{
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.searchaction));
 				else if(itemHolder.getItemId() == R.id.action_home)
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.homeaction));
-				else if(itemHolder.getItemId() == R.id.action_more)
-					itemHolder.setIcon(getResources().getDrawable(R.drawable.moreaction));
+				else if(itemHolder.getItemId() == R.id.action_group)
+					itemHolder.setIcon(getResources().getDrawable(R.drawable.groupaction));
 				itemHolder = item;
 				item.setIcon(getResources().getDrawable(R.drawable.notificationsactionpressed));
 				return true;
-			case R.id.action_more:
+			case R.id.action_group:
 				if(itemHolder.getItemId() == R.id.action_profile)
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.profileaction));
 				else if(itemHolder.getItemId() == R.id.action_search)
@@ -465,7 +465,7 @@ public class HomePage extends Activity implements OnClickListener{
 				else if(itemHolder.getItemId() == R.id.action_home)
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.homeaction));
 				itemHolder = item;
-				item.setIcon(getResources().getDrawable(R.drawable.moreactionpressed));
+				item.setIcon(getResources().getDrawable(R.drawable.groupactionpressed));
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);

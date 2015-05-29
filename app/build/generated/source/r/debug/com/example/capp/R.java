@@ -57,15 +57,15 @@ public final class R {
         public static final int filterbutton=0x7f020002;
         public static final int go=0x7f020003;
         public static final int gridborderframe=0x7f020004;
-        public static final int homeaction=0x7f020005;
-        public static final int homeactionpressed=0x7f020006;
-        public static final int ic_delete=0x7f020007;
-        public static final int ic_edit=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int leftbutton=0x7f02000a;
-        public static final int logo=0x7f02000b;
-        public static final int moreaction=0x7f02000c;
-        public static final int moreactionpressed=0x7f02000d;
+        public static final int groupaction=0x7f020005;
+        public static final int groupactionpressed=0x7f020006;
+        public static final int homeaction=0x7f020007;
+        public static final int homeactionpressed=0x7f020008;
+        public static final int ic_delete=0x7f020009;
+        public static final int ic_edit=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int leftbutton=0x7f02000c;
+        public static final int logo=0x7f02000d;
         public static final int notificationsaction=0x7f02000e;
         public static final int notificationsactionpressed=0x7f02000f;
         public static final int profileaction=0x7f020010;
@@ -82,11 +82,11 @@ public final class R {
     }
     public static final class id {
         public static final int TabHost01=0x7f0c0025;
+        public static final int action_group=0x7f0c0072;
         public static final int action_home=0x7f0c0070;
-        public static final int action_more=0x7f0c0074;
         public static final int action_notifications=0x7f0c0073;
         public static final int action_profile=0x7f0c0071;
-        public static final int action_search=0x7f0c0072;
+        public static final int action_search=0x7f0c0074;
         public static final int addEvent=0x7f0c000a;
         public static final int addEventButton=0x7f0c0023;
         public static final int allDayCheckBox=0x7f0c0011;
