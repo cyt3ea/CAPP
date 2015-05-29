@@ -2,28 +2,38 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
       android:layout_width="match_parent"
-      tools:context="com.example.capp.MainActivity"  >
+    tools:context="com.example.capp.MainActivity"  >
 	
-	<item android:id="@+id/action_day"
-          android:title="@string/action_day"
+	<item android:id="@+id/action_home"
+          android:title="@string/action_home"
+          android:icon="@drawable/homeaction"
           android:layout_weight="1"
           android:layout_width="0dp"
           android:showAsAction="ifRoom" />
-    <item android:id="@+id/action_week"
-          android:title="@string/action_week"
+    <item android:id="@+id/action_profile"
+          android:title="@string/action_profile"
+        android:icon="@drawable/profileaction"
+        android:layout_weight="1"
+          android:layout_width="0dp"
+          android:showAsAction="ifRoom" />
+    <item android:id="@+id/action_search"
+          android:title="@string/action_search"
+        android:icon="@drawable/searchaction"
           android:layout_weight="1"
           android:layout_width="0dp"
           android:showAsAction="ifRoom" />
-    <item android:id="@+id/action_month"
-          android:title="@string/action_month"
+    <item android:id="@+id/action_notifications"
+          android:title="@string/action_notifications"
+        android:icon="@drawable/notificationsaction"
           android:layout_weight="1"
           android:layout_width="0dp"
           android:showAsAction="ifRoom" />
-    <item android:id="@+id/action_year"
-          android:title="@string/action_year"
-          android:layout_weight="1"
-          android:layout_width="0dp"
-          android:showAsAction="ifRoom" />
+    <item android:id="@+id/action_more"
+        android:title="@string/action_more"
+        android:icon="@drawable/moreaction"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:showAsAction="ifRoom" />
     
 </menu>
 

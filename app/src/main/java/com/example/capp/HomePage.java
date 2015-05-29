@@ -93,10 +93,15 @@ public class HomePage extends Activity implements OnClickListener{
 		slideOutRight = AnimationUtils.loadAnimation(HomePage.this, android.R.anim.slide_out_right);
 		slideOutRight.setAnimationListener(new Animation.AnimationListener() {
 			public void onAnimationStart(Animation anim) {
-			};
+			}
+
+			;
 
 			public void onAnimationRepeat(Animation anim) {
-			};
+			}
+
+			;
+
 			public void onAnimationEnd(Animation anim) {
 				slideInLeft.setDuration(200);
 				if (view.equals("week")) {
@@ -109,7 +114,9 @@ public class HomePage extends Activity implements OnClickListener{
 					yearViewGridLayout.setAnimation(slideInLeft);
 				}
 				slideInLeft.start();
-			};
+			}
+
+			;
 		});
 		slideOutLeft = AnimationUtils.loadAnimation(HomePage.this, R.anim.slide_out_left);
 		slideOutLeft.setAnimationListener(new Animation.AnimationListener() {
@@ -398,7 +405,8 @@ public class HomePage extends Activity implements OnClickListener{
 				year = c.get(Calendar.YEAR);
 				dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 				openDayView();
-				viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.dayview)));
+				if(!(viewFlipper.getCurrentView().equals(findViewById(R.id.dayview))))
+					viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.dayview)));
 
 				if(itemHolder.getItemId() == R.id.action_profile)
 					itemHolder.setIcon(getResources().getDrawable(R.drawable.profileaction));

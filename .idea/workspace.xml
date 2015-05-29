@@ -19,23 +19,72 @@
   <component name="ChangeListManager">
     <list default="true" id="6003521d-16fb-4c68-bfa9-ebf49ab32164" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\build\intermediates\res\debug\drawable-hdpi-v4\searchbutton.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\build\intermediates\res\release\drawable-hdpi-v4\searchbutton.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\searchbutton.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent$CustomDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent$CustomDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/CreateEvent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/Event$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/Event$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/Event.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/Event.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/ExpandableListAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$GridCellAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage$GridCellAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/HomePage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/MyEventsDataBaseAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/MyEventsDataBaseAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$array.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$array.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$attr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$dimen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$raw.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/SignUPActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/example/capp/SignUPActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/drawable-hdpi-v4/addeventbutton.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/drawable-hdpi-v4/addeventbutton.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-release.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-release.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/drawable-hdpi-v4/switchbutton.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/drawable-hdpi-v4/switchbutton.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/example/capp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/example/capp/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/layout/create_new_event.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/layout/create_new_event.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/layout/custom_actionbar.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/layout/custom_actionbar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/lint-results-release-fatal.html" afterPath="$PROJECT_DIR$/app/build/outputs/lint-results-release-fatal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/release/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/release/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/menu/view.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/menu/view.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CAPP.iws" />
@@ -103,23 +152,23 @@
       <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0508982">
-              <caret line="288" column="39" selection-start-line="288" selection-start-column="39" selection-end-line="288" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.55988026">
+              <caret line="407" column="86" selection-start-line="407" selection-start-column="86" selection-end-line="407" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#11104#11105#0" expanded="true" />
-                <element signature="e#11157#11158#0" expanded="true" />
-                <element signature="e#12148#12455#0" expanded="true" />
-                <element signature="e#12454#12455#0" expanded="true" />
-                <element signature="e#12559#13110#0" expanded="true" />
-                <element signature="e#13109#13110#0" expanded="true" />
-                <element signature="e#13229#13790#0" expanded="true" />
-                <element signature="e#13789#13790#0" expanded="true" />
+                <element signature="e#11120#11121#0" expanded="true" />
+                <element signature="e#11173#11174#0" expanded="true" />
+                <element signature="e#12164#12471#0" expanded="true" />
+                <element signature="e#12470#12471#0" expanded="true" />
+                <element signature="e#12575#13126#0" expanded="true" />
+                <element signature="e#13125#13126#0" expanded="true" />
+                <element signature="e#13245#13806#0" expanded="true" />
+                <element signature="e#13805#13806#0" expanded="true" />
                 <element signature="method#dispatchTouchEvent#0;class#HomePage#0" expanded="false" />
                 <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
-                <element signature="e#21918#21925#0" expanded="true" />
-                <element signature="e#23204#23211#0" expanded="true" />
-                <element signature="e#25556#25563#0" expanded="true" />
+                <element signature="e#22010#22017#0" expanded="true" />
+                <element signature="e#23296#23303#0" expanded="true" />
+                <element signature="e#25648#25655#0" expanded="true" />
                 <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
                 <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
               </folding>
@@ -204,7 +253,7 @@
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="KEY_STORE_PATH" value="C:\Users\Christine Tsou\AndroidstudioProjects\keystore.jks" />
-    <option name="KEY_ALIAS" value="Tests" />
+    <option name="KEY_ALIAS" value="tests" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1919,42 +1968,42 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>904</line>
+          <line>912</line>
           <properties class="com.example.capp.HomePage" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>466</line>
+          <line>474</line>
           <properties class="com.example.capp.HomePage" method="openYearView" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>1467</line>
+          <line>1475</line>
           <properties class="com.example.capp.HomePage.GridCellAdapter" method="getItemId" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>906</line>
+          <line>914</line>
           <properties class="com.example.capp.HomePage" method="setGridCellAdapterToDate" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>1199</line>
+          <line>1207</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>1035</line>
+          <line>1043</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java</url>
-          <line>494</line>
+          <line>502</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -1970,19 +2019,19 @@
           <caret line="761" column="39" selection-start-line="761" selection-start-column="39" selection-end-line="761" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11104#11105#0" expanded="true" />
-            <element signature="e#11157#11158#0" expanded="true" />
-            <element signature="e#12148#12455#0" expanded="true" />
-            <element signature="e#12454#12455#0" expanded="true" />
-            <element signature="e#12559#13110#0" expanded="true" />
-            <element signature="e#13109#13110#0" expanded="true" />
-            <element signature="e#13229#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
+            <element signature="e#11120#11121#0" expanded="true" />
+            <element signature="e#11173#11174#0" expanded="true" />
+            <element signature="e#12164#12471#0" expanded="true" />
+            <element signature="e#12470#12471#0" expanded="true" />
+            <element signature="e#12575#13126#0" expanded="true" />
+            <element signature="e#13125#13126#0" expanded="true" />
+            <element signature="e#13245#13806#0" expanded="true" />
+            <element signature="e#13805#13806#0" expanded="true" />
             <element signature="method#dispatchTouchEvent#0;class#HomePage#0" expanded="false" />
             <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
-            <element signature="e#21918#21925#0" expanded="true" />
-            <element signature="e#23204#23211#0" expanded="true" />
-            <element signature="e#25556#25563#0" expanded="true" />
+            <element signature="e#22010#22017#0" expanded="true" />
+            <element signature="e#23296#23303#0" expanded="true" />
+            <element signature="e#25648#25655#0" expanded="true" />
             <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
             <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
@@ -2017,19 +2066,19 @@
           <caret line="758" column="19" selection-start-line="758" selection-start-column="19" selection-end-line="758" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11104#11105#0" expanded="true" />
-            <element signature="e#11157#11158#0" expanded="true" />
-            <element signature="e#12148#12455#0" expanded="true" />
-            <element signature="e#12454#12455#0" expanded="true" />
-            <element signature="e#12559#13110#0" expanded="true" />
-            <element signature="e#13109#13110#0" expanded="true" />
-            <element signature="e#13229#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
+            <element signature="e#11120#11121#0" expanded="true" />
+            <element signature="e#11173#11174#0" expanded="true" />
+            <element signature="e#12164#12471#0" expanded="true" />
+            <element signature="e#12470#12471#0" expanded="true" />
+            <element signature="e#12575#13126#0" expanded="true" />
+            <element signature="e#13125#13126#0" expanded="true" />
+            <element signature="e#13245#13806#0" expanded="true" />
+            <element signature="e#13805#13806#0" expanded="true" />
             <element signature="method#dispatchTouchEvent#0;class#HomePage#0" expanded="false" />
             <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
-            <element signature="e#21918#21925#0" expanded="true" />
-            <element signature="e#23204#23211#0" expanded="true" />
-            <element signature="e#25556#25563#0" expanded="true" />
+            <element signature="e#22010#22017#0" expanded="true" />
+            <element signature="e#23296#23303#0" expanded="true" />
+            <element signature="e#25648#25655#0" expanded="true" />
             <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
             <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
@@ -2064,19 +2113,19 @@
           <caret line="761" column="14" selection-start-line="761" selection-start-column="14" selection-end-line="761" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11104#11105#0" expanded="true" />
-            <element signature="e#11157#11158#0" expanded="true" />
-            <element signature="e#12148#12455#0" expanded="true" />
-            <element signature="e#12454#12455#0" expanded="true" />
-            <element signature="e#12559#13110#0" expanded="true" />
-            <element signature="e#13109#13110#0" expanded="true" />
-            <element signature="e#13229#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
+            <element signature="e#11120#11121#0" expanded="true" />
+            <element signature="e#11173#11174#0" expanded="true" />
+            <element signature="e#12164#12471#0" expanded="true" />
+            <element signature="e#12470#12471#0" expanded="true" />
+            <element signature="e#12575#13126#0" expanded="true" />
+            <element signature="e#13125#13126#0" expanded="true" />
+            <element signature="e#13245#13806#0" expanded="true" />
+            <element signature="e#13805#13806#0" expanded="true" />
             <element signature="method#dispatchTouchEvent#0;class#HomePage#0" expanded="false" />
             <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
-            <element signature="e#21918#21925#0" expanded="true" />
-            <element signature="e#23204#23211#0" expanded="true" />
-            <element signature="e#25556#25563#0" expanded="true" />
+            <element signature="e#22010#22017#0" expanded="true" />
+            <element signature="e#23296#23303#0" expanded="true" />
+            <element signature="e#25648#25655#0" expanded="true" />
             <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
             <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
@@ -2111,19 +2160,19 @@
           <caret line="961" column="17" selection-start-line="961" selection-start-column="17" selection-end-line="961" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11104#11105#0" expanded="true" />
-            <element signature="e#11157#11158#0" expanded="true" />
-            <element signature="e#12148#12455#0" expanded="true" />
-            <element signature="e#12454#12455#0" expanded="true" />
-            <element signature="e#12559#13110#0" expanded="true" />
-            <element signature="e#13109#13110#0" expanded="true" />
-            <element signature="e#13229#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
+            <element signature="e#11120#11121#0" expanded="true" />
+            <element signature="e#11173#11174#0" expanded="true" />
+            <element signature="e#12164#12471#0" expanded="true" />
+            <element signature="e#12470#12471#0" expanded="true" />
+            <element signature="e#12575#13126#0" expanded="true" />
+            <element signature="e#13125#13126#0" expanded="true" />
+            <element signature="e#13245#13806#0" expanded="true" />
+            <element signature="e#13805#13806#0" expanded="true" />
             <element signature="method#dispatchTouchEvent#0;class#HomePage#0" expanded="false" />
             <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
-            <element signature="e#21918#21925#0" expanded="true" />
-            <element signature="e#23204#23211#0" expanded="true" />
-            <element signature="e#25556#25563#0" expanded="true" />
+            <element signature="e#22010#22017#0" expanded="true" />
+            <element signature="e#23296#23303#0" expanded="true" />
+            <element signature="e#25648#25655#0" expanded="true" />
             <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
             <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
@@ -2158,19 +2207,19 @@
           <caret line="541" column="9" selection-start-line="541" selection-start-column="9" selection-end-line="541" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11104#11105#0" expanded="true" />
-            <element signature="e#11157#11158#0" expanded="true" />
-            <element signature="e#12148#12455#0" expanded="true" />
-            <element signature="e#12454#12455#0" expanded="true" />
-            <element signature="e#12559#13110#0" expanded="true" />
-            <element signature="e#13109#13110#0" expanded="true" />
-            <element signature="e#13229#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
+            <element signature="e#11120#11121#0" expanded="true" />
+            <element signature="e#11173#11174#0" expanded="true" />
+            <element signature="e#12164#12471#0" expanded="true" />
+            <element signature="e#12470#12471#0" expanded="true" />
+            <element signature="e#12575#13126#0" expanded="true" />
+            <element signature="e#13125#13126#0" expanded="true" />
+            <element signature="e#13245#13806#0" expanded="true" />
+            <element signature="e#13805#13806#0" expanded="true" />
             <element signature="method#dispatchTouchEvent#0;class#HomePage#0" expanded="false" />
             <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
-            <element signature="e#21918#21925#0" expanded="true" />
-            <element signature="e#23204#23211#0" expanded="true" />
-            <element signature="e#25556#25563#0" expanded="true" />
+            <element signature="e#22010#22017#0" expanded="true" />
+            <element signature="e#23296#23303#0" expanded="true" />
+            <element signature="e#25648#25655#0" expanded="true" />
             <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
             <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
@@ -2485,23 +2534,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0508982">
-          <caret line="288" column="39" selection-start-line="288" selection-start-column="39" selection-end-line="288" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.55988026">
+          <caret line="407" column="86" selection-start-line="407" selection-start-column="86" selection-end-line="407" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11104#11105#0" expanded="true" />
-            <element signature="e#11157#11158#0" expanded="true" />
-            <element signature="e#12148#12455#0" expanded="true" />
-            <element signature="e#12454#12455#0" expanded="true" />
-            <element signature="e#12559#13110#0" expanded="true" />
-            <element signature="e#13109#13110#0" expanded="true" />
-            <element signature="e#13229#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
+            <element signature="e#11120#11121#0" expanded="true" />
+            <element signature="e#11173#11174#0" expanded="true" />
+            <element signature="e#12164#12471#0" expanded="true" />
+            <element signature="e#12470#12471#0" expanded="true" />
+            <element signature="e#12575#13126#0" expanded="true" />
+            <element signature="e#13125#13126#0" expanded="true" />
+            <element signature="e#13245#13806#0" expanded="true" />
+            <element signature="e#13805#13806#0" expanded="true" />
             <element signature="method#dispatchTouchEvent#0;class#HomePage#0" expanded="false" />
             <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
-            <element signature="e#21918#21925#0" expanded="true" />
-            <element signature="e#23204#23211#0" expanded="true" />
-            <element signature="e#25556#25563#0" expanded="true" />
+            <element signature="e#22010#22017#0" expanded="true" />
+            <element signature="e#23296#23303#0" expanded="true" />
+            <element signature="e#25648#25655#0" expanded="true" />
             <element signature="method#setGridCellAdapterToDate#0;class#HomePage#0" expanded="false" />
             <element signature="class#GridCellAdapter#0;class#HomePage#0" expanded="false" />
           </folding>
