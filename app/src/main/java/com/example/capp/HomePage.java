@@ -1,16 +1,24 @@
 package com.example.capp;
 import android.animation.ObjectAnimator;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.graphics.Point;
+import android.media.Image;
 import android.os.Handler;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MotionEventCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.util.AttributeSet;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.GridLayoutAnimationController;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
 
 import java.text.ParseException;
@@ -39,7 +47,9 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -81,6 +91,17 @@ public class HomePage extends Activity implements OnClickListener{
 	OnSwipeTouchListener gestureDetector;
 	MenuItem itemHolder;
 
+	String[] mCalendarTitles;
+	DrawerLayout mDrawerLayout;
+	ListView mDrawerList;
+	ImageButton filterButton;
+	ArrayAdapter<String> calendarListAdapter;
+	RelativeLayout drawerLinLayout;
+	CheckboxCustomAdapter checkBoxAdapter;
+	Button addCalendar;
+	Dialog createCalendarDialog;
+	Spinner colorSpinner;
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
@@ -89,6 +110,46 @@ public class HomePage extends Activity implements OnClickListener{
 
 		setContentView(R.layout.homepage);
 
+		ActionBar mActionBar = getActionBar();
+		mActionBar.setDisplayShowHomeEnabled(false);
+		mActionBar.setDisplayShowTitleEnabled(false);
+		LayoutInflater mInflater = LayoutInflater.from(this);
+
+		View mCustomView = mInflater.inflate(R.layout.custom_actionbar, null);
+
+		createCalendarDialog = onCreateDialog(savedInstanceState);
+
+		addCalendar = (Button) findViewById(R.id.add_calendar);
+		addCalendar.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				createCalendarDialog.show();
+			}
+		});
+
+		mCalendarTitles = getResources().getStringArray(R.array.calendar_array);
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		mDrawerList = (ListView) findViewById(R.id.right_drawer);
+		drawerLinLayout = (RelativeLayout) findViewById(R.id.drawerlinlayout);
+		checkBoxAdapter = new CheckboxCustomAdapter(this, mCalendarTitles);
+
+		// Set the adapter for the list view
+		Log.v("Setting Adapter", "");
+		mDrawerList.setAdapter(checkBoxAdapter);
+		//mDrawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, mCalendarTitles));
+		Log.v("Set Adapter", "");
+
+		filterButton = (ImageButton) mCustomView.findViewById(R.id.filterButton);
+		filterButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Log.v("IsDrawerOpen?", mDrawerLayout.isDrawerOpen(drawerLinLayout) + "");
+				if(mDrawerLayout.isDrawerOpen(drawerLinLayout))
+					mDrawerLayout.closeDrawer(drawerLinLayout);
+				else
+					mDrawerLayout.openDrawer(drawerLinLayout);
+			}
+		});
 
 		slideOutRight = AnimationUtils.loadAnimation(HomePage.this, android.R.anim.slide_out_right);
 		slideOutRight.setAnimationListener(new Animation.AnimationListener() {
@@ -231,18 +292,10 @@ public class HomePage extends Activity implements OnClickListener{
 		setGridViewParams(yearViewNov);
 		setGridViewParams(yearViewDec);
 
-
 		c = Calendar.getInstance();
 		month = c.get(Calendar.MONTH);
 		day = c.get(Calendar.DATE);
 		year = c.get(Calendar.YEAR);
-
-		ActionBar mActionBar = getActionBar();
-		mActionBar.setDisplayShowHomeEnabled(false);
-		mActionBar.setDisplayShowTitleEnabled(false);
-		LayoutInflater mInflater = LayoutInflater.from(this);
-
-		View mCustomView = mInflater.inflate(R.layout.custom_actionbar, null);
 
 		Intent receiveUsername = getIntent();
 		userName = receiveUsername.getExtras().getString("key");
@@ -365,7 +418,120 @@ public class HomePage extends Activity implements OnClickListener{
 				viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.dayview)));
 			}
 		});
+
 		openDayView();
+	}
+
+	public Dialog onCreateDialog(Bundle savedInstanceState) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(HomePage.this);
+		// Get the layout inflater
+		LayoutInflater inflater = (HomePage.this).getLayoutInflater();
+		View v = inflater.inflate(R.layout.dialog_create_calendar, null);
+
+		colorSpinner = (Spinner) v.findViewById(R.id.colorC); //Event color
+		final ArrayList<String> colorList = new ArrayList<String>(Arrays.asList("Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "Black"));
+		ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, colorList) {
+			public View getView(int position, View convertView, ViewGroup parent) {
+				View v = convertView;
+				if (v == null) {
+					Context mContext = this.getContext();
+					LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+					v = vi.inflate(android.R.layout.simple_spinner_item, parent, false);
+				}
+
+				TextView tv = ((TextView) v);
+				tv.setText(colorList.get(position));
+
+				switch (position) {
+					case 0:
+						tv.setTextColor(getResources().getColor(R.color.reds));
+						break;
+					case 1:
+						tv.setTextColor(getResources().getColor(R.color.oranges));
+						break;
+					case 2:
+						tv.setTextColor(getResources().getColor(R.color.yellows));
+						break;
+					case 3:
+						tv.setTextColor(getResources().getColor(R.color.greens));
+						break;
+					case 4:
+						tv.setTextColor(getResources().getColor(R.color.blues));
+						break;
+					case 5:
+						tv.setTextColor(getResources().getColor(R.color.purples));
+						break;
+					case 6:
+						tv.setTextColor(getResources().getColor(R.color.pinks));
+						break;
+					case 7:
+						tv.setTextColor(getResources().getColor(R.color.blacks));
+						break;
+				}
+				return v;
+			}
+
+			@Override
+			public View getDropDownView(int position, View convertView, ViewGroup parent){
+				View v = convertView;
+				if (v == null) {
+					Context mContext = this.getContext();
+					LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+					v = vi.inflate(android.R.layout.simple_spinner_dropdown_item, parent, false);
+				}
+
+				TextView tv = ((TextView) v);
+				tv.setText(colorList.get(position));
+
+				switch (position) {
+					case 0:
+						tv.setTextColor(getResources().getColor(R.color.reds));
+						break;
+					case 1:
+						tv.setTextColor(getResources().getColor(R.color.oranges));
+						break;
+					case 2:
+						tv.setTextColor(getResources().getColor(R.color.yellows));
+						break;
+					case 3:
+						tv.setTextColor(getResources().getColor(R.color.greens));
+						break;
+					case 4:
+						tv.setTextColor(getResources().getColor(R.color.blues));
+						break;
+					case 5:
+						tv.setTextColor(getResources().getColor(R.color.purples));
+						break;
+					case 6:
+						tv.setTextColor(getResources().getColor(R.color.pinks));
+						break;
+					case 7:
+						tv.setTextColor(getResources().getColor(R.color.blacks));
+						break;
+				}
+				return v;
+			}
+		};
+		spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		colorSpinner.setAdapter(spinnerAdapter);
+		colorSpinner.setSelection(0);
+
+		// Inflate and set the layout for the dialog
+		// Pass null as the parent view because its going in the dialog layout
+		builder.setView(v)
+				// Add action buttons
+				.setPositiveButton("Create Calendar", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int id) {
+						// sign in the user ...
+					}
+				})
+				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						//LoginDialogFragment.this.getDialog().cancel();
+					}
+				});
+		return builder.create();
 	}
 
 	@Override

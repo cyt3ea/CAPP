@@ -16,9 +16,9 @@
         android:layout_weight="1"
           android:layout_width="0dp"
           android:showAsAction="ifRoom" />
-    <item android:id="@+id/action_search"
+    <item android:id="@+id/action_group"
           android:title="@string/action_search"
-        android:icon="@drawable/searchaction"
+        android:icon="@drawable/groupaction"
           android:layout_weight="1"
           android:layout_width="0dp"
           android:showAsAction="ifRoom" />
@@ -28,9 +28,9 @@
           android:layout_weight="1"
           android:layout_width="0dp"
           android:showAsAction="ifRoom" />
-    <item android:id="@+id/action_more"
+    <item android:id="@+id/action_search"
         android:title="@string/action_more"
-        android:icon="@drawable/moreaction"
+        android:icon="@drawable/searchaction"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:showAsAction="ifRoom" />
