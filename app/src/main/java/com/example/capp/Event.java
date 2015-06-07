@@ -219,7 +219,7 @@ public class Event implements Parcelable, Comparable{
 				String temp = repeatExcept.substring(x, x+8);
 				tempList.add(temp);
 		}
-		Log.v("Get Repeat Except: ", tempList.toString());
+		//Log.v("Get Repeat Except: ", tempList.toString());
 		return tempList;
 	}
 

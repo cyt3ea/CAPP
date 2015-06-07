@@ -182,8 +182,24 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         });
 
 		//Log.v("EXPANDABLE LIST ADAPTER", "getting color=" + getGroup(groupPosition).getColor());
+		String color = getGroup(groupPosition).getColor();
+		if(color.equals("Red"))
+			box.setBackgroundColor(context.getResources().getColor(R.color.reds));
+		else if(color.equals("Orange"))
+			box.setBackgroundColor(context.getResources().getColor(R.color.oranges));
+		else if(color.equals("Yellow"))
+			box.setBackgroundColor(context.getResources().getColor(R.color.yellows));
+		else if(color.equals("Green"))
+			box.setBackgroundColor(context.getResources().getColor(R.color.greens));
+		else if(color.equals("Blue"))
+			box.setBackgroundColor(context.getResources().getColor(R.color.blues));
+		else if(color.equals("Purple"))
+			box.setBackgroundColor(context.getResources().getColor(R.color.purples));
+		else if(color.equals("Pink"))
+			box.setBackgroundColor(context.getResources().getColor(R.color.pinks));
+		else if(color.equals("Black"))
+			box.setBackgroundColor(context.getResources().getColor(R.color.blacks));
 
-		box.setBackgroundColor(Color.parseColor(getGroup(groupPosition).getColor()));
 		//Log.v("EXPANDABLE LIST ADAPTER", "getting group view=" + eventName);
 		
 		//item.setTypeface(null, Typeface.BOLD);

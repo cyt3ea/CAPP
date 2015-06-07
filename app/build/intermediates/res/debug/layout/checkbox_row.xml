@@ -9,7 +9,8 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text="" >
+    </CheckBox>
 
     <TextView
         android:id="@+id/calendarName"
@@ -19,7 +20,8 @@
         android:layout_toRightOf="@+id/checkBox"
         android:layout_toLeftOf="@+id/editRow"
         android:textSize="18dp"
-        android:text="TextView" />
+        android:text="TextView" >
+    </TextView>
 
     <ImageView
         android:id="@+id/deleteRow"
@@ -27,7 +29,8 @@
         android:layout_width="20dp"
         android:paddingRight="8dp"
         android:layout_alignParentRight="true"
-        android:src="@drawable/ic_delete_white"/>
+        android:src="@drawable/ic_delete_white">
+    </ImageView>
 
     <ImageView
         android:id="@+id/editRow"
@@ -35,6 +38,7 @@
         android:layout_width="20dp"
         android:paddingRight="8dp"
         android:layout_toLeftOf="@+id/deleteRow"
-        android:src="@drawable/ic_edit_white" />
+        android:src="@drawable/ic_edit_white" >
+    </ImageView>
 
 </RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/layout/checkbox_row.xml -->

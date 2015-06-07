@@ -52,7 +52,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 	String currentTime = "";
 	LayoutInflater inflater;
 	View newEventLayout;
-	Spinner spinner, calendarSpinner, colorSpinner, repeatSpinner;
+	Spinner spinner, calendarSpinner, repeatSpinner;
 	EditText evTitle, evLocation, evDescrip;
 	CheckBox allDayCheck, privateCheck;
 	int remind = -1;
@@ -64,6 +64,8 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 	View topDivide, botDivide;
 	String repeat = "0";
 	String repeatExcept = "";
+	CalendarDataBaseAdapter calendarDataBaseAdapter;
+	ArrayList<String> calendarNames;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -74,6 +76,9 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 		eventsDBAdapter = new MyEventsDataBaseAdapter(this);
 		eventsDBAdapter = eventsDBAdapter.open();
 
+		calendarDataBaseAdapter = new CalendarDataBaseAdapter(this);
+		calendarDataBaseAdapter = calendarDataBaseAdapter.open();
+
 		spinner = (Spinner) findViewById(R.id.remind); //When to remind
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 				R.array.reminder_array, android.R.layout.simple_spinner_item);
@@ -81,9 +86,10 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 		spinner.setAdapter(adapter);
 		spinner.setSelection(0);
 
+		calendarNames = calendarDataBaseAdapter.getAllCalendars();
+
 		calendarSpinner = (Spinner) findViewById(R.id.calendar); //Which calendar the event should go on
-		ArrayAdapter<CharSequence> adapterC = ArrayAdapter.createFromResource(this,
-				R.array.calendar_array, android.R.layout.simple_spinner_item);
+		ArrayAdapter<String> adapterC = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, calendarNames);
 		adapterC.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		calendarSpinner.setAdapter(adapterC);
 		calendarSpinner.setSelection(0);
@@ -101,9 +107,9 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				Log.v("RepeatSpinnerListener: ", "HERE");
 				botDivide = findViewById(R.id.repeatGridBottomDivide);
 				topDivide = findViewById(R.id.repeatGridTopDivide);
-				if(position == 2) { //if event is repeated weekly
+				if (position == 2) { //if event is repeated weekly
 					repeatAdapter = new GridCellRepeatAdapter(CreateEvent.this, R.id.repeat_day_gridcell, "weekly", day, month, year);
-					if(editEvent != null) {
+					if (editEvent != null) {
 						repeatAdapter.updateHighlighted(editEvent.getRepeat());
 						editEvent = null;
 					}
@@ -114,10 +120,9 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 					repeatGrid.setVisibility(View.VISIBLE);
 					botDivide.setVisibility(View.VISIBLE);
 					topDivide.setVisibility(View.VISIBLE);
-				}
-				else if(position == 3) { //if event is repeated monthly
+				} else if (position == 3) { //if event is repeated monthly
 					repeatAdapter = new GridCellRepeatAdapter(CreateEvent.this, R.id.repeat_day_gridcell, "monthly", day, month, year);
-					if(editEvent != null) {
+					if (editEvent != null) {
 						repeatAdapter.updateHighlighted(editEvent.getRepeat());
 						editEvent = null;
 					}
@@ -128,107 +133,19 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 					repeatGrid.setVisibility(View.VISIBLE);
 					botDivide.setVisibility(View.VISIBLE);
 					topDivide.setVisibility(View.VISIBLE);
-				}
-				else {
+				} else {
 					repeatGrid.setVisibility(View.GONE);
 					botDivide.setVisibility(View.GONE);
 					topDivide.setVisibility(View.GONE);
 				}
 			}
+
 			@Override
 			public void onNothingSelected(AdapterView<?> adapterView) {
 				repeatSpinner.setSelection(0);
 				repeatGrid.setVisibility(View.GONE);
 			}
 		});
-
-		colorSpinner = (Spinner) findViewById(R.id.color); //Event color
-		final ArrayList<String> colorList = new ArrayList<String>(Arrays.asList("Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "Black"));
-		ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, colorList) {
-			public View getView(int position, View convertView, ViewGroup parent) {
-				View v = convertView;
-				if (v == null) {
-					Context mContext = this.getContext();
-					LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-					v = vi.inflate(android.R.layout.simple_spinner_item, parent, false);
-				}
-
-				TextView tv = ((TextView) v);
-				tv.setText(colorList.get(position));
-
-				switch (position) {
-					case 0:
-						tv.setTextColor(getResources().getColor(R.color.reds));
-						break;
-					case 1:
-						tv.setTextColor(getResources().getColor(R.color.oranges));
-						break;
-					case 2:
-						tv.setTextColor(getResources().getColor(R.color.yellows));
-						break;
-					case 3:
-						tv.setTextColor(getResources().getColor(R.color.greens));
-						break;
-					case 4:
-						tv.setTextColor(getResources().getColor(R.color.blues));
-						break;
-					case 5:
-						tv.setTextColor(getResources().getColor(R.color.purples));
-						break;
-					case 6:
-						tv.setTextColor(getResources().getColor(R.color.pinks));
-						break;
-					case 7:
-						tv.setTextColor(getResources().getColor(R.color.blacks));
-						break;
-				}
-				return v;
-			}
-
-			@Override
-			public View getDropDownView(int position, View convertView, ViewGroup parent){
-				View v = convertView;
-				if (v == null) {
-					Context mContext = this.getContext();
-					LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-					v = vi.inflate(android.R.layout.simple_spinner_dropdown_item, parent, false);
-				}
-
-				TextView tv = ((TextView) v);
-				tv.setText(colorList.get(position));
-
-				switch (position) {
-					case 0:
-						tv.setTextColor(getResources().getColor(R.color.reds));
-						break;
-					case 1:
-						tv.setTextColor(getResources().getColor(R.color.oranges));
-						break;
-					case 2:
-						tv.setTextColor(getResources().getColor(R.color.yellows));
-						break;
-					case 3:
-						tv.setTextColor(getResources().getColor(R.color.greens));
-						break;
-					case 4:
-						tv.setTextColor(getResources().getColor(R.color.blues));
-						break;
-					case 5:
-						tv.setTextColor(getResources().getColor(R.color.purples));
-						break;
-					case 6:
-						tv.setTextColor(getResources().getColor(R.color.pinks));
-						break;
-					case 7:
-						tv.setTextColor(getResources().getColor(R.color.blacks));
-						break;
-				}
-				return v;
-			}
-		};
-		spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		colorSpinner.setAdapter(spinnerAdapter);
-		colorSpinner.setSelection(0);
 
 		c = Calendar.getInstance();
 		month = c.get(Calendar.MONTH);
@@ -343,6 +260,8 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			int endMonth = editEvent.getEndDate()[0];
 			int endDay = editEvent.getEndDate()[1];
 			int endYear = editEvent.getEndDate()[2];
+			int calendarPos = calendarNames.indexOf(editEvent.getCalendar());
+			calendarSpinner.setSelection(calendarPos);
 
 			if(editEvent.getAllDay() == 1)
 			{
@@ -369,23 +288,6 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				privateCheck.setChecked(true);
 			else
 				privateCheck.setChecked(false);
-			String tempColor = editEvent.getColor();
-			if(tempColor.equals("#FF0000"))
-				colorSpinner.setSelection(0);
-			else if(tempColor.equals("#FF6A00"))
-				colorSpinner.setSelection(1);
-			else if(tempColor.equals("#FFDB2B"))
-				colorSpinner.setSelection(2);
-			else if(tempColor.equals("#A5FF7F"))
-				colorSpinner.setSelection(3);
-			else if(tempColor.equals("#7F92FF"))
-				colorSpinner.setSelection(4);
-			else if(tempColor.equals("#8900F9"))
-				colorSpinner.setSelection(5);
-			else if(tempColor.equals("#FFA7DC"))
-				colorSpinner.setSelection(6);
-			else if(tempColor.equals("#000000"))
-				colorSpinner.setSelection(7);
 			int tempRemind = editEvent.getRemind();
 			if(tempRemind == -1)
 				spinner.setSelection(0);
@@ -405,12 +307,6 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				spinner.setSelection(7);
 			if(tempRemind == 60*24*7)
 				spinner.setSelection(8);
-
-			if(editEvent.getCalendar().equals("Default"))
-				calendarSpinner.setSelection(0);
-			if(editEvent.getCalendar().equals("Academic"))
-				calendarSpinner.setSelection(1);
-			//What to do with calendar spinner???
 
 			repeatExcept = editEvent.getRepeatExcept();
 
@@ -478,23 +374,6 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				remind = 60*24*2;
 			else if(remindSpin.equals("1 Week Before"))
 				remind = 60*24*7;
-			String color = colorSpinner.getSelectedItem().toString();
-			if(color.equals("Red"))
-				color = "#FF0000";
-			else if(color.equals("Orange"))
-				color = "#FF6A00";
-			else if(color.equals("Yellow"))
-				color = "#FFDB2B";
-			else if(color.equals("Green"))
-				color = "#A5FF7F";
-			else if(color.equals("Blue"))
-				color = "#7F92FF";
-			else if(color.equals("Purple"))
-				color = "#8900F9";
-			else if(color.equals("Pink"))
-				color = "#FFA7DC";
-			else if(color.equals("Black"))
-				color = "#000000";
 
 			if(allDayCheck.isChecked()) {
 				allDay = 1;
@@ -608,6 +487,8 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 			long dayGapLong = dayGap;
 			Log.v("Days: ", "" + diff + " " + dayGapLong);
 
+			String color = calendarDataBaseAdapter.getSingleEntry(calendarSpinner.getSelectedItem().toString());
+
 			if(title.equals("")) {
 				text = "Cannot make event with no title.";
 				Toast toast = Toast.makeText(context, text, duration);
@@ -636,6 +517,7 @@ public class CreateEvent extends Activity implements OnClickListener, OnItemSele
 				toast.show();
 			}
 			else if(intentExtras.hasExtra("EVENT")) {
+
 				final Event newEvent = new Event(title, location, description,
 						startTimeH, startTimeM, endTimeH, endTimeM,
 						startMonth, startDay, startYear,

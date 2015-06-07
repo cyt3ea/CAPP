@@ -14,6 +14,7 @@ public class SignUPActivity extends Activity
 	Button btnCreateAccount;
 
 	LoginDataBaseAdapter loginDataBaseAdapter;
+	CalendarDataBaseAdapter calendarDataBaseAdapter;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
@@ -23,6 +24,8 @@ public class SignUPActivity extends Activity
 		// get Instance  of Database Adapter
 		loginDataBaseAdapter=new LoginDataBaseAdapter(this);
 		loginDataBaseAdapter=loginDataBaseAdapter.open();
+		calendarDataBaseAdapter = new CalendarDataBaseAdapter(this);
+		calendarDataBaseAdapter=calendarDataBaseAdapter.open();
 
 		// Get References of Views
 		editTextUserName=(EditText)findViewById(R.id.editTextUserName);
@@ -58,6 +61,7 @@ public class SignUPActivity extends Activity
 					// Save the Data in Database
 					if(loginDataBaseAdapter.insertEntry(userName, password))
 					{
+						calendarDataBaseAdapter.insertEntry("Default", "Red");
 						Toast.makeText(getApplicationContext(), "Account Successfully Created ", Toast.LENGTH_LONG).show();
 						finish();
 					}

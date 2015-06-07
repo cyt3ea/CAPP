@@ -19,6 +19,8 @@ import android.view.animation.GridLayoutAnimationController;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ExpandableListView;
 
 import java.text.ParseException;
@@ -91,16 +93,18 @@ public class HomePage extends Activity implements OnClickListener{
 	OnSwipeTouchListener gestureDetector;
 	MenuItem itemHolder;
 
-	String[] mCalendarTitles;
+	ArrayList<String> mCalendarTitles;
 	DrawerLayout mDrawerLayout;
 	ListView mDrawerList;
 	ImageButton filterButton;
 	ArrayAdapter<String> calendarListAdapter;
 	RelativeLayout drawerLinLayout;
 	CheckboxCustomAdapter checkBoxAdapter;
-	Button addCalendar;
+	Button addCalendar, selectAll;
 	Dialog createCalendarDialog;
 	Spinner colorSpinner;
+	CalendarDataBaseAdapter calendarDataBaseAdapter;
+	ArrayList<CheckBox> checkboxes;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -117,7 +121,8 @@ public class HomePage extends Activity implements OnClickListener{
 
 		View mCustomView = mInflater.inflate(R.layout.custom_actionbar, null);
 
-		createCalendarDialog = onCreateDialog(savedInstanceState);
+		AlertDialog.Builder calendarDialogBuilder = onCreateDialog();
+		createCalendarDialog = calendarDialogBuilder.create();
 
 		addCalendar = (Button) findViewById(R.id.add_calendar);
 		addCalendar.setOnClickListener(new OnClickListener() {
@@ -127,11 +132,23 @@ public class HomePage extends Activity implements OnClickListener{
 			}
 		});
 
-		mCalendarTitles = getResources().getStringArray(R.array.calendar_array);
+		calendarDataBaseAdapter = new CalendarDataBaseAdapter(this);
+		calendarDataBaseAdapter = calendarDataBaseAdapter.open();
+		mCalendarTitles = calendarDataBaseAdapter.getAllCalendars();
+
+		//mCalendarTitles = getResources().getStringArray(R.array.calendar_array);
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+		TextView drawerListHeader = new TextView(HomePage.this);
+		drawerListHeader.setText("Calendars");
+		drawerListHeader.setTextSize(20);
+		drawerListHeader.setTextColor(getResources().getColor(android.R.color.holo_blue_light));
+		drawerListHeader.setPadding(10, 0, 0, 0);
 		mDrawerList = (ListView) findViewById(R.id.right_drawer);
+		mDrawerList.addHeaderView(drawerListHeader);
+
 		drawerLinLayout = (RelativeLayout) findViewById(R.id.drawerlinlayout);
-		checkBoxAdapter = new CheckboxCustomAdapter(this, mCalendarTitles);
+		checkBoxAdapter = new CheckboxCustomAdapter(HomePage.this, mCalendarTitles);
 
 		// Set the adapter for the list view
 		Log.v("Setting Adapter", "");
@@ -139,12 +156,50 @@ public class HomePage extends Activity implements OnClickListener{
 		//mDrawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, mCalendarTitles));
 		Log.v("Set Adapter", "");
 
+		checkboxes = checkBoxAdapter.getCheckBoxes();
+
+		selectAll = (Button) findViewById(R.id.selectAll);
+		selectAll.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Log.v("Drawer size: ", checkBoxAdapter.getCount() + "");
+
+				if (selectAll.getText().toString().equals("Select All")) {
+					final ListView listView = mDrawerList;
+					for (int i = 1; i < checkBoxAdapter.getCount()+1; i++) {
+						RelativeLayout itemLayout = (RelativeLayout)mDrawerList.getChildAt(i);
+						CheckBox checkbox = (CheckBox) itemLayout.findViewById(R.id.checkBox);
+						checkbox.setChecked(true);
+					}
+					selectAll.setText("Deselect All");
+					//checkBoxAdapter.addAllCalendarsToChecked();
+				} else {
+					for (int i = 1; i < mDrawerList.getChildCount(); i++) {
+						RelativeLayout itemLayout = (RelativeLayout)mDrawerList.getChildAt(i);
+						CheckBox checkbox = (CheckBox) itemLayout.findViewById(R.id.checkBox);
+						checkbox.setChecked(false);
+					}
+					selectAll.setText("Select All");
+					//checkBoxAdapter.clearCalendarsChecked();
+				}
+				//checkBoxAdapter.notifyDataSetChanged();
+				if (view.equals("day"))
+					openDayView();
+				else if (view.equals("week"))
+					openWeekView();
+				else if (view.equals("month"))
+					openMonthView();
+				else if (view.equals("year"))
+					openYearView();
+			}
+		});
+
 		filterButton = (ImageButton) mCustomView.findViewById(R.id.filterButton);
 		filterButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				Log.v("IsDrawerOpen?", mDrawerLayout.isDrawerOpen(drawerLinLayout) + "");
-				if(mDrawerLayout.isDrawerOpen(drawerLinLayout))
+				if (mDrawerLayout.isDrawerOpen(drawerLinLayout))
 					mDrawerLayout.closeDrawer(drawerLinLayout);
 				else
 					mDrawerLayout.openDrawer(drawerLinLayout);
@@ -422,7 +477,7 @@ public class HomePage extends Activity implements OnClickListener{
 		openDayView();
 	}
 
-	public Dialog onCreateDialog(Bundle savedInstanceState) {
+	public AlertDialog.Builder onCreateDialog() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(HomePage.this);
 		// Get the layout inflater
 		LayoutInflater inflater = (HomePage.this).getLayoutInflater();
@@ -514,16 +569,31 @@ public class HomePage extends Activity implements OnClickListener{
 		};
 		spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		colorSpinner.setAdapter(spinnerAdapter);
-		colorSpinner.setSelection(0);
+		//colorSpinner.setSelection(0);
+
+		final EditText calendarName = (EditText) v.findViewById(R.id.calendarNameInput);
 
 		// Inflate and set the layout for the dialog
 		// Pass null as the parent view because its going in the dialog layout
 		builder.setView(v)
 				// Add action buttons
+				.setTitle("Create Calendar")
 				.setPositiveButton("Create Calendar", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int id) {
-						// sign in the user ...
+						//Log.v("Create Calendar: ", calendarName.getText().toString() + " " + colorSpinner.getSelectedItem().toString());
+						String name = calendarName.getText().toString();
+						String color = colorSpinner.getSelectedItem().toString();
+						Log.v("Calendar Color Added: ", color);
+						if (calendarDataBaseAdapter.insertEntry(name, color)) {
+							calendarName.setText("");
+							colorSpinner.setSelection(0);
+							//Log.v("Calendar Name: ", name);
+							mCalendarTitles.add(name);
+							selectAll.setText("Deselect All");
+							checkBoxAdapter.setCalendarNames(mCalendarTitles);
+							checkBoxAdapter.notifyDataSetChanged();
+						}
 					}
 				})
 				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -531,7 +601,7 @@ public class HomePage extends Activity implements OnClickListener{
 						//LoginDialogFragment.this.getDialog().cancel();
 					}
 				});
-		return builder.create();
+		return builder;
 	}
 
 	@Override
@@ -539,6 +609,8 @@ public class HomePage extends Activity implements OnClickListener{
 		super.dispatchTouchEvent(ev);
 		return gestureDetector.onTouch(viewFlipper.getCurrentView(), ev);
 	}
+
+	public String getCalendarView() { return view; }
 
 	public void setGridViewParams(GridView x) {
 		RelativeLayout leftRightToggleYV = (RelativeLayout) findViewById(R.id.leftRightToggleYV);
@@ -638,7 +710,7 @@ public class HomePage extends Activity implements OnClickListener{
 		}
 	}
 
-	private void openYearView() {
+	public void openYearView() {
 		// TODO Auto-generated method stub
 		//Toast.makeText(HomePage.this, "Year View", Toast.LENGTH_SHORT).show();
 		view = "year";
@@ -673,7 +745,7 @@ public class HomePage extends Activity implements OnClickListener{
 		todaysDateTextView.setText(Integer.toString(year));
 	}
 
-	private void openMonthView() {
+	public void openMonthView() {
 		// TODO Auto-generated method stub
 		//Toast.makeText(HomePage.this, "Month View", Toast.LENGTH_SHORT).show();
 
@@ -712,7 +784,7 @@ public class HomePage extends Activity implements OnClickListener{
 		todaysDateTextView.setText(months[month] + " " + Integer.toString(year));
 	}
 
-	private void openWeekView() {
+	public void openWeekView() {
 		// TODO Auto-generated method stuff
 
 		//Toast.makeText(HomePage.this, "Week View", Toast.LENGTH_SHORT).show();
@@ -791,7 +863,7 @@ public class HomePage extends Activity implements OnClickListener{
 		view = "week";
 	}
 
-	private void openDayView() {
+	public void openDayView() {
 		// TODO Auto-generated method stub
 		view = "day";
 
@@ -808,6 +880,7 @@ public class HomePage extends Activity implements OnClickListener{
 	public void getEventsForThatDay(ExpandableListAdapter expList, int dd, int mm, int yy) {
 		ArrayList<Event> tempList = new ArrayList<Event>();
 		tempList = myEventsDataBaseAdapter.getAllEvents();
+		ArrayList<String> calendarsChecked = checkBoxAdapter.getCalendarsChecked();
 		Log.v("EVENTS IN DATABASE: ", tempList.toString());
 		eventList.clear();
 
@@ -819,154 +892,15 @@ public class HomePage extends Activity implements OnClickListener{
 
 		//only shows events for that day
 		for (Event e : tempList) {
-			Log.v("EVENT BEING ADDED: ", e.toString());
-			//Log.v("EVENT DATE: ", e.getStartDate()[0] + " " + e.getStartDate()[1] + " " + e.getStartDate()[2]);
-			if (e.getStartDate()[1] == dd && e.getEndDate()[1] == dd) {
-				if (e.getStartDate()[0] == mm && e.getEndDate()[0] == mm) {
-					if (e.getStartDate()[2] == yy && e.getEndDate()[2] == yy) {
-						if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString())) {
-							eventList.add(e);
-							Log.v("Event added to list: ", e.toString());
-						}
-					}
-				}
-			} else if (e.getStartDate()[2] <= yy && e.getEndDate()[2] >= yy) {
-				if (e.getStartDate()[0] <= mm && e.getEndDate()[0] >= mm) {
-					if (e.getStartDate()[1] <= dd && e.getEndDate()[1] >= dd) {
-						Log.v("start date", e.getStartDate()[1] + " " + dd);
-						if (e.getStartTimeHour() == -1) {
-							//do nothing
-						} else if (e.getStartDate()[1] == dd) {
-							e.setEndTimeHour(23);
-							e.setEndTimeMin(59);
-						} else if (e.getEndDate()[1] == dd) {
-							e.setStartTimeHour(0);
-							e.setStartTimeMin(0);
-						} else {
-							e.setStartTimeHour(-1);
-							e.setStartTimeMin(-1);
-							e.setEndTimeHour(-1);
-							e.setEndTimeMin(-1);
-						}
-						if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString())) {
-							Log.v("Event added to list: ", e.toString());
-							eventList.add(e);
-						}
-					}
-				}
-			}
-			Log.v("repeat length: ", e.getRepeat());
-			if (e.getRepeat().length() > 1 && !eventList.contains(e)) {
-				//e.setStartDate(mm, dd, yy);
-				Calendar cStart = Calendar.getInstance();
-				cStart.set(Calendar.DAY_OF_MONTH, e.getStartDate()[1]);
-				cStart.set(Calendar.MONTH, e.getStartDate()[0]);
-				cStart.set(Calendar.YEAR, e.getStartDate()[2]);
-				Calendar cEnd = Calendar.getInstance();
-				cEnd.set(Calendar.DAY_OF_MONTH, e.getEndDate()[1]);
-				cEnd.set(Calendar.MONTH, e.getEndDate()[0]);
-				cEnd.set(Calendar.YEAR, e.getEndDate()[2]);
-				long diff = Math.abs(cEnd.getTime().getTime() - cStart.getTime().getTime());
-				diff = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
-				int diffInt = (int) diff;
-				Log.v("Diff: ", diffInt + " ");
-				int tempdd, tempmm, tempyy;
-				tempmm = mm;
-				tempdd = dd;
-				tempyy = yy;
-				if(e.getRepeat().length() == 9) {
-					if(e.getRepeatAsArrayList().get(dayOfWeekNum) == 1 && !eventList.contains(e)) {
-						e.setStartDate(mm, dd, yy);
-						if (tempdd + diffInt > daysOfMonth[mm]) {
-							if (tempmm == 11) {
-								tempmm = 0;
-								tempyy++;
-								tempdd = diffInt - daysOfMonth[11] - tempdd;
-							} else {
-								tempmm++;
-								tempdd = diffInt - daysOfMonth[tempmm - 1] - tempdd;
-							}
-						} else {
-							tempdd = tempdd + diffInt;
-						}
-						e.setEndDate(tempmm, tempdd, tempyy);
-					}
-				}
-				else if (e.getRepeat().length() != 9) {
-					Log.v("repeating monthly: ", dd + " " + diffInt + " " + e.getStartDate()[1]);
-					for(int j = 0; j < e.getRepeatAsArrayList().size(); j++) {
-						if (dd - diffInt <= e.getRepeatAsArrayList().get(j)) {
-							tempdd = e.getRepeatAsArrayList().get(j);
-							Log.v("Within the diff", "yay");
-							break;
-						}
-					}
-					if (e.getRepeatAsArrayList().contains(tempdd) && !eventList.contains(e)) {
-						e.setStartDate(mm, tempdd, yy);
-						if (tempdd + diffInt > daysOfMonth[mm]) {
-							if (tempmm == 11) {
-								tempmm = 0;
-								tempyy++;
-								tempdd = diffInt - daysOfMonth[11] - tempdd;
-							} else {
-								tempmm++;
-								tempdd = diffInt - daysOfMonth[tempmm - 1] - tempdd;
-							}
-						} else {
-							tempdd = tempdd + diffInt;
-						}
-						e.setEndDate(tempmm, tempdd, tempyy);
-					}
-				}
-				/*
-				else {
-					//if (!(e.getRepeatAsArrayList().contains(dd) || e.getRepeatAsArrayList().get(dayOfWeekNum) == 1) && !eventList.contains(e)) {
-					for (int j = 0; j < diffInt; j++) {
-						Log.v("TEMP DATES START: ", tempmm + "/" + tempdd + "/" + tempyy);
-						if (tempdd - 1 <= 0) {
-							if (tempmm == 0) {
-								tempmm = 11;
-								tempyy--;
-								tempdd = daysOfMonth[tempmm];
-							} else {
-								tempmm--;
-								tempdd--;
-							}
-						} else
-							tempdd = tempdd - 1;
-						Calendar cdar = Calendar.getInstance();
-						cdar.set(Calendar.DAY_OF_MONTH, tempdd);
-						cdar.set(Calendar.MONTH, tempmm);
-						cdar.set(Calendar.YEAR, tempyy);
-						int tempDayOfWeekNum = cdar.get(Calendar.DAY_OF_WEEK) - 1;
-						Log.v("TEMP DATES MID: ", tempmm + "/" + tempdd + "/" + tempyy + " " + tempDayOfWeekNum);
-						if (e.getRepeatAsArrayList().get(tempDayOfWeekNum) == 1 || e.getRepeatAsArrayList().contains(dd)) {
-							e.setStartDate(tempmm, tempdd, tempyy);
-							if (tempdd + diffInt > daysOfMonth[mm]) {
-								if (tempmm == 11) {
-									tempmm = 0;
-									tempyy++;
-									tempdd = diffInt - daysOfMonth[11] - tempdd;
-								} else {
-									tempmm++;
-									tempdd = diffInt - daysOfMonth[tempmm - 1] - tempdd;
-								}
-							} else {
-								tempdd = tempdd + diffInt;
-							}
-							e.setEndDate(tempmm, tempdd, tempyy);
-							Log.v("TEMP DATES END: ", tempmm + "/" + tempdd + "/" + tempyy + " " + tempDayOfWeekNum);
-						}
-					}
-				}
-				*/
-				Log.v("Getting all dates:", e.getStartDateAsOneString() + " " + e.getEndDateAsOneString() + " " + mm + "/" + dd + "/" + yy + " " + diffInt);
+			if(calendarsChecked.contains(e.getCalendar())) {
+				//Log.v("EVENT BEING ADDED: ", e.toString());
+				//Log.v("EVENT DATE: ", e.getStartDate()[0] + " " + e.getStartDate()[1] + " " + e.getStartDate()[2]);
 				if (e.getStartDate()[1] == dd && e.getEndDate()[1] == dd) {
 					if (e.getStartDate()[0] == mm && e.getEndDate()[0] == mm) {
 						if (e.getStartDate()[2] == yy && e.getEndDate()[2] == yy) {
 							if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString())) {
 								eventList.add(e);
-								Log.v("Event added to list: ", e.toString());
+								//Log.v("Event added to list: ", e.toString());
 							}
 						}
 					}
@@ -988,12 +922,111 @@ public class HomePage extends Activity implements OnClickListener{
 								e.setEndTimeHour(-1);
 								e.setEndTimeMin(-1);
 							}
-							if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString()))
+							if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString())) {
+								Log.v("Event added to list: ", e.toString());
 								eventList.add(e);
+							}
+						}
+					}
+				}
+				//Log.v("repeat length: ", e.getRepeat());
+				if (e.getRepeat().length() > 1 && !eventList.contains(e)) {
+					//e.setStartDate(mm, dd, yy);
+					Calendar cStart = Calendar.getInstance();
+					cStart.set(Calendar.DAY_OF_MONTH, e.getStartDate()[1]);
+					cStart.set(Calendar.MONTH, e.getStartDate()[0]);
+					cStart.set(Calendar.YEAR, e.getStartDate()[2]);
+					Calendar cEnd = Calendar.getInstance();
+					cEnd.set(Calendar.DAY_OF_MONTH, e.getEndDate()[1]);
+					cEnd.set(Calendar.MONTH, e.getEndDate()[0]);
+					cEnd.set(Calendar.YEAR, e.getEndDate()[2]);
+					long diff = Math.abs(cEnd.getTime().getTime() - cStart.getTime().getTime());
+					diff = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+					int diffInt = (int) diff;
+					Log.v("Diff: ", diffInt + " ");
+					int tempdd, tempmm, tempyy;
+					tempmm = mm;
+					tempdd = dd;
+					tempyy = yy;
+					if (e.getRepeat().length() == 9) {
+						if (e.getRepeatAsArrayList().get(dayOfWeekNum) == 1 && !eventList.contains(e)) {
+							e.setStartDate(mm, dd, yy);
+							if (tempdd + diffInt > daysOfMonth[mm]) {
+								if (tempmm == 11) {
+									tempmm = 0;
+									tempyy++;
+									tempdd = diffInt - daysOfMonth[11] - tempdd;
+								} else {
+									tempmm++;
+									tempdd = diffInt - daysOfMonth[tempmm - 1] - tempdd;
+								}
+							} else {
+								tempdd = tempdd + diffInt;
+							}
+							e.setEndDate(tempmm, tempdd, tempyy);
+						}
+					} else if (e.getRepeat().length() != 9) {
+						Log.v("repeating monthly: ", dd + " " + diffInt + " " + e.getStartDate()[1]);
+						for (int j = 0; j < e.getRepeatAsArrayList().size(); j++) {
+							if (dd - diffInt <= e.getRepeatAsArrayList().get(j)) {
+								tempdd = e.getRepeatAsArrayList().get(j);
+								Log.v("Within the diff", "yay");
+								break;
+							}
+						}
+						if (e.getRepeatAsArrayList().contains(tempdd) && !eventList.contains(e)) {
+							e.setStartDate(mm, tempdd, yy);
+							if (tempdd + diffInt > daysOfMonth[mm]) {
+								if (tempmm == 11) {
+									tempmm = 0;
+									tempyy++;
+									tempdd = diffInt - daysOfMonth[11] - tempdd;
+								} else {
+									tempmm++;
+									tempdd = diffInt - daysOfMonth[tempmm - 1] - tempdd;
+								}
+							} else {
+								tempdd = tempdd + diffInt;
+							}
+							e.setEndDate(tempmm, tempdd, tempyy);
+						}
+					}
+					Log.v("Getting all dates:", e.getStartDateAsOneString() + " " + e.getEndDateAsOneString() + " " + mm + "/" + dd + "/" + yy + " " + diffInt);
+					if (e.getStartDate()[1] == dd && e.getEndDate()[1] == dd) {
+						if (e.getStartDate()[0] == mm && e.getEndDate()[0] == mm) {
+							if (e.getStartDate()[2] == yy && e.getEndDate()[2] == yy) {
+								if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString())) {
+									eventList.add(e);
+									Log.v("Event added to list: ", e.toString());
+								}
+							}
+						}
+					} else if (e.getStartDate()[2] <= yy && e.getEndDate()[2] >= yy) {
+						if (e.getStartDate()[0] <= mm && e.getEndDate()[0] >= mm) {
+							if (e.getStartDate()[1] <= dd && e.getEndDate()[1] >= dd) {
+								Log.v("start date", e.getStartDate()[1] + " " + dd);
+								if (e.getStartTimeHour() == -1) {
+									//do nothing
+								} else if (e.getStartDate()[1] == dd) {
+									e.setEndTimeHour(23);
+									e.setEndTimeMin(59);
+								} else if (e.getEndDate()[1] == dd) {
+									e.setStartTimeHour(0);
+									e.setStartTimeMin(0);
+								} else {
+									e.setStartTimeHour(-1);
+									e.setStartTimeMin(-1);
+									e.setEndTimeHour(-1);
+									e.setEndTimeMin(-1);
+								}
+								if (!e.getRepeatExceptAsArrayList().contains(e.getStartDateAsOneString()))
+									eventList.add(e);
+							}
 						}
 					}
 				}
 			}
+
 		}
 		Collections.sort(eventList);
 		expList.setEventList(eventList);
@@ -1697,8 +1730,8 @@ public class HomePage extends Activity implements OnClickListener{
 				}
 			}
 			/*
-			if((!eventsPerMonthMap.isEmpty() && eventsPerMonthMap != null)) { 
-				if(eventsPerMonthMap.containsKey(theday)) { 
+			if((!eventsPerMonthMap.isEmpty() && eventsPerMonthMap != null)) {
+				if(eventsPerMonthMap.containsKey(theday)) {
 					num_events_per_day = (TextView) row.findViewById(R.id.num_events_per_day);
 					Integer numEvents = (Integer) eventsPerMonthMap.get(theday);
 					num_events_per_day.setText(numEvents.toString());

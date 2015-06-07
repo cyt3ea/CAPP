@@ -588,6 +588,13 @@
 			android:background="@color/transparent"
 			android:dividerHeight="0dp"/>
 
+		<Button android:id="@+id/selectAll"
+			android:layout_width="240dp"
+			android:layout_height="wrap_content"
+			android:textColor="@android:color/white"
+			android:layout_alignParentBottom="true"
+			android:text="Deselect All"/>
+
 	</RelativeLayout>
 </android.support.v4.widget.DrawerLayout>
 
