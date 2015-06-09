@@ -30,17 +30,21 @@ public class CheckboxCustomAdapter extends ArrayAdapter<String> {
     CalendarDataBaseAdapter calendarDataBaseAdapter;
     MyEventsDataBaseAdapter eventsDBAdapt;
     Spinner calendarSpinner;
+    Button selectAll;
 
-    public CheckboxCustomAdapter(Context context, ArrayList<String> x) {
+    public CheckboxCustomAdapter(Context context, ArrayList<String> x, Button selectAll) {
         super(context,R.layout.checkbox_row, x);
         this.context = context;
+        this.selectAll = selectAll;
         checkBoxes = new ArrayList<CheckBox>();
         calendarNames = x;
         calendarDataBaseAdapter = new CalendarDataBaseAdapter(context);
         calendarDataBaseAdapter = calendarDataBaseAdapter.open();
         eventsDBAdapt = new MyEventsDataBaseAdapter(context);
         eventsDBAdapt = eventsDBAdapt.open();
-        calendarsChecked = x;
+        ArrayList<String> eventList = calendarDataBaseAdapter.getAllCalendars();
+        calendarsChecked = eventList;
+        //addAllCalendarsToChecked();
     }
 
     public void clearCalendarsChecked() {
@@ -54,6 +58,7 @@ public class CheckboxCustomAdapter extends ArrayAdapter<String> {
             ((HomePage) context).openMonthView();
         else if (calendarViewOpen.equals("year"))
             ((HomePage) context).openYearView();
+        Log.v("Cleared Calendars: ", calendarsChecked.toString());
     }
 
     public void addAllCalendarsToChecked() {
@@ -69,6 +74,8 @@ public class CheckboxCustomAdapter extends ArrayAdapter<String> {
             ((HomePage) context).openMonthView();
         else if (calendarViewOpen.equals("year"))
             ((HomePage) context).openYearView();
+        Log.v("Checked All Calendars: ", calendarsChecked.toString());
+
     }
 
     public void setCalendarNames(ArrayList<String> c) {
@@ -122,6 +129,10 @@ public class CheckboxCustomAdapter extends ArrayAdapter<String> {
                     calendarsChecked.add(name.getText().toString());
                 else
                     calendarsChecked.remove(calendarsChecked.indexOf(name.getText().toString()));
+                if(getCalendarsChecked().size() == 0)
+                    selectAll.setText("Select All");
+                else if(getCalendarsChecked().size() == calendarNames.size())
+                    selectAll.setText("Deselect All");
                 Log.v("Calendars Checked: ", calendarsChecked.toString());
                 String calendarViewOpen = ((HomePage) context).getCalendarView();
                 if (calendarViewOpen.equals("day"))
@@ -180,7 +191,6 @@ public class CheckboxCustomAdapter extends ArrayAdapter<String> {
             public void onClick(View view) {
                 if (context instanceof HomePage) {
                     final LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-                    View convertView = inflater.inflate(R.layout.homepage, null);
                     AlertDialog.Builder editCalendarBuilder = ((HomePage) context).onCreateDialog();
                     View editView = inflater.inflate(R.layout.dialog_create_calendar, null);
                     final EditText calendarName = (EditText) editView.findViewById(R.id.calendarNameInput);
@@ -294,6 +304,7 @@ public class CheckboxCustomAdapter extends ArrayAdapter<String> {
                     editCalendarBuilder.setPositiveButton("Edit Calendar", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
+                            selectAll.setText("Deselect All");
                             calendarDataBaseAdapter.updateEntry(nameText, calendarName.getText().toString(), colorSpin.getSelectedItem().toString());
                             calendarNames.set(position, calendarName.getText().toString());
                             ArrayList<Event> eventList = new ArrayList<Event>();

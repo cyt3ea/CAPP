@@ -18,8 +18,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6003521d-16fb-4c68-bfa9-ebf49ab32164" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/CalendarDataBaseAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/delete_calendar_dialog.xml" />
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\build\intermediates\classes\debug\com\example\capp\CreateEvent$7.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\build\intermediates\classes\debug\com\example\capp\Day.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\build\intermediates\classes\release\com\example\capp\Day.class" afterPath="" />
@@ -32,23 +30,19 @@
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\moreaction.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\moreactionpressed.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\searchbutton.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$CustomDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$CustomDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$GridCellRepeatAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent$GridCellRepeatAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CreateEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/Event.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/Event.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/ExpandableListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$11.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$12.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$14.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" />
@@ -59,38 +53,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/SignUPActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/SignUPActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/SignUPActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/SignUPActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/CheckboxCustomAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/CheckboxCustomAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/Event.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/ExpandableListAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/capp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/capp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/SignUPActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/SignUPActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/checkbox_row.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/checkbox_row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/checkbox_row.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/checkbox_row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/create_new_event.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/create_new_event.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_new_event.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_new_event.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/homepage.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/homepage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/homepage.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/homepage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CAPP.iws" />
@@ -155,32 +126,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5969697">
-              <caret line="179" column="51" selection-start-line="179" selection-start-column="51" selection-end-line="179" selection-end-column="51" />
+            <state vertical-scroll-proportion="-34.24138">
+              <caret line="883" column="83" selection-start-line="883" selection-start-column="45" selection-end-line="883" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3149#3157#0" expanded="true" />
-                <element signature="e#6141#7360#0" expanded="true" />
-                <element signature="e#7359#7360#0" expanded="true" />
-                <element signature="e#7474#7792#0" expanded="true" />
-                <element signature="e#7791#7792#0" expanded="true" />
-                <element signature="e#18290#18298#0" expanded="true" />
-                <element signature="e#18442#18450#0" expanded="true" />
-                <element signature="class#18430:20924" expanded="false" />
-                <element signature="e#21419#22193#0" expanded="true" />
-                <element signature="e#22192#22193#0" expanded="true" />
-                <element signature="e#22228#22394#0" expanded="true" />
-                <element signature="e#22393#22394#0" expanded="true" />
+                <element signature="class#18438:20932" expanded="false" />
                 <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#HomePage#0" expanded="false" />
                 <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
                 <element signature="method#openWeekView#0;class#HomePage#0" expanded="false" />
                 <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-                <marker date="1433662858227" expanded="true" signature="6337:6735" placeholder="{...}" />
+                <marker date="1433893164535" expanded="true" signature="6349:6745" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -189,7 +149,7 @@
       <file leaf-file-name="checkbox_row.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/checkbox_row.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
@@ -202,14 +162,9 @@
       <file leaf-file-name="homepage.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5">
+            <state vertical-scroll-proportion="-6.62069">
               <caret line="594" column="51" selection-start-line="594" selection-start-column="51" selection-end-line="594" selection-end-column="51" />
-              <folding>
-                <element signature="e#1151#1171#0" expanded="true" />
-                <element signature="e#3122#3142#0" expanded="true" />
-                <element signature="e#6828#6848#0" expanded="true" />
-                <element signature="e#10305#10325#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
           <provider editor-type-id="android-designer">
@@ -220,7 +175,7 @@
       <file leaf-file-name="CreateEvent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7931035">
+            <state vertical-scroll-proportion="0.0">
               <caret line="637" column="19" selection-start-line="637" selection-start-column="15" selection-end-line="637" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -229,23 +184,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckboxCustomAdapter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CheckboxCustomAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/CheckboxCustomAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1724138">
-              <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.11890244">
+              <caret line="123" column="27" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3665#3673#0" expanded="true" />
-                <element signature="e#4232#4490#0" expanded="true" />
-                <element signature="e#4489#4490#0" expanded="true" />
-                <element signature="e#6371#8471#0" expanded="true" />
-                <element signature="e#6648#8325#0" expanded="true" />
-                <element signature="e#8324#8325#0" expanded="true" />
-                <element signature="e#8470#8471#0" expanded="true" />
-                <element signature="e#9304#9312#0" expanded="true" />
-                <element signature="class#9462:14235" expanded="false" />
-                <element signature="e#16111#16118#0" expanded="true" />
+                <element signature="e#4007#4015#0" expanded="true" />
+                <element signature="e#9804#9812#0" expanded="true" />
+                <element signature="class#9962:14735" expanded="false" />
+                <element signature="e#16674#16681#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1483,8 +1432,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/CalendarDataBaseAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/homepage.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/checkbox_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/CheckboxCustomAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/capp/CheckboxCustomAdapter.java" />
       </list>
     </option>
   </component>
@@ -1505,7 +1454,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1320" />
-    <option name="height" value="784" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1533,10 +1482,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1679,6 +1624,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1694,6 +1640,9 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1917,8 +1866,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1320" height="780" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29186603" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -1929,14 +1878,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32460317" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32376397" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32263243" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38277513" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38202247" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2920635" sideWeight="0.49881235" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16984127" sideWeight="0.49881235" order="5" side_tool="false" content_ui="tabs" />
@@ -1949,6 +1897,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2006,25 +1955,14 @@
           <caret line="961" column="17" selection-start-line="961" selection-start-column="17" selection-end-line="961" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3149#3157#0" expanded="true" />
-            <element signature="e#6141#7360#0" expanded="true" />
-            <element signature="e#7359#7360#0" expanded="true" />
-            <element signature="e#7474#7792#0" expanded="true" />
-            <element signature="e#7791#7792#0" expanded="true" />
-            <element signature="e#18290#18298#0" expanded="true" />
-            <element signature="e#18442#18450#0" expanded="true" />
-            <element signature="class#18430:20924" expanded="false" />
-            <element signature="e#21419#22193#0" expanded="true" />
-            <element signature="e#22192#22193#0" expanded="true" />
-            <element signature="e#22228#22394#0" expanded="true" />
-            <element signature="e#22393#22394#0" expanded="true" />
+            <element signature="class#18438:20932" expanded="false" />
             <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#HomePage#0" expanded="false" />
             <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
             <element signature="method#openWeekView#0;class#HomePage#0" expanded="false" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <marker date="1433662858227" expanded="true" signature="6337:6735" placeholder="{...}" />
+            <marker date="1433893164535" expanded="true" signature="6349:6745" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -2057,25 +1995,14 @@
           <caret line="541" column="9" selection-start-line="541" selection-start-column="9" selection-end-line="541" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3149#3157#0" expanded="true" />
-            <element signature="e#6141#7360#0" expanded="true" />
-            <element signature="e#7359#7360#0" expanded="true" />
-            <element signature="e#7474#7792#0" expanded="true" />
-            <element signature="e#7791#7792#0" expanded="true" />
-            <element signature="e#18290#18298#0" expanded="true" />
-            <element signature="e#18442#18450#0" expanded="true" />
-            <element signature="class#18430:20924" expanded="false" />
-            <element signature="e#21419#22193#0" expanded="true" />
-            <element signature="e#22192#22193#0" expanded="true" />
-            <element signature="e#22228#22394#0" expanded="true" />
-            <element signature="e#22393#22394#0" expanded="true" />
+            <element signature="class#18438:20932" expanded="false" />
             <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#HomePage#0" expanded="false" />
             <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
             <element signature="method#openWeekView#0;class#HomePage#0" expanded="false" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <marker date="1433662858227" expanded="true" signature="6337:6735" placeholder="{...}" />
+            <marker date="1433893164535" expanded="true" signature="6349:6745" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -2316,7 +2243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2324,7 +2250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="75" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2348,7 +2273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2060606">
           <caret line="8" column="22" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2419,22 +2343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5">
-          <caret line="594" column="51" selection-start-line="594" selection-start-column="51" selection-end-line="594" selection-end-column="51" />
-          <folding>
-            <element signature="e#1151#1171#0" expanded="true" />
-            <element signature="e#3122#3142#0" expanded="true" />
-            <element signature="e#6828#6848#0" expanded="true" />
-            <element signature="e#10305#10325#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/checkbox_row.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -2446,9 +2354,20 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homepage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.62069">
+          <caret line="594" column="51" selection-start-line="594" selection-start-column="51" selection-end-line="594" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/CreateEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7931035">
+        <state vertical-scroll-proportion="0.0">
           <caret line="637" column="19" selection-start-line="637" selection-start-column="15" selection-end-line="637" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2456,51 +2375,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/CheckboxCustomAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1724138">
-          <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3665#3673#0" expanded="true" />
-            <element signature="e#4232#4490#0" expanded="true" />
-            <element signature="e#4489#4490#0" expanded="true" />
-            <element signature="e#6371#8471#0" expanded="true" />
-            <element signature="e#6648#8325#0" expanded="true" />
-            <element signature="e#8324#8325#0" expanded="true" />
-            <element signature="e#8470#8471#0" expanded="true" />
-            <element signature="e#9304#9312#0" expanded="true" />
-            <element signature="class#9462:14235" expanded="false" />
-            <element signature="e#16111#16118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5969697">
-          <caret line="179" column="51" selection-start-line="179" selection-start-column="51" selection-end-line="179" selection-end-column="51" />
+        <state vertical-scroll-proportion="-34.24138">
+          <caret line="883" column="83" selection-start-line="883" selection-start-column="45" selection-end-line="883" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3149#3157#0" expanded="true" />
-            <element signature="e#6141#7360#0" expanded="true" />
-            <element signature="e#7359#7360#0" expanded="true" />
-            <element signature="e#7474#7792#0" expanded="true" />
-            <element signature="e#7791#7792#0" expanded="true" />
-            <element signature="e#18290#18298#0" expanded="true" />
-            <element signature="e#18442#18450#0" expanded="true" />
-            <element signature="class#18430:20924" expanded="false" />
-            <element signature="e#21419#22193#0" expanded="true" />
-            <element signature="e#22192#22193#0" expanded="true" />
-            <element signature="e#22228#22394#0" expanded="true" />
-            <element signature="e#22393#22394#0" expanded="true" />
+            <element signature="class#18438:20932" expanded="false" />
             <element signature="method#setGridViewParams#0;class#HomePage#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#HomePage#0" expanded="false" />
             <element signature="method#openYearView#0;class#HomePage#0" expanded="false" />
             <element signature="method#openWeekView#0;class#HomePage#0" expanded="false" />
             <element signature="method#openDayView#0;class#HomePage#0" expanded="false" />
-            <marker date="1433662858227" expanded="true" signature="6337:6735" placeholder="{...}" />
+            <marker date="1433893164535" expanded="true" signature="6349:6745" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/capp/CheckboxCustomAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11890244">
+          <caret line="123" column="27" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4007#4015#0" expanded="true" />
+            <element signature="e#9804#9812#0" expanded="true" />
+            <element signature="class#9962:14735" expanded="false" />
+            <element signature="e#16674#16681#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -147,8 +147,10 @@ public class HomePage extends Activity implements OnClickListener{
 		mDrawerList = (ListView) findViewById(R.id.right_drawer);
 		mDrawerList.addHeaderView(drawerListHeader);
 
+		selectAll = (Button) findViewById(R.id.selectAll);
+
 		drawerLinLayout = (RelativeLayout) findViewById(R.id.drawerlinlayout);
-		checkBoxAdapter = new CheckboxCustomAdapter(HomePage.this, mCalendarTitles);
+		checkBoxAdapter = new CheckboxCustomAdapter(HomePage.this, mCalendarTitles, selectAll);
 
 		// Set the adapter for the list view
 		Log.v("Setting Adapter", "");
@@ -158,7 +160,6 @@ public class HomePage extends Activity implements OnClickListener{
 
 		checkboxes = checkBoxAdapter.getCheckBoxes();
 
-		selectAll = (Button) findViewById(R.id.selectAll);
 		selectAll.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -172,7 +173,7 @@ public class HomePage extends Activity implements OnClickListener{
 						checkbox.setChecked(true);
 					}
 					selectAll.setText("Deselect All");
-					//checkBoxAdapter.addAllCalendarsToChecked();
+					checkBoxAdapter.addAllCalendarsToChecked();
 				} else {
 					for (int i = 1; i < mDrawerList.getChildCount(); i++) {
 						RelativeLayout itemLayout = (RelativeLayout)mDrawerList.getChildAt(i);
@@ -180,7 +181,7 @@ public class HomePage extends Activity implements OnClickListener{
 						checkbox.setChecked(false);
 					}
 					selectAll.setText("Select All");
-					//checkBoxAdapter.clearCalendarsChecked();
+					checkBoxAdapter.clearCalendarsChecked();
 				}
 				//checkBoxAdapter.notifyDataSetChanged();
 				if (view.equals("day"))
