@@ -30,39 +30,6 @@
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\moreaction.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\moreactionpressed.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Christine Tsou\AndroidstudioProjects\CAPP\app\src\main\res\drawable-hdpi\searchbutton.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/CheckboxCustomAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage$GridCellAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/capp/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/CheckboxCustomAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/CheckboxCustomAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/capp/HomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CAPP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1866,8 +1833,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="780" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1320" height="780" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29186603" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
