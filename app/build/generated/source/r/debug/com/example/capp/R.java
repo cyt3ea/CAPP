@@ -68,19 +68,22 @@ public final class R {
         public static final int ic_launcher=0x7f02000d;
         public static final int leftbutton=0x7f02000e;
         public static final int logo=0x7f02000f;
-        public static final int notificationsaction=0x7f020010;
-        public static final int notificationsactionpressed=0x7f020011;
-        public static final int profileaction=0x7f020012;
-        public static final int profileactionpressed=0x7f020013;
-        public static final int rectangle=0x7f020014;
-        public static final int rightbutton=0x7f020015;
-        public static final int rounded_button=0x7f020016;
-        public static final int searchaction=0x7f020017;
-        public static final int searchactionpressed=0x7f020018;
-        public static final int splash_back=0x7f020019;
-        public static final int switchbutton=0x7f02001a;
-        public static final int triangle=0x7f02001b;
-        public static final int usericon=0x7f02001c;
+        public static final int moreaction=0x7f020010;
+        public static final int moreactionpressed=0x7f020011;
+        public static final int notificationsaction=0x7f020012;
+        public static final int notificationsactionpressed=0x7f020013;
+        public static final int profileaction=0x7f020014;
+        public static final int profileactionpressed=0x7f020015;
+        public static final int rectangle=0x7f020016;
+        public static final int rightbutton=0x7f020017;
+        public static final int rounded_button=0x7f020018;
+        public static final int searchaction=0x7f020019;
+        public static final int searchactionpressed=0x7f02001a;
+        public static final int searchbutton=0x7f02001b;
+        public static final int splash_back=0x7f02001c;
+        public static final int switchbutton=0x7f02001d;
+        public static final int triangle=0x7f02001e;
+        public static final int usericon=0x7f02001f;
     }
     public static final class id {
         public static final int TabHost01=0x7f0c0027;

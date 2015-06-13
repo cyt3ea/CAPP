@@ -63,4 +63,4 @@
         android:layout_toLeftOf="@+id/delete"
         android:src="@drawable/ic_edit" />
     
-</RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/layout/group_item.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/Documents/CAPP2/app/src/main/res/layout/group_item.xml -->

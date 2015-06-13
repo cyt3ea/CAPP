@@ -20,4 +20,4 @@
         android:layout_below="@+id/eventLocation"
         android:paddingLeft="30dp" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/layout/child_item.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/Documents/CAPP2/app/src/main/res/layout/child_item.xml -->

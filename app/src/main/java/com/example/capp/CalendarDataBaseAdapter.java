@@ -127,7 +127,7 @@ public class CalendarDataBaseAdapter
         }
 
         // return contact list
-        Log.v("ALL CALENDARS: ", calendarList.toString() + "COLORS: " + getSingleEntry(calendarList.get(0)) + ", " + getSingleEntry(calendarList.get(1)) + ", " + getSingleEntry(calendarList.get(2)));
+        Log.v("ALL CALENDARS: ", calendarList.toString() + "COLORS: " + getSingleEntry(calendarList.get(0)));
         return calendarList;
     }
 }

@@ -55,4 +55,4 @@
         android:layout_below="@+id/editTextPassword"
         android:text="Create Account" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/layout/signup.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/Documents/CAPP2/app/src/main/res/layout/signup.xml -->

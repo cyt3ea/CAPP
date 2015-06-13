@@ -3,4 +3,4 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="#00000000" />
     <stroke android:width="1dip" android:color="#00000000"/> 
-</shape><!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/drawable-hdpi/gridborderframe.xml -->
+</shape><!-- From: file:/C:/Users/Christine%20Tsou/Documents/CAPP2/app/src/main/res/drawable-hdpi/gridborderframe.xml -->

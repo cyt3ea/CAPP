@@ -29,4 +29,4 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/calendarNameInput"
         android:layout_toEndOf="@+id/colorTextC" />
-</RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/layout/dialog_create_calendar.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Christine%20Tsou/Documents/CAPP2/app/src/main/res/layout/dialog_create_calendar.xml -->

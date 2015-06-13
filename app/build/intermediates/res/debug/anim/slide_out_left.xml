@@ -3,4 +3,4 @@
     android:shareInterpolator="false" >
     <translate android:duration="5000" android:fromXDelta="0%" android:toXDelta="-100%"/>
     <alpha android:duration="5000" android:fromAlpha="1.0" android:toAlpha="0.0" />
-</set><!-- From: file:/C:/Users/Christine%20Tsou/AndroidstudioProjects/CAPP/app/src/main/res/anim/slide_out_left.xml -->
+</set><!-- From: file:/C:/Users/Christine%20Tsou/Documents/CAPP2/app/src/main/res/anim/slide_out_left.xml -->
